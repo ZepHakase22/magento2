@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Solwin Infotech
+ * Solwin Flickr Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_Flickr
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="flickrwidget" class="Solwin\Flickr\Block\Widget\Flickr">
+        <label translate="true">Flickr widget</label>
+        <description>Flickr widget</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="10" >
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="numberimage" xsi:type="text" visible="true" required="true" sort_order="20" >
+                <label translate="true">Number Of Image</label>
+            </parameter>
+            <parameter name="display" xsi:type="select" source_model="Solwin\Flickr\Model\System\Config\Source\OrderImage" visible="true" sort_order="30" >
+                <label translate="true">Portfolio Type</label>
+            </parameter>
+        </parameters>
+    </widget> 
+</widgets>

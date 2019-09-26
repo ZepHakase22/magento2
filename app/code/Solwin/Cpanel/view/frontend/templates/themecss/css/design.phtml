@@ -1,0 +1,1816 @@
+/**
+* WARNING: Do not change this file. Your changes will be lost.
+* <?php echo date("Y-m-d H:i:s"); ?>
+*/
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\CssSetting');
+$theme_color = $helper->getCpanelStoreConfig('cpaneldesignsection/themedesigngeneral/themecolor');
+$use_custom_bodycolor = $helper->getCpanelStoreConfig('cpaneldesignsection/colorsettings/use_custom');
+$bodycolor = $helper->getCpanelStoreConfig('cpaneldesignsection/colorsettings/bodycolor');
+$use_custom_bodyfontsize = $helper->getCpanelStoreConfig('cpaneldesignsection/fontsettings/use_custom');
+$bodyfontsize = $helper->getCpanelStoreConfig('cpaneldesignsection/fontsettings/bodyfontsize');
+$use_custom_mainwrapper_background = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/use_custom');
+$mainwrapper_background = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/mainwrapper_background');
+$maincontent_background = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/maincontent_background');
+$blog_background = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/blog_background');
+$blog_background_image = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/blog_background_image');
+$custom_blog_style = $helper->getCpanelStoreConfig('cpaneldesignsection/wrapper_content_settings/custom_blog_style');
+//header
+$header_use_custom = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/use_custom');
+$header_background_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_background_color');
+$header_background_image = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_background_image');
+$custom_header_style = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/custom_header_style');
+//header top
+$header_top_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_top_background');
+$header_top_bottom_border_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_top_bottom_border_color');
+$header_top_links_sprt_border = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_top_links_sprt_border');
+$header_top_link_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_top_link_color');
+$header_top_link_color_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_top_link_color_hover');
+//header search
+$header_search_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_background');
+$header_search_border_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_border_color');
+$header_search_txtcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_txtcolor');
+$header_search_btn_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_btn_background');
+$header_search_btn_iconcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_btn_iconcolor');
+$header_search_toggle_iconcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_toggle_iconcolor');
+$header_search_toggle_icon_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_search_toggle_icon_background');
+//header navigation menu
+$header_menu_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_background');
+$header_menu_border_top_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_border_top_color');
+$header_menu_link_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_link_color');
+$header_menu_link_color_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_link_color_hover');
+$header_menu_link_color_active = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_link_color_active');
+$header_menu_link_background_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_link_background_hover');
+$header_menu_link_background_active = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_menu_link_background_active');
+$header_submenu_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_submenu_background');
+$header_submenu_link_color = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_submenu_link_color');
+$header_submenu_link_color_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_submenu_link_color_hover');
+$header_submenu_link_color_active = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_submenu_link_color_active');
+//minicart
+$header_minicart_background = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_minicart_background');
+$header_minicart_iconcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/headerdesign/header_minicart_iconcolor');
+//footer
+$footer_use_custom = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/use_custom');
+$custom_footer_style = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/custom_footer_style');
+$footer_top_background = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_top_background');
+$footer_top_background_image = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_top_background_image');
+$footer_top_txtcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_top_txtcolor');
+$footer_newsletter_border_color = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_newsletter_border_color');
+$footer_newsletter_txtcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_newsletter_txtcolor');
+$footer_newsletter_btn_iconcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_newsletter_btn_iconcolor');
+$footer_newsletter_btn_iconcolor_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_newsletter_btn_iconcolor_hover');
+$footer_socials_icon_border_color = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_socials_icon_border_color');
+$footer_socials_icon_border_color_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_socials_icon_border_color_hover');
+$footer_socials_icon_color = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_socials_icon_color');
+$footer_socials_icon_color_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_socials_icon_color_hover');
+$footer_middle_background = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_middle_background');
+$footer_middle_background_image = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_middle_background_image');
+$custom_footer_middle_style = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/custom_footer_middle_style');
+$footer_middle_title_color = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_middle_title_color');
+$footer_middle_txtcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_middle_txtcolor');
+$footer_middle_txtcolor_hover = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_middle_txtcolor_hover');
+$footer_bottom_border_color = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_bottom_border_color');
+$footer_bottom_background = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_bottom_background');
+$footer_bottom_txtcolor = $helper->getCpanelStoreConfig('cpaneldesignsection/footerdesign/footer_bottom_txtcolor');
+
+$custom_theme_style = $helper->getCpanelStoreConfig('cpaneldesignsection/custom_css_block/custom_theme_style');
+
+$mediaurl = $helper->getMediaUrl() . 'themecss/box/';
+?>
+<?php if ($use_custom_bodycolor || $use_custom_bodyfontsize) { ?>
+    <?php if ($bodycolor != '' || $bodyfontsize != '') { ?>
+        body {
+        <?php if ($bodycolor != '') { ?>
+            color: #<?php echo $bodycolor; ?>;
+        <?php } ?>
+        <?php if ($bodyfontsize != '') { ?>
+            font-size: <?php echo $bodyfontsize; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+<?php } ?>
+<?php if ($use_custom_mainwrapper_background) { ?>
+    <?php if ($mainwrapper_background != '') { ?>
+        .page-wrapper {
+        background: #<?php echo $mainwrapper_background; ?>;
+        }
+    <?php } ?>
+    <?php if ($maincontent_background != '') { ?>
+        #maincontent {
+        background: #<?php echo $maincontent_background; ?>;
+        }
+    <?php } ?>
+<?php } ?>
+<?php if ($blog_background_image != '' || $custom_blog_style != '') { ?>
+    .bh-back-wrapper {  
+    <?php if ($blog_background_image != '') { ?>
+        background-image: url(<?php echo $mediaurl . $blog_background_image; ?>);
+        <?php if ($custom_blog_style != '') { ?>
+            <?php echo $custom_blog_style; ?>
+        <?php } ?>
+        }
+    <?php } ?>
+<?php } ?>
+<?php if ($theme_color) { ?>
+    /* general */
+    .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent .newsletter-input .control .subscribe.btn {
+    border-color: #<?php echo $theme_color; ?>;
+    background: #<?php echo $theme_color; ?>;
+    }
+    .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent .newsletter-input .control .subscribe.btn:hover {
+    border-color: #<?php echo $theme_color; ?>;
+    background: #<?php echo $theme_color; ?>;
+    }
+    .pages strong.page {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .popup-main .nh-wrapper .nh-content > h2 {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .popup-main .nh-wrapper .nh-content #newsletter-validate-detail .input-group-btn #newspopupsubmit {
+    background: #<?php echo $theme_color; ?>;
+    border-color: #<?php echo $theme_color; ?>;
+    }
+    .product-add-form .box-tocart .field.qty .control .qty-main:hover {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .modal-footer .action-dismiss::before, .modal-footer .action-accept::before {
+    background: #<?php echo $theme_color; ?>;
+    }
+    a:hover, .alink:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .block-title-main h2 > span {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .fotorama__thumb-border {
+    border-color: #<?php echo $theme_color; ?>;
+    }
+    .c-add .cs-name {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .pro-effect div[class^="swatch-opt-"] .swatch-attribute-options .swatch-option.selected {
+    outline-color: #<?php echo $theme_color; ?>;
+    }
+
+
+    /* header css */
+    .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-focus, 
+    .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-active, 
+    .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .navigation .level0 .submenu .active > a {
+    border-color: #<?php echo $theme_color; ?>;
+    }
+    .navigation .level0 .submenu .active > a {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.level-top:hover,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus,
+    header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0.active > a.level-top {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0.active > a.level-top {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+    header.page-header.htype-3 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0.active > a.level-top {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .panel.wrapper .header.panel .header.links > li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0.active > a.level-top {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+    header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+    /* header top css */
+
+    .page-header .panel.wrapper .header.panel .header.links > li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 #switcher-language-trigger:hover, 
+    header.page-header.htype-1 #switcher-currency-trigger:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 #switcher-language-trigger:hover, 
+    header.page-header.htype-2 #switcher-currency-trigger:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .switcher .options ul.dropdown li:hover > a {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .panel.wrapper .header.panel .header.links > li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 #switcher-language-trigger:hover, header.page-header.htype-3 #switcher-currency-trigger:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .switcher .options ul.dropdown li:hover > a {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .panel.wrapper .header.panel .header.links > li > a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+    header.page-header.htype-6 .switcher .options ul.dropdown li:hover > a {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 #switcher-language-trigger:hover, 
+    header.page-header.htype-6 #switcher-currency-trigger:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 #switcher-language-trigger:hover,
+    header.page-header.htype-7 #switcher-currency-trigger:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .page-header .switcher .options ul.dropdown li:hover > a {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    /* minicart css */
+
+    header.page-header.htype-1 .minicart-wrapper {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .minicart-wrapper .action.showcart {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .minicart-wrapper .action.showcart {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .minicart-wrapper .action.showcart {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .minicart-wrapper .action.showcart {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+    /* search block css */
+
+    header.page-header.htype-2 .block-search .block.block-content {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .block-search .s-icon {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .block-search .block.block-content {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-3 .block-search .block.block-content .action.search:hover::before {
+    color: #<?php echo $theme_color; ?> !important;
+    }
+    header.page-header.htype-6 .block-search .s-icon {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-6 .block-search .block.block-content {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .block-search .s-icon {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-7 .block-search .block.block-content {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+
+    /* footer css */
+    .cp-newsletter {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent ul li a:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .bh-back-wrapper .bh-wrapper .bh-main .bh-main-inner .bh-img .bh-date .bh-monyr {
+    color: #<?php echo $theme_color; ?>;
+    }
+
+
+    /* all button css */
+
+    button.action.primary:before, a.action.primary:before, input.action.primary[type="submit"]:before, 
+    button.action.action-edit:before, a.action.action-edit:before, input.action.action-edit[type="submit"]:before, 
+    button.action.action-delete:before, a.action.action-delete:before, input.action.action-delete[type="submit"]:before, 
+    button.action.clear:before, a.action.clear:before, input.action.clear[type="submit"]:before, button.action.action-apply:before, 
+    a.action.action-apply:before, input.action.action-apply[type="submit"]:before, button.action.share:before, a.action.share:before, 
+    input.action.share[type="submit"]:before, button.action.tocart:before, a.action.tocart:before, input.action.tocart[type="submit"]:before, 
+    button.action.action-towishlist:before, a.action.action-towishlist:before, input.action.action-towishlist[type="submit"]:before, 
+    .cart.table-wrapper .actions-toolbar > .action.action.primary:before, .cart.table-wrapper .actions-toolbar > .action.action.action-edit:before, 
+    .cart.table-wrapper .actions-toolbar > .action.action.action-delete:before, .cart.table-wrapper .actions-toolbar > .action.action.clear:before, 
+    .cart.table-wrapper .actions-toolbar > .action.action.action-apply:before, .cart.table-wrapper .actions-toolbar > .action.action.share:before, 
+    .cart.table-wrapper .actions-toolbar > .action.action.tocart:before, .cart.table-wrapper .actions-toolbar > .action.action.action-towishlist:before, 
+    .cart.table-wrapper .action-gift.action.primary:before, .cart.table-wrapper .action-gift.action.action-edit:before, 
+    .cart.table-wrapper .action-gift.action.action-delete:before, .cart.table-wrapper .action-gift.action.clear:before, 
+    .cart.table-wrapper .action-gift.action.action-apply:before, .cart.table-wrapper .action-gift.action.share:before, 
+    .cart.table-wrapper .action-gift.action.tocart:before, .cart.table-wrapper .action-gift.action.action-towishlist:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+    button.action.update:before, a.action.update:before, input.action.update[type="submit"]:before, 
+    button.action.continue:before, a.action.continue:before, input.action.continue[type="submit"]:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+    .multicheckout a.action.continue {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+
+    button.action.back:before, a.action.back:before, input.action.back[type="submit"]:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+    .box-billing-address .action:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .product-info-main .product-social-links .product-addto-links .towishlist:after, 
+    .product-info-main .product-social-links .mailto .towishlist:after, .product-info-main .product-social-links .product-addto-links .tocompare:after, 
+    .product-info-main .product-social-links .mailto .tocompare:after, .product-info-main .product-social-links .product-addto-links.friend:after, 
+    .product-info-main .product-social-links .mailto.friend:after {
+    background: #<?php echo $theme_color; ?>;
+    }
+
+    button.action.primary:before, a.action.primary:before, input.action.primary[type="submit"]:before, button.action.action-edit:before, 
+    a.action.action-edit:before, input.action.action-edit[type="submit"]:before, button.action.action-delete:before, 
+    a.action.action-delete:before, input.action.action-delete[type="submit"]:before, button.action.clear:before, 
+    a.action.clear:before, input.action.clear[type="submit"]:before, button.action.action-apply:before, a.action.action-apply:before, 
+    input.action.action-apply[type="submit"]:before, button.action.share:before, 
+    a.action.share:before, input.action.share[type="submit"]:before, button.action.tocart:before, 
+    a.action.tocart:before, input.action.tocart[type="submit"]:before, button.action.action-towishlist:before, 
+    a.action.action-towishlist:before, input.action.action-towishlist[type="submit"]:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .add-cus-btn a.action.viewcart:before, .block-reviews-dashboard a.action.viewcart:before, 
+    .block-dashboard-orders a.action.viewcart:before, #my-reviews-table a.action.viewcart:before, 
+    .order-actions-toolbar a.action.viewcart:before, .block-dashboard-info a.action.viewcart:before, 
+    .block-dashboard-addresses a.action.viewcart:before, .box-address-billing a.action.viewcart:before, 
+    .box-address-shipping a.action.viewcart:before, .block-addresses-list a.action.viewcart:before, 
+    #my-orders-table a.action.viewcart:before, #checkout_multishipping_form a.action.viewcart:before, 
+    #checkout-step-shipping a.action.viewcart:before, .box-billing-address a.action.viewcart:before, 
+    .box-billing-method a.action.viewcart:before, .box-shipping-address a.action.viewcart:before, 
+    .box-shipping-method a.action.viewcart:before, .table-order-review a.action.viewcart:before, 
+    #shipping_method_form a.action.viewcart:before, .add-cus-btn button.action.viewcart:before, 
+    .block-reviews-dashboard button.action.viewcart:before, .block-dashboard-orders button.action.viewcart:before, 
+    #my-reviews-table button.action.viewcart:before, .order-actions-toolbar button.action.viewcart:before, 
+    .block-dashboard-info button.action.viewcart:before, .block-dashboard-addresses button.action.viewcart:before, 
+    .box-address-billing button.action.viewcart:before, .box-address-shipping button.action.viewcart:before, 
+    .block-addresses-list button.action.viewcart:before, #my-orders-table button.action.viewcart:before, 
+    #checkout_multishipping_form button.action.viewcart:before, #checkout-step-shipping button.action.viewcart:before, 
+    .box-billing-address button.action.viewcart:before, .box-billing-method button.action.viewcart:before, 
+    .box-shipping-address button.action.viewcart:before, .box-shipping-method button.action.viewcart:before, 
+    .table-order-review button.action.viewcart:before, #shipping_method_form button.action.viewcart:before, 
+    .add-cus-btn a.action.update-cart-item:before, .block-reviews-dashboard a.action.update-cart-item:before, 
+    .block-dashboard-orders a.action.update-cart-item:before, #my-reviews-table a.action.update-cart-item:before, 
+    .order-actions-toolbar a.action.update-cart-item:before, .block-dashboard-info a.action.update-cart-item:before, 
+    .block-dashboard-addresses a.action.update-cart-item:before, .box-address-billing a.action.update-cart-item:before, 
+    .box-address-shipping a.action.update-cart-item:before, .block-addresses-list a.action.update-cart-item:before, 
+    #my-orders-table a.action.update-cart-item:before, #checkout_multishipping_form a.action.update-cart-item:before, 
+    #checkout-step-shipping a.action.update-cart-item:before, .box-billing-address a.action.update-cart-item:before, 
+    .box-billing-method a.action.update-cart-item:before, .box-shipping-address a.action.update-cart-item:before, 
+    .box-shipping-method a.action.update-cart-item:before, .table-order-review a.action.update-cart-item:before, 
+    #shipping_method_form a.action.update-cart-item:before, .add-cus-btn button.action.update-cart-item:before, 
+    .block-reviews-dashboard button.action.update-cart-item:before, .block-dashboard-orders button.action.update-cart-item:before, 
+    #my-reviews-table button.action.update-cart-item:before, .order-actions-toolbar button.action.update-cart-item:before, 
+    .block-dashboard-info button.action.update-cart-item:before, .block-dashboard-addresses button.action.update-cart-item:before, 
+    .box-address-billing button.action.update-cart-item:before, .box-address-shipping button.action.update-cart-item:before, 
+    .block-addresses-list button.action.update-cart-item:before, #my-orders-table button.action.update-cart-item:before, 
+    #checkout_multishipping_form button.action.update-cart-item:before, #checkout-step-shipping button.action.update-cart-item:before, 
+    .box-billing-address button.action.update-cart-item:before, .box-billing-method button.action.update-cart-item:before, 
+    .box-shipping-address button.action.update-cart-item:before, .box-shipping-method button.action.update-cart-item:before, 
+    .table-order-review button.action.update-cart-item:before, #shipping_method_form button.action.update-cart-item:before, 
+    .add-cus-btn a.action.view:before, .block-reviews-dashboard a.action.view:before, .block-dashboard-orders a.action.view:before, 
+    #my-reviews-table a.action.view:before, .order-actions-toolbar a.action.view:before, .block-dashboard-info a.action.view:before, 
+    .block-dashboard-addresses a.action.view:before, .box-address-billing a.action.view:before, .box-address-shipping a.action.view:before, 
+    .block-addresses-list a.action.view:before, #my-orders-table a.action.view:before, #checkout_multishipping_form a.action.view:before, 
+    #checkout-step-shipping a.action.view:before, .box-billing-address a.action.view:before, .box-billing-method a.action.view:before, 
+    .box-shipping-address a.action.view:before, .box-shipping-method a.action.view:before, .table-order-review a.action.view:before,
+    #shipping_method_form a.action.view:before, .add-cus-btn button.action.view:before, .block-reviews-dashboard button.action.view:before, 
+    .block-dashboard-orders button.action.view:before, #my-reviews-table button.action.view:before, 
+    .order-actions-toolbar button.action.view:before, .block-dashboard-info button.action.view:before, 
+    .block-dashboard-addresses button.action.view:before, .box-address-billing button.action.view:before, 
+    .box-address-shipping button.action.view:before, .block-addresses-list button.action.view:before, 
+    #my-orders-table button.action.view:before, #checkout_multishipping_form button.action.view:before, 
+    #checkout-step-shipping button.action.view:before, .box-billing-address button.action.view:before, 
+    .box-billing-method button.action.view:before, .box-shipping-address button.action.view:before, 
+    .box-shipping-method button.action.view:before, .table-order-review button.action.view:before, 
+    #shipping_method_form button.action.view:before, .add-cus-btn a.action.order:before, .block-reviews-dashboard a.action.order:before, 
+    .block-dashboard-orders a.action.order:before, #my-reviews-table a.action.order:before, .order-actions-toolbar a.action.order:before, 
+    .block-dashboard-info a.action.order:before, .block-dashboard-addresses a.action.order:before, .box-address-billing a.action.order:before,
+    .box-address-shipping a.action.order:before, .block-addresses-list a.action.order:before, #my-orders-table a.action.order:before, 
+    #checkout_multishipping_form a.action.order:before, #checkout-step-shipping a.action.order:before, 
+    .box-billing-address a.action.order:before, .box-billing-method a.action.order:before, .box-shipping-address a.action.order:before, 
+    .box-shipping-method a.action.order:before, .table-order-review a.action.order:before, #shipping_method_form a.action.order:before, 
+    .add-cus-btn button.action.order:before, .block-reviews-dashboard button.action.order:before, 
+    .block-dashboard-orders button.action.order:before, #my-reviews-table button.action.order:before, 
+    .order-actions-toolbar button.action.order:before, .block-dashboard-info button.action.order:before, 
+    .block-dashboard-addresses button.action.order:before, .box-address-billing button.action.order:before, 
+    .box-address-shipping button.action.order:before, .block-addresses-list button.action.order:before, 
+    #my-orders-table button.action.order:before, #checkout_multishipping_form button.action.order:before, 
+    #checkout-step-shipping button.action.order:before, .box-billing-address button.action.order:before, 
+    .box-billing-method button.action.order:before, .box-shipping-address button.action.order:before, 
+    .box-shipping-method button.action.order:before, .table-order-review button.action.order:before, 
+    #shipping_method_form button.action.order:before, .add-cus-btn a.action.reorder:before, .block-reviews-dashboard a.action.reorder:before, 
+    .block-dashboard-orders a.action.reorder:before, #my-reviews-table a.action.reorder:before, 
+    .order-actions-toolbar a.action.reorder:before, .block-dashboard-info a.action.reorder:before, 
+    .block-dashboard-addresses a.action.reorder:before, .box-address-billing a.action.reorder:before, 
+    .box-address-shipping a.action.reorder:before, .block-addresses-list a.action.reorder:before, 
+    #my-orders-table a.action.reorder:before, #checkout_multishipping_form a.action.reorder:before, 
+    #checkout-step-shipping a.action.reorder:before, .box-billing-address a.action.reorder:before, 
+    .box-billing-method a.action.reorder:before, .box-shipping-address a.action.reorder:before, 
+    .box-shipping-method a.action.reorder:before, .table-order-review a.action.reorder:before, #shipping_method_form a.action.reorder:before, 
+    .add-cus-btn button.action.reorder:before, .block-reviews-dashboard button.action.reorder:before, 
+    .block-dashboard-orders button.action.reorder:before, #my-reviews-table button.action.reorder:before, 
+    .order-actions-toolbar button.action.reorder:before, .block-dashboard-info button.action.reorder:before, 
+    .block-dashboard-addresses button.action.reorder:before, .box-address-billing button.action.reorder:before, 
+    .box-address-shipping button.action.reorder:before, .block-addresses-list button.action.reorder:before, 
+    #my-orders-table button.action.reorder:before, #checkout_multishipping_form button.action.reorder:before, 
+    #checkout-step-shipping button.action.reorder:before, .box-billing-address button.action.reorder:before, 
+    .box-billing-method button.action.reorder:before, .box-shipping-address button.action.reorder:before, 
+    .box-shipping-method button.action.reorder:before, .table-order-review button.action.reorder:before, 
+    #shipping_method_form button.action.reorder:before, .add-cus-btn a.action.more:before, .block-reviews-dashboard a.action.more:before, 
+    .block-dashboard-orders a.action.more:before, #my-reviews-table a.action.more:before, .order-actions-toolbar a.action.more:before, 
+    .block-dashboard-info a.action.more:before, .block-dashboard-addresses a.action.more:before, .box-address-billing a.action.more:before, 
+    .box-address-shipping a.action.more:before, .block-addresses-list a.action.more:before, #my-orders-table a.action.more:before, 
+    #checkout_multishipping_form a.action.more:before, #checkout-step-shipping a.action.more:before, 
+    .box-billing-address a.action.more:before, .box-billing-method a.action.more:before, .box-shipping-address a.action.more:before, 
+    .box-shipping-method a.action.more:before, .table-order-review a.action.more:before, #shipping_method_form a.action.more:before, 
+    .add-cus-btn button.action.more:before, .block-reviews-dashboard button.action.more:before, 
+    .block-dashboard-orders button.action.more:before, #my-reviews-table button.action.more:before, 
+    .order-actions-toolbar button.action.more:before, .block-dashboard-info button.action.more:before, 
+    .block-dashboard-addresses button.action.more:before, .box-address-billing button.action.more:before, 
+    .box-address-shipping button.action.more:before, .block-addresses-list button.action.more:before, 
+    #my-orders-table button.action.more:before, #checkout_multishipping_form button.action.more:before, 
+    #checkout-step-shipping button.action.more:before, .box-billing-address button.action.more:before, 
+    .box-billing-method button.action.more:before, .box-shipping-address button.action.more:before, 
+    .box-shipping-method button.action.more:before, .table-order-review button.action.more:before, 
+    #shipping_method_form button.action.more:before, .add-cus-btn a.action.print:before, .block-reviews-dashboard a.action.print:before, 
+    .block-dashboard-orders a.action.print:before, #my-reviews-table a.action.print:before, .order-actions-toolbar a.action.print:before, 
+    .block-dashboard-info a.action.print:before, .block-dashboard-addresses a.action.print:before, 
+    .box-address-billing a.action.print:before, .box-address-shipping a.action.print:before, .block-addresses-list a.action.print:before, 
+    #my-orders-table a.action.print:before, #checkout_multishipping_form a.action.print:before, #checkout-step-shipping a.action.print:before, 
+    .box-billing-address a.action.print:before, .box-billing-method a.action.print:before, .box-shipping-address a.action.print:before, 
+    .box-shipping-method a.action.print:before, .table-order-review a.action.print:before, #shipping_method_form a.action.print:before, 
+    .add-cus-btn button.action.print:before, .block-reviews-dashboard button.action.print:before, 
+    .block-dashboard-orders button.action.print:before, #my-reviews-table button.action.print:before, 
+    .order-actions-toolbar button.action.print:before, .block-dashboard-info button.action.print:before, 
+    .block-dashboard-addresses button.action.print:before, .box-address-billing button.action.print:before, 
+    .box-address-shipping button.action.print:before, .block-addresses-list button.action.print:before, 
+    #my-orders-table button.action.print:before, #checkout_multishipping_form button.action.print:before, 
+    #checkout-step-shipping button.action.print:before, .box-billing-address button.action.print:before, 
+    .box-billing-method button.action.print:before, .box-shipping-address button.action.print:before, 
+    .box-shipping-method button.action.print:before, .table-order-review button.action.print:before, 
+    #shipping_method_form button.action.print:before, .add-cus-btn a.action.change-password:before, 
+    .block-reviews-dashboard a.action.change-password:before, .block-dashboard-orders a.action.change-password:before, 
+    #my-reviews-table a.action.change-password:before, .order-actions-toolbar a.action.change-password:before, 
+    .block-dashboard-info a.action.change-password:before, .block-dashboard-addresses a.action.change-password:before, 
+    .box-address-billing a.action.change-password:before, .box-address-shipping a.action.change-password:before, 
+    .block-addresses-list a.action.change-password:before, #my-orders-table a.action.change-password:before, 
+    #checkout_multishipping_form a.action.change-password:before, #checkout-step-shipping a.action.change-password:before, 
+    .box-billing-address a.action.change-password:before, .box-billing-method a.action.change-password:before, 
+    .box-shipping-address a.action.change-password:before, .box-shipping-method a.action.change-password:before, 
+    .table-order-review a.action.change-password:before, #shipping_method_form a.action.change-password:before, 
+    .add-cus-btn button.action.change-password:before, .block-reviews-dashboard button.action.change-password:before, 
+    .block-dashboard-orders button.action.change-password:before, #my-reviews-table button.action.change-password:before, 
+    .order-actions-toolbar button.action.change-password:before, .block-dashboard-info button.action.change-password:before, 
+    .block-dashboard-addresses button.action.change-password:before, .box-address-billing button.action.change-password:before,
+    .box-address-shipping button.action.change-password:before, .block-addresses-list button.action.change-password:before, 
+    #my-orders-table button.action.change-password:before, #checkout_multishipping_form button.action.change-password:before,
+    #checkout-step-shipping button.action.change-password:before, .box-billing-address button.action.change-password:before, 
+    .box-billing-method button.action.change-password:before, .box-shipping-address button.action.change-password:before, 
+    .box-shipping-method button.action.change-password:before, .table-order-review button.action.change-password:before, 
+    #shipping_method_form button.action.change-password:before, .add-cus-btn a.action.edit:before, 
+    .block-reviews-dashboard a.action.edit:before, .block-dashboard-orders a.action.edit:before, 
+    #my-reviews-table a.action.edit:before, .order-actions-toolbar a.action.edit:before, .block-dashboard-info a.action.edit:before, 
+    .block-dashboard-addresses a.action.edit:before, .box-address-billing a.action.edit:before, .box-address-shipping a.action.edit:before, 
+    .block-addresses-list a.action.edit:before, #my-orders-table a.action.edit:before, #checkout_multishipping_form a.action.edit:before,
+    #checkout-step-shipping a.action.edit:before, .box-billing-address a.action.edit:before, .box-billing-method a.action.edit:before, 
+    .box-shipping-address a.action.edit:before, .box-shipping-method a.action.edit:before, .table-order-review a.action.edit:before, 
+    #shipping_method_form a.action.edit:before, .add-cus-btn button.action.edit:before, .block-reviews-dashboard button.action.edit:before, 
+    .block-dashboard-orders button.action.edit:before, #my-reviews-table button.action.edit:before, 
+    .order-actions-toolbar button.action.edit:before, .block-dashboard-info button.action.edit:before, 
+    .block-dashboard-addresses button.action.edit:before, .box-address-billing button.action.edit:before, 
+    .box-address-shipping button.action.edit:before, .block-addresses-list button.action.edit:before, 
+    #my-orders-table button.action.edit:before, #checkout_multishipping_form button.action.edit:before, 
+    #checkout-step-shipping button.action.edit:before, .box-billing-address button.action.edit:before, 
+    .box-billing-method button.action.edit:before, .box-shipping-address button.action.edit:before, 
+    .box-shipping-method button.action.edit:before, .table-order-review button.action.edit:before, 
+    #shipping_method_form button.action.edit:before, .add-cus-btn a.action.delete:before, .block-reviews-dashboard a.action.delete:before, 
+    .block-dashboard-orders a.action.delete:before, #my-reviews-table a.action.delete:before, .order-actions-toolbar a.action.delete:before, 
+    .block-dashboard-info a.action.delete:before, .block-dashboard-addresses a.action.delete:before, 
+    .box-address-billing a.action.delete:before, .box-address-shipping a.action.delete:before, .block-addresses-list a.action.delete:before, 
+    #my-orders-table a.action.delete:before, #checkout_multishipping_form a.action.delete:before, 
+    #checkout-step-shipping a.action.delete:before, .box-billing-address a.action.delete:before, .box-billing-method a.action.delete:before, 
+    .box-shipping-address a.action.delete:before, .box-shipping-method a.action.delete:before, .table-order-review a.action.delete:before,
+    #shipping_method_form a.action.delete:before, .add-cus-btn button.action.delete:before, 
+    .block-reviews-dashboard button.action.delete:before, .block-dashboard-orders button.action.delete:before,
+    #my-reviews-table button.action.delete:before, .order-actions-toolbar button.action.delete:before, 
+    .block-dashboard-info button.action.delete:before, .block-dashboard-addresses button.action.delete:before, 
+    .box-address-billing button.action.delete:before, .box-address-shipping button.action.delete:before,
+    .block-addresses-list button.action.delete:before, #my-orders-table button.action.delete:before, 
+    #checkout_multishipping_form button.action.delete:before, #checkout-step-shipping button.action.delete:before, 
+    .box-billing-address button.action.delete:before, .box-billing-method button.action.delete:before, 
+    .box-shipping-address button.action.delete:before, .box-shipping-method button.action.delete:before, 
+    .table-order-review button.action.delete:before, #shipping_method_form button.action.delete:before, 
+    .add-cus-btn a.action.add:before, .block-reviews-dashboard a.action.add:before, .block-dashboard-orders a.action.add:before,
+    #my-reviews-table a.action.add:before, .order-actions-toolbar a.action.add:before, .block-dashboard-info a.action.add:before,
+    .block-dashboard-addresses a.action.add:before, .box-address-billing a.action.add:before, .box-address-shipping a.action.add:before, 
+    .block-addresses-list a.action.add:before, #my-orders-table a.action.add:before, #checkout_multishipping_form a.action.add:before,
+    #checkout-step-shipping a.action.add:before, .box-billing-address a.action.add:before, .box-billing-method a.action.add:before, 
+    .box-shipping-address a.action.add:before, .box-shipping-method a.action.add:before, .table-order-review a.action.add:before,
+    #shipping_method_form a.action.add:before, .add-cus-btn button.action.add:before, .block-reviews-dashboard button.action.add:before, 
+    .block-dashboard-orders button.action.add:before, #my-reviews-table button.action.add:before, 
+    .order-actions-toolbar button.action.add:before, .block-dashboard-info button.action.add:before, 
+    .block-dashboard-addresses button.action.add:before, .box-address-billing button.action.add:before, 
+    .box-address-shipping button.action.add:before, .block-addresses-list button.action.add:before, 
+    #my-orders-table button.action.add:before, #checkout_multishipping_form button.action.add:before, 
+    #checkout-step-shipping button.action.add:before, .box-billing-address button.action.add:before, 
+    .box-billing-method button.action.add:before, .box-shipping-address button.action.add:before,
+    .box-shipping-method button.action.add:before, .table-order-review button.action.add:before, 
+    #shipping_method_form button.action.add:before, .add-cus-btn a.action.action-select-shipping-item:before, 
+    .block-reviews-dashboard a.action.action-select-shipping-item:before, .block-dashboard-orders a.action.action-select-shipping-item:before,
+    #my-reviews-table a.action.action-select-shipping-item:before, .order-actions-toolbar a.action.action-select-shipping-item:before, 
+    .block-dashboard-info a.action.action-select-shipping-item:before, .block-dashboard-addresses a.action.action-select-shipping-item:before,
+    .box-address-billing a.action.action-select-shipping-item:before, .box-address-shipping a.action.action-select-shipping-item:before, 
+    .block-addresses-list a.action.action-select-shipping-item:before, #my-orders-table a.action.action-select-shipping-item:before, 
+    #checkout_multishipping_form a.action.action-select-shipping-item:before, #checkout-step-shipping a.action.action-select-shipping-item:before, 
+    .box-billing-address a.action.action-select-shipping-item:before, .box-billing-method a.action.action-select-shipping-item:before, 
+    .box-shipping-address a.action.action-select-shipping-item:before, .box-shipping-method a.action.action-select-shipping-item:before, 
+    .table-order-review a.action.action-select-shipping-item:before, #shipping_method_form a.action.action-select-shipping-item:before,
+    .add-cus-btn button.action.action-select-shipping-item:before, .block-reviews-dashboard button.action.action-select-shipping-item:before,
+    .block-dashboard-orders button.action.action-select-shipping-item:before, #my-reviews-table button.action.action-select-shipping-item:before, 
+    .order-actions-toolbar button.action.action-select-shipping-item:before, .block-dashboard-info button.action.action-select-shipping-item:before, 
+    .block-dashboard-addresses button.action.action-select-shipping-item:before, .box-address-billing button.action.action-select-shipping-item:before, 
+    .box-address-shipping button.action.action-select-shipping-item:before, .block-addresses-list button.action.action-select-shipping-item:before, 
+    #my-orders-table button.action.action-select-shipping-item:before, #checkout_multishipping_form button.action.action-select-shipping-item:before, 
+    #checkout-step-shipping button.action.action-select-shipping-item:before, .box-billing-address button.action.action-select-shipping-item:before, 
+    .box-billing-method button.action.action-select-shipping-item:before, .box-shipping-address button.action.action-select-shipping-item:before,
+    .box-shipping-method button.action.action-select-shipping-item:before, .table-order-review button.action.action-select-shipping-item:before, 
+    #shipping_method_form button.action.action-select-shipping-item:before, .add-cus-btn a.action.action-show-popup:before, 
+    .block-reviews-dashboard a.action.action-show-popup:before, .block-dashboard-orders a.action.action-show-popup:before, 
+    #my-reviews-table a.action.action-show-popup:before, .order-actions-toolbar a.action.action-show-popup:before, 
+    .block-dashboard-info a.action.action-show-popup:before, .block-dashboard-addresses a.action.action-show-popup:before, 
+    .box-address-billing a.action.action-show-popup:before, .box-address-shipping a.action.action-show-popup:before, 
+    .block-addresses-list a.action.action-show-popup:before, #my-orders-table a.action.action-show-popup:before, 
+    #checkout_multishipping_form a.action.action-show-popup:before, #checkout-step-shipping a.action.action-show-popup:before, 
+    .box-billing-address a.action.action-show-popup:before, .box-billing-method a.action.action-show-popup:before, 
+    .box-shipping-address a.action.action-show-popup:before, .box-shipping-method a.action.action-show-popup:before, 
+    .table-order-review a.action.action-show-popup:before, #shipping_method_form a.action.action-show-popup:before, 
+    .add-cus-btn button.action.action-show-popup:before, .block-reviews-dashboard button.action.action-show-popup:before, 
+    .block-dashboard-orders button.action.action-show-popup:before, #my-reviews-table button.action.action-show-popup:before, 
+    .order-actions-toolbar button.action.action-show-popup:before, .block-dashboard-info button.action.action-show-popup:before, 
+    .block-dashboard-addresses button.action.action-show-popup:before, .box-address-billing button.action.action-show-popup:before, 
+    .box-address-shipping button.action.action-show-popup:before, .block-addresses-list button.action.action-show-popup:before, 
+    #my-orders-table button.action.action-show-popup:before, #checkout_multishipping_form button.action.action-show-popup:before, 
+    #checkout-step-shipping button.action.action-show-popup:before, .box-billing-address button.action.action-show-popup:before, 
+    .box-billing-method button.action.action-show-popup:before, .box-shipping-address button.action.action-show-popup:before, 
+    .box-shipping-method button.action.action-show-popup:before, .table-order-review button.action.action-show-popup:before, 
+    #shipping_method_form button.action.action-show-popup:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .abs-actions-addto-gridlist:hover:before, 
+    .product-item-actions .actions-secondary > .action:hover:before, 
+    .table-comparison .wishlist.split.button > .action.split:hover:before, 
+    .product-items .wishlist.split.button > .action.split:hover:before, 
+    .products.list.items .action.towishlist:hover:before, 
+    .table-comparison .action.towishlist:hover:before, 
+    .product-info-main .product-social-links .product-addto-links .towishlist:hover:before, 
+    .product-info-main .product-social-links .product-addto-links .tocompare:hover:before, 
+    .product-info-main .product-social-links .mailto:hover:before {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .opc-progress-bar-item._active > span:before,
+    .opc-progress-bar-item._active:before {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .opc-wrapper .shipping-address-item.selected-item {
+    border-color: #<?php echo $theme_color; ?>;
+    }
+    .opc-wrapper .shipping-address-item.selected-item:after {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .products-grid .three_blocks .product-item .pro-effect .product-item-actions .actions-secondary .actions-primary .action.tocart:hover {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .products-grid .three_blocks .product-item .pro-effect .product-item-actions .actions-secondary .cus-addto:hover {
+    background: #<?php echo $theme_color; ?>;
+    }
+    .sidebar-main .block, .sidebar-additional .block {
+    border-top-color: #<?php echo $theme_color; ?>;
+    }
+    .sidebar-main a.action.clear:hover, .sidebar-additional a.action.clear:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .abs-action-button-as-link:hover, 
+    .abs-action-remove:hover, 
+    .cart-summary .block.giftcard .action.check:hover, 
+    .gift-options .actions-toolbar .action-cancel:hover, 
+    .table-comparison .wishlist.split.button > .action:hover, 
+    .product-items .wishlist.split.button > .action:hover, 
+    .paypal-button-widget .paypal-button:hover, 
+    .cart.table-wrapper .action.help.map:hover, 
+    .opc-wrapper .edit-address-link:hover, 
+    .opc-block-shipping-information .shipping-information-title .action-edit:hover, 
+    .action-auth-toggle:hover, 
+    .checkout-payment-method .payment-method-billing-address .action-cancel:hover, 
+    .checkout-payment-method .payment-method-billing-address .billing-address-details .action-edit-address:hover, 
+    .checkout-agreements-block .action-show:hover, 
+    .abs-add-fields .action.remove:hover, 
+    .form-giftregistry-share .action.remove:hover, 
+    .form-giftregistry-edit .action.remove:hover, 
+    .form-add-invitations .action.remove:hover, 
+    .form-create-return .action.remove:hover, 
+    .form.send.friend .action.remove:hover {
+    color: #<?php echo $theme_color; ?>;
+    }
+    .sidebar-main .block .block-content.filter-content .filter-current > .items > .item .action.remove:hover::after, 
+    .sidebar-additional .block .block-content.filter-content .filter-current > .items > .item .action.remove:hover::after {
+    color: #<?php echo $theme_color; ?>;
+    }
+    @media only screen and (max-width: 767px) {
+    .navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active) {
+    border-color: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-1 .nav-sections .nav-sections-item-title, header.page-header.htype-2 .nav-sections .nav-sections-item-title, header.page-header.htype-3 .nav-sections .nav-sections-item-title {
+    background: #<?php echo $theme_color; ?>;
+    }
+    header.page-header.htype-2 .minicart-wrapper .action.showcart {
+    background: transparent;
+    }
+    header.page-header.htype-6 .minicart-wrapper .action.showcart {
+    background: transparent;
+    }
+    header.page-header.htype-7 .minicart-wrapper .action.showcart {
+    background: transparent;
+    }
+    header.page-header.htype-3 .minicart-wrapper .action.showcart {
+    background: transparent;
+    }
+    }
+
+<?php } ?>
+
+<?php if ($header_use_custom) { ?>
+    <?php if ($header_background_color != '' || $header_background_image != '' || $custom_header_style != '') { ?>
+        .page-header.htype-1 {
+        <?php if ($header_background_color != '') { ?>
+            background: #<?php echo $header_background_color; ?>;
+        <?php } ?>   
+        <?php if ($header_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $header_background_image; ?>);
+            <?php if ($custom_header_style != '') { ?>
+                <?php echo $custom_header_style; ?>
+            <?php } ?>
+        <?php } else if ($header_background_color != '') { ?>
+            background-image: none;
+        <?php } ?>
+        }
+        .page-header.htype-2 {
+        <?php if ($header_background_color != '') { ?>
+            background: #<?php echo $header_background_color; ?>;
+        <?php } ?>   
+        <?php if ($header_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $header_background_image; ?>);
+            <?php if ($custom_header_style != '') { ?>
+                <?php echo $custom_header_style; ?>
+            <?php } ?>
+        <?php } else if ($header_background_color != '') { ?>
+            background-image: none;
+        <?php } ?>
+        }
+        .page-header.htype-3 {
+        <?php if ($header_background_color != '') { ?>
+            background: #<?php echo $header_background_color; ?>;
+        <?php } ?>   
+        <?php if ($header_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $header_background_image; ?>);
+            <?php if ($custom_header_style != '') { ?>
+                <?php echo $custom_header_style; ?>
+            <?php } ?>
+        <?php } else if ($header_background_color != '') { ?>
+            background-image: none;
+        <?php } ?>
+        }
+        .cms-index-index .page-header.htype-6, .page-header.htype-6 {
+        <?php if ($header_background_color != '') { ?>
+            background: #<?php echo $header_background_color; ?>;
+        <?php } ?>   
+        <?php if ($header_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $header_background_image; ?>);
+            <?php if ($custom_header_style != '') { ?>
+                <?php echo $custom_header_style; ?>
+            <?php } ?>
+        <?php } else if ($header_background_color != '') { ?>
+            background-image: none;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($header_top_background != '' || $header_top_bottom_border_color != '') { ?>
+        .page-header.htype-1 .panel.wrapper {
+        <?php if ($header_top_background != '') { ?>
+            background: #<?php echo $header_top_background; ?>;
+        <?php } ?>
+        <?php if ($header_top_bottom_border_color != '') { ?>
+            border-bottom-color: #<?php echo $header_top_bottom_border_color; ?>;
+        <?php } ?>
+        }
+        .page-header.htype-2 .panel.wrapper {
+        <?php if ($header_top_background != '') { ?>
+            background: #<?php echo $header_top_background; ?>;
+        <?php } ?>
+        }
+        .page-header.htype-3 .panel.wrapper {
+        <?php if ($header_top_background != '') { ?>
+            background: #<?php echo $header_top_background; ?>;
+        <?php } ?>
+        <?php if ($header_top_bottom_border_color != '') { ?>
+            border-bottom-color: #<?php echo $header_top_bottom_border_color; ?>;
+        <?php } ?>
+        }
+        .page-header.htype-6 .panel.wrapper {
+        <?php if ($header_top_background != '') { ?>
+            background: #<?php echo $header_top_background; ?>;
+        <?php } ?>
+        }
+        .page-header.htype-7 .panel.wrapper {
+        <?php if ($header_top_background != '') { ?>
+            background: #<?php echo $header_top_background; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($header_top_links_sprt_border != '') { ?>
+        header.page-header.htype-1 #switcher-language-trigger > strong {
+        border-left-color: #<?php echo $header_top_links_sprt_border; ?>;
+        }
+        .page-header .panel.wrapper .header.panel .header.links > li > a {
+        border-left-color: #<?php echo $header_top_links_sprt_border; ?>;
+        }
+        header.page-header.htype-6 #switcher-language-trigger > strong {
+        border-left-color: #<?php echo $header_top_links_sprt_border; ?>;
+        }
+        header.page-header.htype-7 #switcher-language-trigger > strong {
+        border-left-color: #<?php echo $header_top_links_sprt_border; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_top_link_color != '') { ?>
+        header.page-header.htype-1 #switcher-language-trigger, header.page-header.htype-1 #switcher-currency-trigger {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        .page-header .panel.wrapper .header.panel .header.links > li.welcome {
+        color: #<?php echo $header_top_link_color; ?> !important;
+        }
+        .page-header .panel.wrapper .header.panel .header.links > li > a {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-2 #switcher-language-trigger, header.page-header.htype-2 #switcher-currency-trigger {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-2 .panel.wrapper .header.panel .header.links > li.welcome {
+        color: #<?php echo $header_top_link_color; ?> !important;
+        }
+        header.page-header.htype-2 .panel.wrapper .header.panel .header.links > li > a {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-3 #switcher-language-trigger, header.page-header.htype-3 #switcher-currency-trigger {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-3 .panel.wrapper .header.panel .header.links > li.welcome {
+        color: #<?php echo $header_top_link_color; ?> !important;
+        }
+        header.page-header.htype-3 .panel.wrapper .header.panel .header.links > li > a {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-6 #switcher-language-trigger, header.page-header.htype-6 #switcher-currency-trigger {
+        color: #<?php echo $header_top_link_color; ?> ;
+        }
+        header.page-header.htype-6 .panel.wrapper .header.panel .header.links > li.welcome {
+        color: #<?php echo $header_top_link_color; ?> !important;
+        }
+        header.page-header.htype-6 .panel.wrapper .header.panel .header.links > li > a {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+        header.page-header.htype-7 #switcher-language-trigger, header.page-header.htype-7 #switcher-currency-trigger {
+        color: #<?php echo $header_top_link_color; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_top_link_color_hover != '') { ?>
+        header.page-header.htype-1 #switcher-language-trigger:hover, header.page-header.htype-1 #switcher-currency-trigger:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        a:hover, .alink:hover, .page-header .switcher .options ul.dropdown li:hover > a {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        .page-header .panel.wrapper .header.panel .header.links > li > a:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-2 #switcher-language-trigger:hover, header.page-header.htype-2 #switcher-currency-trigger:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-2 .switcher .options ul.dropdown li:hover > a {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-2 .panel.wrapper .header.panel .header.links > li > a:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-3 #switcher-language-trigger:hover, header.page-header.htype-3 #switcher-currency-trigger:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-3 .switcher .options ul.dropdown li:hover > a {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-3 .panel.wrapper .header.panel .header.links > li > a:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-6 #switcher-language-trigger:hover, header.page-header.htype-6 #switcher-currency-trigger:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-6 .switcher .options ul.dropdown li:hover > a {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-6 .panel.wrapper .header.panel .header.links > li > a:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+        header.page-header.htype-7 #switcher-language-trigger:hover, header.page-header.htype-7 #switcher-currency-trigger:hover {
+        color: #<?php echo $header_top_link_color_hover; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_search_background != '' || $header_search_border_color != '' || $header_search_txtcolor != '') { ?>
+        header.page-header.htype-1 .block-search #search {
+        <?php if ($header_search_background != '') { ?>
+            background: #<?php echo $header_search_background; ?>;
+        <?php } ?>
+        <?php if ($header_search_border_color != '') { ?>
+            border-color: #<?php echo $header_search_border_color; ?>;
+        <?php } ?>
+        <?php if ($header_search_txtcolor != '') { ?>
+            color: #<?php echo $header_search_txtcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-2 .block-search .block.block-content .field.search .control #search {
+        <?php if ($header_search_background != '') { ?>
+            background: #<?php echo $header_search_background; ?>;
+        <?php } ?>
+        <?php if ($header_search_border_color != '') { ?>
+            border-color: #<?php echo $header_search_border_color; ?>;
+        <?php } ?>
+        <?php if ($header_search_txtcolor != '') { ?>
+            color: #<?php echo $header_search_txtcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-3 .block-search .block.block-content .field.search .control #search {
+        <?php if ($header_search_txtcolor != '') { ?>
+            color: #<?php echo $header_search_txtcolor; ?>;
+        <?php } ?>
+        <?php if ($header_search_border_color != '') { ?>
+            border-bottom-color: #<?php echo $header_search_border_color; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-6 .block-search .block.block-content .field.search .control #search {
+        <?php if ($header_search_background != '') { ?>
+            background: #<?php echo $header_search_background; ?>;
+        <?php } ?>
+        <?php if ($header_search_border_color != '') { ?>
+            border-color: #<?php echo $header_search_border_color; ?>;
+        <?php } ?>
+        <?php if ($header_search_txtcolor != '') { ?>
+            color: #<?php echo $header_search_txtcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-7 .block-search .block.block-content .field.search .control #search {
+        <?php if ($header_search_background != '') { ?>
+            background: #<?php echo $header_search_background; ?>;
+        <?php } ?>
+        <?php if ($header_search_border_color != '') { ?>
+            border-color: #<?php echo $header_search_border_color; ?>;
+        <?php } ?>
+        <?php if ($header_search_txtcolor != '') { ?>
+            color: #<?php echo $header_search_txtcolor; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($header_search_txtcolor != '') { ?>
+        .block-search input::-moz-placeholder {
+        color: #<?php echo $header_search_txtcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_search_btn_background != '') { ?>
+        header.page-header.htype-1 .block-search .action.search {
+        background: #<?php echo $header_search_btn_background; ?> !important;
+        }
+        header.page-header.htype-2 .block-search .block.block-content .action.search {
+        background: #<?php echo $header_search_btn_background; ?> !important;
+        }        
+        header.page-header.htype-6 .block-search .block.block-content .action.search {
+        background: #<?php echo $header_search_btn_background; ?> !important;
+        }
+        header.page-header.htype-7 .block-search .block.block-content .action.search {
+        background: #<?php echo $header_search_btn_background; ?> !important;
+        }
+    <?php } ?>
+    <?php if ($header_search_btn_iconcolor != '') { ?>
+        header.page-header.htype-1 .block-search .action.search::before {
+        color: #<?php echo $header_search_btn_iconcolor; ?> !important;
+        }
+        header.page-header.htype-2 .block-search .block.block-content .action.search::before {
+        color: #<?php echo $header_search_btn_iconcolor; ?> !important;
+        }
+        header.page-header.htype-3 .block-search .block.block-content .action.search::before {
+        color: #<?php echo $header_search_btn_iconcolor; ?> !important;
+        }
+        header.page-header.htype-6 .block-search .block.block-content .action.search::before {
+        color: #<?php echo $header_search_btn_iconcolor; ?> !important;
+        }
+        header.page-header.htype-7 .block-search .block.block-content .action.search::before {
+        color: #<?php echo $header_search_btn_iconcolor; ?> !important;
+        }
+    <?php } ?>
+    <?php if ($header_search_toggle_iconcolor != '') { ?>
+        header.page-header.htype-7 .block-search .s-icon {
+        color: #<?php echo $header_search_toggle_iconcolor; ?>;
+        }
+        header.page-header.htype-6 .block-search .s-icon {
+        color: #<?php echo $header_search_toggle_iconcolor; ?>;
+        }
+        header.page-header.htype-2 .block-search .s-icon {
+        color: #<?php echo $header_search_toggle_iconcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_search_toggle_icon_background != '') { ?>
+        header.page-header.htype-7 .block-search .s-icon {
+        background: #<?php echo $header_search_toggle_icon_background; ?>;
+        }
+        header.page-header.htype-6 .block-search .s-icon {
+        background: #<?php echo $header_search_toggle_icon_background; ?>;
+        }
+        header.page-header.htype-2 .block-search .s-icon {
+        background: #<?php echo $header_search_toggle_icon_background; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_menu_background != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation {
+        background: #<?php echo $header_menu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections {
+        background: #<?php echo $header_menu_background; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_menu_border_top_color != '') { ?>
+        .page-header.htype-2 .header.content .h-inner {
+        border-bottom-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        border-top-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        border-top-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        border-top-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        border-top-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        border-top-color: #<?php echo $header_menu_border_top_color; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_menu_link_color != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $header_menu_link_color; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $header_menu_link_color; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $header_menu_link_color; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $header_menu_link_color; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $header_menu_link_color; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_menu_link_color_hover != '' || $header_menu_link_background_hover != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus {
+        <?php if ($header_menu_link_color_hover != '') { ?>
+            color: #<?php echo $header_menu_link_color_hover; ?>;
+        <?php } ?>
+        <?php if ($header_menu_link_background_hover != '') { ?>
+            background: #<?php echo $header_menu_link_background_hover; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($header_menu_link_color_hover != '') { ?>
+            color: #<?php echo $header_menu_link_color_hover; ?>;
+        <?php } ?>
+        <?php if ($header_menu_link_background_hover != '') { ?>
+            background: #<?php echo $header_menu_link_background_hover; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top:hover,
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top.ui-state-focus,
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($header_menu_link_color_hover != '') { ?>
+            color: #<?php echo $header_menu_link_color_hover; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($header_menu_link_color_hover != '') { ?>
+            color: #<?php echo $header_menu_link_color_hover; ?>;
+        <?php } ?>
+        <?php if ($header_menu_link_background_hover != '') { ?>
+            background: #<?php echo $header_menu_link_background_hover; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($header_menu_link_color_hover != '') { ?>
+            color: #<?php echo $header_menu_link_color_hover; ?>;
+        <?php } ?>
+        <?php if ($header_menu_link_background_hover != '') { ?>
+            background: #<?php echo $header_menu_link_background_hover; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($header_menu_link_color_active != '' || $header_menu_link_background_active != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($header_menu_link_color_active != '') { ?>
+            color: #<?php echo $header_menu_link_color_active; ?>;
+        <?php } ?>
+        <?php if ($header_menu_link_background_active != '') { ?>
+            background: #<?php echo $header_menu_link_background_active; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($header_menu_link_color_active != '') { ?>
+            color: #<?php echo $header_menu_link_color_active; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0.active > a.level-top {
+        <?php if ($header_menu_link_color_active != '') { ?>
+            color: #<?php echo $header_menu_link_color_active; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($header_menu_link_color_active != '') { ?>
+            color: #<?php echo $header_menu_link_color_active; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($header_menu_link_color_active != '') { ?>
+            color: #<?php echo $header_menu_link_color_active; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($header_submenu_background != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $header_submenu_background; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_submenu_link_color != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $header_submenu_link_color; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $header_submenu_link_color; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $header_submenu_link_color; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $header_submenu_link_color; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $header_submenu_link_color; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_submenu_link_color_hover != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $header_submenu_link_color_hover; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $header_submenu_link_color_hover; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $header_submenu_link_color_hover; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $header_submenu_link_color_hover; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus {
+        color: #<?php echo $header_submenu_link_color_hover; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_submenu_link_color_active != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $header_submenu_link_color_active; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $header_submenu_link_color_active; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $header_submenu_link_color_active; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $header_submenu_link_color_active; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $header_submenu_link_color_active; ?>;
+        }
+
+    <?php } ?>
+    <?php if ($header_minicart_background != '') { ?>
+        header.page-header.htype-1 .minicart-wrapper {
+        background: #<?php echo $header_minicart_background; ?>;
+        }
+        header.page-header.htype-2 .minicart-wrapper .action.showcart {
+        background: #<?php echo $header_minicart_background; ?>;
+        }
+        header.page-header.htype-3 .minicart-wrapper .action.showcart {
+        background: #<?php echo $header_minicart_background; ?>;
+        }
+        header.page-header.htype-6 .minicart-wrapper .action.showcart {
+        background: #<?php echo $header_minicart_background; ?>;
+        }
+        header.page-header.htype-7 .minicart-wrapper .action.showcart {
+        background: #<?php echo $header_minicart_background; ?>;
+        }
+    <?php } ?>
+    <?php if ($header_minicart_iconcolor != '') { ?>
+        header.page-header.htype-1 .minicart-wrapper .action.showcart:before {
+        color: #<?php echo $header_minicart_iconcolor; ?>;
+        }
+        header.page-header.htype-2 .minicart-wrapper .action.showcart::before {
+        color: #<?php echo $header_minicart_iconcolor; ?>;
+        }
+        header.page-header.htype-3 .minicart-wrapper .action.showcart::before {
+        color: #<?php echo $header_minicart_iconcolor; ?>;
+        }
+        header.page-header.htype-6 .minicart-wrapper .action.showcart::before {
+        color: #<?php echo $header_minicart_iconcolor; ?>;
+        }
+        header.page-header.htype-7 .minicart-wrapper .action.showcart::before {
+        color: #<?php echo $header_minicart_iconcolor; ?>;
+        }
+    <?php } ?>
+
+<?php } ?>
+
+<?php if ($footer_use_custom) { ?>
+    <?php if ($footer_top_background != '' || $footer_top_background_image != '' || $custom_footer_style != '') { ?>
+        .cp-newsletter.back-main {
+        <?php if ($footer_top_background != '') { ?>
+            background: #<?php echo $footer_top_background; ?>;
+        <?php } ?>   
+        <?php if ($footer_top_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $footer_top_background_image; ?>);
+            <?php if ($custom_footer_style != '') { ?>
+                <?php echo $custom_footer_style; ?>
+            <?php } ?>
+        <?php } else if ($footer_top_background != '') { ?>
+            background-image: none;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_top_txtcolor != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-left .news-block-title h2 {
+        color: #<?php echo $footer_top_txtcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($footer_newsletter_border_color != '' || $footer_newsletter_txtcolor != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-left #newsletter-validate-detail .newsletter-input #newsletter,
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent .newsletter-input .control #newsletter {
+        <?php if ($footer_newsletter_txtcolor != '') { ?>
+            color: #<?php echo $footer_newsletter_txtcolor; ?>;
+        <?php } ?>
+        <?php if ($footer_newsletter_border_color != '') { ?>
+            border-color: #<?php echo $footer_newsletter_border_color; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_newsletter_txtcolor != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-left #newsletter-validate-detail .newsletter-input #newsletter::-moz-placeholder, 
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent .newsletter-input .control #newsletter::-moz-placeholder {
+        color: #<?php echo $footer_newsletter_txtcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($footer_newsletter_btn_iconcolor != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-left #newsletter-validate-detail .subscribe.btn {
+        <?php if ($footer_newsletter_btn_iconcolor != '') { ?>
+            color: #<?php echo $footer_newsletter_btn_iconcolor; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_newsletter_btn_iconcolor_hover != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-left #newsletter-validate-detail .subscribe.btn:hover {
+        <?php if ($footer_newsletter_btn_iconcolor_hover != '') { ?>
+            color: #<?php echo $footer_newsletter_btn_iconcolor_hover; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_socials_icon_border_color != '' || $footer_socials_icon_color != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-right .newsletter-block-right-inner .social-block .cp-social li a {
+        <?php if ($footer_socials_icon_color != '') { ?>
+            color: #<?php echo $footer_socials_icon_color; ?>;
+        <?php } ?>
+        <?php if ($footer_socials_icon_border_color != '') { ?>
+            border-color: #<?php echo $footer_socials_icon_border_color; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_socials_icon_border_color_hover != '' || $footer_socials_icon_color_hover != '') { ?>
+        .cp-newsletter .newsletter-block .newsletter-block-right .newsletter-block-right-inner .social-block .cp-social li a:hover {
+        <?php if ($footer_socials_icon_color_hover != '') { ?>
+            color: #<?php echo $footer_socials_icon_color_hover; ?>;
+        <?php } ?>
+        <?php if ($footer_socials_icon_border_color_hover != '') { ?>
+            border-color: #<?php echo $footer_socials_icon_border_color_hover; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_middle_background != '' || $footer_middle_background_image != '') { ?>
+        .page-footer {
+        <?php if ($footer_middle_background != '') { ?>
+            background: #<?php echo $footer_middle_background; ?>;
+            <?php if ($custom_footer_middle_style != '') { ?>
+                <?php echo $custom_footer_middle_style; ?>
+            <?php } ?>
+        <?php } ?>   
+        <?php if ($footer_middle_background_image != '') { ?>
+            background-image: url(<?php echo $mediaurl . $footer_middle_background_image; ?>);
+            <?php if ($custom_footer_middle_style != '') { ?>
+                <?php echo $custom_footer_middle_style; ?>
+            <?php } ?>
+        <?php } else if ($footer_middle_background != '') { ?>
+            background-image: none;
+            <?php if ($custom_footer_middle_style != '') { ?>
+                <?php echo $custom_footer_middle_style; ?>
+            <?php } ?>
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($footer_middle_title_color != '') { ?>
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-ftitle h3 {
+        color: #<?php echo $footer_middle_title_color; ?>;
+        }
+    <?php } ?>
+
+    <?php if ($footer_middle_txtcolor != '') { ?>
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent ul li a {
+        color: #<?php echo $footer_middle_txtcolor; ?>;
+        }
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent ul li {
+        color: #<?php echo $footer_middle_txtcolor; ?>;
+        }
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent.cp-service-main .s-icon {
+        color: #<?php echo $footer_middle_txtcolor; ?>;
+        }
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent.cp-service-main .s-content {
+        color: #<?php echo $footer_middle_txtcolor; ?>;
+        }
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent.cp-service-main {
+        border-color: #<?php echo $footer_middle_txtcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($footer_middle_txtcolor_hover != '') { ?>
+        .page-footer .cp-footer-container .cp-footer-main .cp-fblock .cp-fcontent ul li a:hover {
+        color: #<?php echo $footer_middle_txtcolor_hover; ?>;
+        }
+    <?php } ?>
+    <?php if ($footer_bottom_background != '' || $footer_bottom_txtcolor != '' || $footer_bottom_border_color != '') { ?>
+        .footer-copyright {
+        <?php if ($footer_bottom_txtcolor != '') { ?>
+            color: #<?php echo $footer_bottom_txtcolor; ?>;
+        <?php } ?>
+        <?php if ($footer_bottom_background != '') { ?>
+            background: #<?php echo $footer_bottom_background; ?>;
+        <?php } ?>
+        <?php if ($footer_bottom_border_color != '') { ?>
+            border-top-color: #<?php echo $footer_bottom_border_color; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+<?php } ?>
+<?php if ($custom_theme_style != '') { ?>
+    <?php echo $custom_theme_style; ?>
+<?php } ?>

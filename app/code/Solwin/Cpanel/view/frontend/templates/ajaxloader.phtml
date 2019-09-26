@@ -1,0 +1,16 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+
+$enableLoader = $helper->getCpanelConfigValue('cpanelsection/loadergroup/enable_loader');
+$loaDerdisplayOn = $helper->getCpanelConfigValue('cpanelsection/loadergroup/loader_displayon');
+$isHomePage = $helper->getIsHomePage();
+?>
+<?php if ($enableLoader) { ?>
+    <?php if ($loaDerdisplayOn == 'homep') { ?>
+        <?php if ($isHomePage) { ?>
+            <div class="cus-ajax-loader"></div>
+        <?php } ?>
+    <?php } else { ?>
+        <div class="cus-ajax-loader"></div>
+    <?php } ?>
+<?php } ?>

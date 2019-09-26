@@ -1,0 +1,27 @@
+<?php
+/**
+ * Solwin Infotech
+ * Solwin Flickr Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_Flickr
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+$helper = $this->helper('\Solwin\Flickr\Helper\Data');
+$enable = $helper->getConfig('flickrsection/flickrgroup/active');
+$flickrId = $helper->getConfig('flickrsection/flickrgroup/flickerid');
+$count = $this->getData('numberimage');
+$display = $this->getData('display');
+?>
+
+<div class="cp-ftitle">
+    <h3><?php echo $this->getData('title'); ?></h3>
+</div>
+<div class="cp-fcontent">
+    <div class="flickr" data-effect="pulse">
+        <div class="flickr_photos_wrap">
+            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=<?php echo $count; ?>&amp;display=<?php echo $display; ?>&amp;layout=y&amp;source=user&amp;user=<?php echo $flickrId; ?>"></script>
+        </div>
+    </div>
+</div>

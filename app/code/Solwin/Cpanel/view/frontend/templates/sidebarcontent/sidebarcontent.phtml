@@ -1,0 +1,15 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\CssSetting');
+$sidebarContentOne = $helper->getCpanelDesignConfig('cpanelsection/homemaincontent/sidebar_content_1');
+$sidebarContentTwo = $helper->getCpanelDesignConfig('cpanelsection/homemaincontent/sidebar_content_2');
+?>
+<?php
+if ($sidebarContentOne != '') {
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($sidebarContentOne)->toHtml();
+}
+?>
+<?php
+if ($sidebarContentTwo != '') {
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($sidebarContentTwo)->toHtml();
+}
+?>

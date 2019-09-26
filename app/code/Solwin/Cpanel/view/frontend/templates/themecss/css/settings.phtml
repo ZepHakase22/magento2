@@ -1,0 +1,122 @@
+/**
+* WARNING: Do not change this file. Your changes will be lost.
+* <?php echo date("Y-m-d H:i:s"); ?>
+*/
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\CssSetting');
+$themelayout = $helper->getCpanelStoreConfig('cpanelsection/themegeneral/themelayout');
+$theme_max_width = $helper->getCpanelStoreConfig('cpanelsection/themegeneral/max_width');
+$box_color = $helper->getCpanelStoreConfig('cpanelsection/themegeneral/box_color');
+$box_back_img = $helper->getCpanelStoreConfig('cpanelsection/themegeneral/box_imgage');
+$box_style = $helper->getCpanelStoreConfig('cpanelsection/themegeneral/box_style');
+$stick_footer_bottom = $helper->getCpanelStoreConfig('cpanelsection/footergroup/stick_footer_bottom');
+
+/* product list page */
+$new_label_background = $helper->getCpanelStoreConfig('cpanelsection/listpagegroup/new_label_background');
+$new_label_txtcolor = $helper->getCpanelStoreConfig('cpanelsection/listpagegroup/new_label_txtcolor');
+$sale_label_background = $helper->getCpanelStoreConfig('cpanelsection/listpagegroup/sale_label_background');
+$sale_label_txtcolor = $helper->getCpanelStoreConfig('cpanelsection/listpagegroup/sale_label_txtcolor');
+
+$title_bottom_image = $helper->getCpanelStoreConfig('cpanelsection/homemaincontent/title_bottom_image');
+
+$enableLoader = $helper->getCpanelStoreConfig('cpanelsection/loadergroup/enable_loader');
+$loaderImage = $helper->getCpanelStoreConfig('cpanelsection/loadergroup/loader_image');
+
+$mediaurl = $helper->getMediaUrl() . 'themecss/box/';
+?>
+
+<?php if ($title_bottom_image != '') { ?>
+    .block-title-main .title-img > span {
+    background: transparent url(<?php echo $mediaurl . $title_bottom_image; ?>) no-repeat scroll center center;
+    }
+<?php } ?>
+<?php
+if ($themelayout == 'box') {
+    $theme_width = '1280px';
+    if ($theme_max_width == '1170') {
+        $theme_width = '1170px';
+    } else {
+        $theme_width = '1280px';
+    }
+    ?>
+    body {
+    float: left;
+    width:100%;
+    <?php if ($box_color != '') { ?>
+        background: #<?php echo $box_color; ?>;
+    <?php } else { ?>
+        background: #000000;
+    <?php } ?>   
+    <?php if ($box_back_img != '') { ?>
+        background-image: url(<?php echo $mediaurl . $box_back_img; ?>);
+        <?php if ($box_style != '') { ?>
+            <?php echo $box_style; ?>
+        <?php } ?>
+    <?php } else if ($box_color != '') { ?>
+        background-image: none;
+    <?php } ?>
+    }
+
+    .page-wrapper {
+    margin: 0 auto;
+    max-width: <?php echo $theme_width ?>;
+    width:100%;
+    background: #ffffff;
+    position: relative;
+    }
+    .page-wrapper .page-header > .page-main {
+    padding: 0;
+    }
+    header.page-header.htype-1 .minicart-wrapper {
+    right: 0;
+    }
+    .flexslider {
+    margin: 0 0 10px;
+    }
+    @media only screen and (max-width: 767px) {
+    .nav-sections {
+    margin: 0;
+    }
+    }
+<?php } ?>
+<?php if ($theme_max_width == '1170') { ?>
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper > .widget, .page-wrapper > .page-bottom, .block.category.event, .top-container, .page-main {
+    max-width: 1170px;
+    }
+<?php } ?>
+<?php if ($stick_footer_bottom) { ?>
+    .cms-index-index .footer-copyright {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    }
+<?php } ?>
+<?php if ($new_label_background != '' || $new_label_txtcolor != '') { ?>
+    .new-lbl {
+    <?php if ($new_label_background != '') { ?>
+        background: #<?php echo $new_label_background; ?>;
+    <?php } ?>
+    <?php if ($new_label_txtcolor != '') { ?>
+        color: #<?php echo $new_label_txtcolor; ?>;
+    <?php } ?>
+    } 
+<?php } ?>
+<?php if ($sale_label_background != '' || $sale_label_txtcolor != '') { ?>
+    .sale-lbl {
+    <?php if ($sale_label_background != '') { ?>
+        background: #<?php echo $sale_label_background; ?>;
+    <?php } ?>
+    <?php if ($sale_label_txtcolor != '') { ?>
+        color: #<?php echo $sale_label_txtcolor; ?>;
+    <?php } ?>
+    }
+<?php } ?>
+<?php if ($enableLoader) { ?>
+    <?php if ($loaderImage != '') { ?>
+        .cus-ajax-loader {
+        background: #ffffff url("<?php echo $mediaurl . $loaderImage; ?>") no-repeat scroll center center;
+        }
+    <?php } ?>
+<?php } ?>

@@ -1,0 +1,5 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$callnow_blockid = $helper->getCpanelConfigValue('cpanelsection/headergroup/static_block');
+
+echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($callnow_blockid)->toHtml();

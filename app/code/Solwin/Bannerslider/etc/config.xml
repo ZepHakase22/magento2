@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <bannersection>
+            <bannergroup>
+                <active>1</active>
+                <animation>slide</animation>
+                <controlNav>false</controlNav>
+                <slideshowSpeed>4000</slideshowSpeed>
+                <direction>horizontal</direction>
+                <animationLoop>1</animationLoop>
+                <smoothHeight>1</smoothHeight>
+                <startAt>0</startAt>
+                <slideshow>1</slideshow>
+                <animationSpeed>2000</animationSpeed>
+                <initDelay>4000</initDelay>
+                <pauseOnHover>1</pauseOnHover>
+                <touch>1</touch>
+                <directionNav>1</directionNav>
+                <keyboard>1</keyboard>
+                <mousewheel>0</mousewheel>
+                <prevText><![CDATA[<i class="fa fa-angle-left"></i>]]></prevText>
+                <nextText><![CDATA[<i class="fa fa-angle-right"></i>]]></nextText>
+            </bannergroup>
+        </bannersection>
+    </default>
+</config>

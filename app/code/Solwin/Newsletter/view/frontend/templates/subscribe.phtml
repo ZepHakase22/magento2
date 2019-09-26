@@ -1,0 +1,789 @@
+<?php
+$helper = $this->helper('Solwin\Newsletter\Helper\Data');
+$ishome = $helper->getIsHomePage();
+$enable = $helper->getEnableNewsletterPopup();
+$mediasocialurl = $helper->getMediaUrl() . 'social/';
+?>
+
+<?php if ($ishome && $enable) { ?>
+    <?php
+    $showmaintitle = $helper->getShownewslettertitle();
+    $maintitle = $helper->getNewslettertitle();
+    $Defaultmaintitlesettings = $helper->getDefaultmaintitlesettings();
+    $Maintitlefontsize = $helper->getMaintitlefontsize();
+    $Maintitletextcolor = $helper->getMaintitletextcolor();
+
+    $Enablecustommessage = $helper->getEnablecustommessage();
+    $custommessage = $helper->getNewslettercustommessage();
+    $Defaultmessagesettings = $helper->getDefaultmessagesettings();
+    $Messagefontsize = $helper->getMessagefontsize();
+    $Messagetextcolor = $helper->getMessagetextcolor();
+
+    $buttontext = $helper->getNewsletterbuttontext();
+    $Defaultbuttonsettings = $helper->getDefaultbuttonsettings();
+    $Buttonbackground = $helper->getButtonbackground();
+    $Buttonbackgroundhover = $helper->getButtonbackgroundhover();
+    $Buttontextcolor = $helper->getButtontextcolor();
+    $Buttontextcolorhover = $helper->getButtontextcolorhover();
+
+    $Enablecheckbox = $helper->getEnablecheckbox();
+    $Checkboxtext = $helper->getCheckboxtext();
+
+    $Enablenewsletterimage = $helper->getEnablenewsletterimage();
+    $upload_newsletter_image = '';
+    if ($Enablenewsletterimage) {
+        $newsletterImage = $helper->getNewsletterimage();
+        if ($newsletterImage != '') {
+            $upload_newsletter_image = $mediasocialurl . $newsletterImage;
+        }
+    }
+
+    $Newsletterimageposition = $helper->getNewsletterimageposition();
+    $EnableBackgroundimage = $helper->getEnableBackgroundimage();
+    $Newsletterbackgroundimage = '';
+    if ($EnableBackgroundimage) {
+        $newsletterBackImage = $helper->getNewsletterbackgroundimage();
+        if ($newsletterBackImage != '') {
+            $Newsletterbackgroundimage = $mediasocialurl . $newsletterBackImage;
+        }
+    }
+
+    $Popupwidth = $helper->getPopupwidth();
+    $Popupheight = $helper->getPopupheight();
+    $Popuppadding = $helper->getPopuppadding();
+    $Enablepopupborder = $helper->getEnablepopupborder();
+    $Popupbordercolor = $helper->getPopupbordercolor();
+    $Openeffect = $helper->getOpeneffect();
+    $Openspeed = $helper->getOpenspeed();
+    $Openmethod = $helper->getOpenmethod();
+    $Closeeffect = $helper->getCloseeffect();
+    $Closespeed = $helper->getClosespeed();
+    $Closemethod = $helper->getClosemethod();
+    $Popupdelay = $helper->getPopupdelay();
+    $Cookieexptime = $helper->getCookieexptime();
+    $Popupshowonce = $helper->getPopupshowonce();
+
+    $Enablesocial = $helper->getEnablesocial();
+    $Socialtitle = $helper->getSocialtitle();
+    $Enablesocialtitlesettings = $helper->getEnablesocialtitlesettings();
+    $Socialtitlefontsize = $helper->getSocialtitlefontsize();
+    $Socialtitletextcolor = $helper->getSocialtitletextcolor();
+
+    $Enablefacebook = $helper->getEnablefacebook();
+    $Facebooklink = $helper->getFacebooklink();
+    $Enablfbsettings = $helper->getEnablfbsettings();
+    $Fbbackground = $helper->getFbbackground();
+    $Fbbackgroundhover = $helper->getFbbackgroundhover();
+    $Fbiconcolor = $helper->getFbiconcolor();
+    $Fbiconcolorhover = $helper->getFbiconcolorhover();
+
+    $Enabletwitter = $helper->getEnabletwitter();
+    $Twitterlink = $helper->getTwitterlink();
+    $Enabltwittersettings = $helper->getEnabltwittersettings();
+    $Twitterbackground = $helper->getTwitterbackground();
+    $Twitterbackgroundhover = $helper->getTwitterbackgroundhover();
+    $Twittericoncolor = $helper->getTwittericoncolor();
+    $Twittericoncolorhover = $helper->getTwittericoncolorhover();
+
+    $Enablegplus = $helper->getEnablegplus();
+    $Gpluslink = $helper->getGpluslink();
+    $Enablgoogleplussettings = $helper->getEnablgoogleplussettings();
+    $Gplusbackground = $helper->getGplusbackground();
+    $Gplusbackgroundhover = $helper->getGplusbackgroundhover();
+    $Gplusiconcolor = $helper->getGplusiconcolor();
+    $Gplusiconcolorhover = $helper->getGplusiconcolorhover();
+
+    $Enableyoutube = $helper->getEnableyoutube();
+    $Youtubelink = $helper->getYoutubelink();
+    $Enablyoutubesettings = $helper->getEnablyoutubesettings();
+    $Youtubebackground = $helper->getYoutubebackground();
+    $Youtubebackgroundhover = $helper->getYoutubebackgroundhover();
+    $Youtubeiconcolor = $helper->getYoutubeiconcolor();
+    $Youtubeiconcolorhover = $helper->getYoutubeiconcolorhover();
+
+    $Enableflickr = $helper->getEnableflickr();
+    $Flickrlink = $helper->getFlickrlink();
+    $Enablflickrsettings = $helper->getEnablflickrsettings();
+    $Flickrbackground = $helper->getFlickrbackground();
+    $Flickrbackgroundhover = $helper->getFlickrbackgroundhover();
+    $Flickriconcolor = $helper->getFlickriconcolor();
+    $Flickriconcolorhover = $helper->getFlickriconcolorhover();
+
+    $Enablevimeo = $helper->getEnablevimeo();
+    $Vimeolink = $helper->getVimeolink();
+    $Enablvimeosettings = $helper->getEnablvimeosettings();
+    $Vimeobackground = $helper->getVimeobackground();
+    $Vimeobackgroundhover = $helper->getVimeobackgroundhover();
+    $Vimeoiconcolor = $helper->getVimeoiconcolor();
+    $Vimeoiconcolorhover = $helper->getVimeoiconcolorhover();
+
+    $Enablepinterest = $helper->getEnablepinterest();
+    $Pinterestlink = $helper->getPinterestlink();
+    $Enablpinterestsettings = $helper->getEnablpinterestsettings();
+    $Pinterestbackground = $helper->getPinterestbackground();
+    $Pinterestbackgroundhover = $helper->getPinterestbackgroundhover();
+    $Pinteresticoncolor = $helper->getPinteresticoncolor();
+    $Pinteresticoncolorhover = $helper->getPinteresticoncolorhover();
+
+    $Enableinstagram = $helper->getEnableinstagram();
+    $Instagramlink = $helper->getInstagramlink();
+    $Enablinstagramsettings = $helper->getEnablinstagramsettings();
+    $Instagrambackground = $helper->getInstagrambackground();
+    $Instagrambackgroundhover = $helper->getInstagrambackgroundhover();
+    $Instagramiconcolor = $helper->getInstagramiconcolor();
+    $Instagramiconcolorhover = $helper->getInstagramiconcolorhover();
+
+    $Enablefoursquare = $helper->getEnablefoursquare();
+    $Foursquarelink = $helper->getFoursquarelink();
+    $Enablfoursquaresettings = $helper->getEnablfoursquaresettings();
+    $Foursquarebackground = $helper->getFoursquarebackground();
+    $Foursquarebackgroundhover = $helper->getFoursquarebackgroundhover();
+    $Foursquareiconcolor = $helper->getFoursquareiconcolor();
+    $Foursquareiconcolorhover = $helper->getFoursquareiconcolorhover();
+
+    $Enabletumblr = $helper->getEnabletumblr();
+    $Tumblrlink = $helper->getTumblrlink();
+    $Enabltumblrsettings = $helper->getEnabltumblrsettings();
+    $Tumblrbackground = $helper->getTumblrbackground();
+    $Tumblrbackgroundhover = $helper->getTumblrbackgroundhover();
+    $Tumblriconcolor = $helper->getTumblriconcolor();
+    $Tumblriconcolorhover = $helper->getTumblriconcolorhover();
+
+    $Enablerss = $helper->getEnablerss();
+    $Rsslink = $helper->getRsslink();
+    $Enablrsssettings = $helper->getEnablrsssettings();
+    $Rssbackground = $helper->getRssbackground();
+    $Rssbackgroundhover = $helper->getRssbackgroundhover();
+    $Rssiconcolor = $helper->getRssiconcolor();
+    $Rssiconcolorhover = $helper->getRssiconcolorhover();
+
+    $Enableemail = $helper->getEnableemail();
+    $Emaillink = $helper->getEmaillink();
+    $Enablemailsettings = $helper->getEnablemailsettings();
+    $Emailbackground = $helper->getEmailbackground();
+    $Emailbackgroundhover = $helper->getEmailbackgroundhover();
+    $Emailiconcolor = $helper->getEmailiconcolor();
+    $Emailiconcolorhover = $helper->getEmailiconcolorhover();
+
+
+    $var_Maintitlefontsize = '';
+    $var_Maintitletextcolor = '';
+    $var_Messagefontsize = '';
+    $var_Messagetextcolor = '';
+    $var_Buttonbackground = '';
+    $var_Buttonbackgroundhover = '';
+    $var_Buttontextcolor = '';
+    $var_Buttontextcolorhover = '';
+    $var_Socialtitlefontsize = '';
+    $var_Socialtitletextcolor = '';
+    $var_Fbbackground = '';
+    $var_Fbbackgroundhover = '';
+    $var_Fbiconcolor = '';
+    $var_Fbiconcolorhover = '';
+    $var_Twitterbackground = '';
+    $var_Twitterbackgroundhover = '';
+    $var_Twittericoncolor = '';
+    $var_Twittericoncolorhover = '';
+    $var_Gplusbackground = '';
+    $var_Gplusbackgroundhover = '';
+    $var_Gplusiconcolor = '';
+    $var_Gplusiconcolorhover = '';
+    $var_Youtubebackground = '';
+    $var_Youtubebackgroundhover = '';
+    $var_Youtubeiconcolor = '';
+    $var_Youtubeiconcolorhover = '';
+    $var_Flickrbackground = '';
+    $var_Flickrbackgroundhover = '';
+    $var_Flickriconcolor = '';
+    $var_Flickriconcolorhover = '';
+    $var_Vimeobackground = '';
+    $var_Vimeobackgroundhover = '';
+    $var_Vimeoiconcolor = '';
+    $var_Vimeoiconcolorhover = '';
+    $var_Pinterestbackground = '';
+    $var_Pinterestbackgroundhover = '';
+    $var_Pinteresticoncolor = '';
+    $var_Pinteresticoncolorhover = '';
+    $var_Instagrambackground = '';
+    $var_Instagrambackgroundhover = '';
+    $var_Instagramiconcolor = '';
+    $var_Instagramiconcolorhover = '';
+    $var_Foursquarebackground = '';
+    $var_Foursquarebackgroundhover = '';
+    $var_Foursquareiconcolor = '';
+    $var_Foursquareiconcolorhover = '';
+    $var_Tumblrbackground = '';
+    $var_Tumblrbackgroundhover = '';
+    $var_Tumblriconcolor = '';
+    $var_Tumblriconcolorhover = '';
+    $var_Rssbackground = '';
+    $var_Rssbackgroundhover = '';
+    $var_Rssiconcolor = '';
+    $var_Rssiconcolorhover = '';
+    $var_Emailbackground = '';
+    $var_Emailbackgroundhover = '';
+    $var_Emailiconcolor = '';
+    $var_Emailiconcolorhover = '';
+
+    if ($Defaultmaintitlesettings) {
+        $var_Maintitlefontsize = '';
+        $var_Maintitletextcolor = '';
+    } else {
+        $var_Maintitlefontsize = $Maintitlefontsize;
+        $var_Maintitletextcolor = $Maintitletextcolor;
+    }
+
+    if ($Defaultmessagesettings) {
+        $var_Messagefontsize = '';
+        $var_Messagetextcolor = '';
+    } else {
+        $var_Messagefontsize = $Messagefontsize;
+        $var_Messagetextcolor = $Messagetextcolor;
+    }
+
+    if ($Defaultbuttonsettings) {
+        $var_Buttonbackground = '';
+        $var_Buttonbackgroundhover = '';
+        $var_Buttontextcolor = '';
+        $var_Buttontextcolorhover = '';
+    } else {
+        $var_Buttonbackground = $Buttonbackground;
+        $var_Buttonbackgroundhover = $Buttonbackgroundhover;
+        $var_Buttontextcolor = $Buttontextcolor;
+        $var_Buttontextcolorhover = $Buttontextcolorhover;
+    }
+    ?>
+    <style>
+        .cus-sub-btn {
+            background: <?php echo $var_Buttonbackground; ?> !important;
+            color: <?php echo $var_Buttontextcolor; ?> !important;
+            border-color: <?php echo $var_Buttonbackground; ?> !important;
+        }
+        .cus-sub-btn:hover {
+            background: <?php echo $var_Buttonbackgroundhover; ?> !important;
+            color: <?php echo $var_Buttontextcolorhover; ?> !important;
+            border-color: <?php echo $var_Buttonbackgroundhover; ?> !important;
+        }
+    </style>
+    <?php if ($Enablepopupborder) { ?>
+        <style>
+            .fancybox-wrap {
+                border: 3px solid <?php echo $Popupbordercolor; ?>;
+            }
+        </style>
+    <?php } ?>
+    <?php
+    if ($Enablesocialtitlesettings) {
+        $var_Socialtitlefontsize = '';
+        $var_Socialtitletextcolor = '';
+    } else {
+        $var_Socialtitlefontsize = $Socialtitlefontsize;
+        $var_Socialtitletextcolor = $Socialtitletextcolor;
+    }
+
+    if ($Enablfbsettings) {
+        $var_Fbbackground = '#45619D';
+        $var_Fbbackgroundhover = '#31446F';
+        $var_Fbiconcolor = '#ffffff';
+        $var_Fbiconcolorhover = '#ffffff';
+    } else {
+        $var_Fbbackground = $Fbbackground;
+        $var_Fbbackgroundhover = $Fbbackgroundhover;
+        $var_Fbiconcolor = $Fbiconcolor;
+        $var_Fbiconcolorhover = $Fbiconcolorhover;
+    }
+    ?>
+    <style>
+        .fb_link {
+            background: <?php echo $var_Fbbackground; ?>;
+            color: <?php echo $var_Fbiconcolor; ?>;
+        }
+        .fb_link:hover {
+            background: <?php echo $var_Fbbackgroundhover; ?>;
+            color: <?php echo $var_Fbiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablgoogleplussettings) {
+        $var_Gplusbackground = '#DE4B39';
+        $var_Gplusbackgroundhover = '#C94434';
+        $var_Gplusiconcolor = '#ffffff';
+        $var_Gplusiconcolorhover = '#ffffff';
+    } else {
+        $var_Gplusbackground = $Gplusbackground;
+        $var_Gplusbackgroundhover = $Gplusbackgroundhover;
+        $var_Gplusiconcolor = $Gplusiconcolor;
+        $var_Gplusiconcolorhover = $Gplusiconcolorhover;
+    }
+    ?>
+    <style>
+        .gplus_link {
+            background: <?php echo $var_Gplusbackground; ?>;
+            color: <?php echo $var_Gplusiconcolor; ?>;
+        }
+        .gplus_link:hover {
+            background: <?php echo $var_Gplusbackgroundhover; ?>;
+            color: <?php echo $var_Gplusiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enabltwittersettings) {
+        $var_Twitterbackground = '#55ACEE';
+        $var_Twitterbackgroundhover = '#3C79A8';
+        $var_Twittericoncolor = '#ffffff';
+        $var_Twittericoncolorhover = '#ffffff';
+    } else {
+        $var_Twitterbackground = $Twitterbackground;
+        $var_Twitterbackgroundhover = $Twitterbackgroundhover;
+        $var_Twittericoncolor = $Twittericoncolor;
+        $var_Twittericoncolorhover = $Twittericoncolorhover;
+    }
+    ?>
+    <style>
+        .twitter_link {
+            background: <?php echo $var_Twitterbackground; ?>;
+            color: <?php echo $var_Twittericoncolor; ?>;
+        }
+        .twitter_link:hover {
+            background: <?php echo $var_Twitterbackgroundhover; ?>;
+            color: <?php echo $var_Twittericoncolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablyoutubesettings) {
+        $var_Youtubebackground = '#E52D27';
+        $var_Youtubebackgroundhover = '#BC1515';
+        $var_Youtubeiconcolor = '#ffffff';
+        $var_Youtubeiconcolorhover = '#ffffff';
+    } else {
+        $var_Youtubebackground = $Youtubebackground;
+        $var_Youtubebackgroundhover = $Youtubebackgroundhover;
+        $var_Youtubeiconcolor = $Youtubeiconcolor;
+        $var_Youtubeiconcolorhover = $Youtubeiconcolorhover;
+    }
+    ?>
+    <style>
+        .youtube_link {
+            background: <?php echo $var_Youtubebackground; ?>;
+            color: <?php echo $var_Youtubeiconcolor; ?>;
+        }
+        .youtube_link:hover {
+            background: <?php echo $var_Youtubebackgroundhover; ?>;
+            color: <?php echo $var_Youtubeiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablflickrsettings) {
+        $var_Flickrbackground = '#ED1983';
+        $var_Flickrbackgroundhover = '#BA1570';
+        $var_Flickriconcolor = '#ffffff';
+        $var_Flickriconcolorhover = '#ffffff';
+    } else {
+        $var_Flickrbackground = $Flickrbackground;
+        $var_Flickrbackgroundhover = $Flickrbackgroundhover;
+        $var_Flickriconcolor = $Flickriconcolor;
+        $var_Flickriconcolorhover = $Flickriconcolorhover;
+    }
+    ?>
+    <style>
+        .flickr_link {
+            background: <?php echo $var_Flickrbackground; ?>;
+            color: <?php echo $var_Flickriconcolor; ?>;
+        }
+        .flickr_link:hover {
+            background: <?php echo $var_Flickrbackgroundhover; ?>;
+            color: <?php echo $var_Flickriconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablvimeosettings) {
+        $var_Vimeobackground = '#1AB7EA';
+        $var_Vimeobackgroundhover = '#139FBF';
+        $var_Vimeoiconcolor = '#ffffff';
+        $var_Vimeoiconcolorhover = '#ffffff';
+    } else {
+        $var_Vimeobackground = $Vimeobackground;
+        $var_Vimeobackgroundhover = $Vimeobackgroundhover;
+        $var_Vimeoiconcolor = $Vimeoiconcolor;
+        $var_Vimeoiconcolorhover = $Vimeoiconcolorhover;
+    }
+    ?>
+    <style>
+        .vimeo_link {
+            background: <?php echo $var_Vimeobackground; ?>;
+            color: <?php echo $var_Vimeoiconcolor; ?>;
+        }
+        .vimeo_link:hover {
+            background: <?php echo $var_Vimeobackgroundhover; ?>;
+            color: <?php echo $var_Vimeoiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablpinterestsettings) {
+        $var_Pinterestbackground = '#CB1F26';
+        $var_Pinterestbackgroundhover = '#8F161B';
+        $var_Pinteresticoncolor = '#ffffff';
+        $var_Pinteresticoncolorhover = '#ffffff';
+    } else {
+        $var_Pinterestbackground = $Pinterestbackground;
+        $var_Pinterestbackgroundhover = $Pinterestbackgroundhover;
+        $var_Pinteresticoncolor = $Pinteresticoncolor;
+        $var_Pinteresticoncolorhover = $Pinteresticoncolorhover;
+    }
+    ?>
+    <style>
+        .pinterest_link {
+            background: <?php echo $var_Pinterestbackground; ?>;
+            color: <?php echo $var_Pinteresticoncolor; ?>;
+        }
+        .pinterest_link:hover {
+            background: <?php echo $var_Pinterestbackgroundhover; ?>;
+            color: <?php echo $var_Pinteresticoncolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablinstagramsettings) {
+        $var_Instagrambackground = '#527FA3';
+        $var_Instagrambackgroundhover = '#255270';
+        $var_Instagramiconcolor = '#ffffff';
+        $var_Instagramiconcolorhover = '#ffffff';
+    } else {
+        $var_Instagrambackground = $Instagrambackground;
+        $var_Instagrambackgroundhover = $Instagrambackgroundhover;
+        $var_Instagramiconcolor = $Instagramiconcolor;
+        $var_Instagramiconcolorhover = $Instagramiconcolorhover;
+    }
+    ?>
+    <style>
+        .instagram_link {
+            background: <?php echo $var_Instagrambackground; ?>;
+            color: <?php echo $var_Instagramiconcolor; ?>;
+        }
+        .instagram_link:hover {
+            background: <?php echo $var_Instagrambackgroundhover; ?>;
+            color: <?php echo $var_Instagramiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablfoursquaresettings) {
+        $var_Foursquarebackground = '#F94877';
+        $var_Foursquarebackgroundhover = '#AF3354';
+        $var_Foursquareiconcolor = '#ffffff';
+        $var_Foursquareiconcolorhover = '#ffffff';
+    } else {
+        $var_Foursquarebackground = $Foursquarebackground;
+        $var_Foursquarebackgroundhover = $Foursquarebackgroundhover;
+        $var_Foursquareiconcolor = $Foursquareiconcolor;
+        $var_Foursquareiconcolorhover = $Foursquareiconcolorhover;
+    }
+    ?>
+    <style>
+        .foursquare_link {
+            background: <?php echo $var_Foursquarebackground; ?>;
+            color: <?php echo $var_Foursquareiconcolor; ?>;
+        }
+        .foursquare_link:hover {
+            background: <?php echo $var_Foursquarebackgroundhover; ?>;
+            color: <?php echo $var_Foursquareiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enabltumblrsettings) {
+        $var_Tumblrbackground = '#325E8B';
+        $var_Tumblrbackgroundhover = '#1B436C';
+        $var_Tumblriconcolor = '#ffffff';
+        $var_Tumblriconcolorhover = '#ffffff';
+    } else {
+        $var_Tumblrbackground = $Tumblrbackground;
+        $var_Tumblrbackgroundhover = $Tumblrbackgroundhover;
+        $var_Tumblriconcolor = $Tumblriconcolor;
+        $var_Tumblriconcolorhover = $Tumblriconcolorhover;
+    }
+    ?>
+    <style>
+        .tumblr_link {
+            background: <?php echo $var_Tumblrbackground; ?>;
+            color: <?php echo $var_Tumblriconcolor; ?>;
+        }
+        .tumblr_link:hover {
+            background: <?php echo $var_Tumblrbackgroundhover; ?>;
+            color: <?php echo $var_Tumblriconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablrsssettings) {
+        $var_Rssbackground = '#FF9900';
+        $var_Rssbackgroundhover = '#B75B0F';
+        $var_Rssiconcolor = '#ffffff';
+        $var_Rssiconcolorhover = '#ffffff';
+    } else {
+        $var_Rssbackground = $Rssbackground;
+        $var_Rssbackgroundhover = $Rssbackgroundhover;
+        $var_Rssiconcolor = $Rssiconcolor;
+        $var_Rssiconcolorhover = $Rssiconcolorhover;
+    }
+    ?>
+    <style>
+        .rss_link {
+            background: <?php echo $var_Rssbackground; ?>;
+            color: <?php echo $var_Rssiconcolor; ?>;
+        }
+        .rss_link:hover {
+            background: <?php echo $var_Rssbackgroundhover; ?>;
+            color: <?php echo $var_Rssiconcolorhover; ?>;
+        }
+    </style>
+
+    <?php
+    if ($Enablemailsettings) {
+        $var_Emailbackground = '#0072C6';
+        $var_Emailbackgroundhover = '#00508C';
+        $var_Emailiconcolor = '#ffffff';
+        $var_Emailiconcolorhover = '#ffffff';
+    } else {
+        $var_Emailbackground = $Emailbackground;
+        $var_Emailbackgroundhover = $Emailbackgroundhover;
+        $var_Emailiconcolor = $Emailiconcolor;
+        $var_Emailiconcolorhover = $Emailiconcolorhover;
+    }
+    ?>
+    <style>
+        .mail_link {
+            background: <?php echo $var_Emailbackground; ?>;
+            color: <?php echo $var_Emailiconcolor; ?>;
+        }
+        .mail_link:hover {
+            background: <?php echo $var_Emailbackgroundhover; ?>;
+            color: <?php echo $var_Emailiconcolorhover; ?>;
+        }
+    </style>
+    <style>
+        .popup-main {
+            width:<?php echo $Popupwidth; ?>;
+            height:<?php echo $Popupheight; ?>;
+            overflow:auto;
+        }
+        @media only screen and (max-width: 767px) {
+            .popup-main {
+                max-width:<?php echo $Popupwidth; ?>;
+                width:100%;
+                height:auto;
+                overflow:auto;
+            }
+        }
+    </style>
+    <?php if ($EnableBackgroundimage) { ?>
+        <style>
+            #reference-first-message {
+                background-image: url('<?php echo $Newsletterbackgroundimage; ?>');
+                padding: 15px;
+            }
+        </style>
+    <?php } ?>
+    <a id = "reference-first" href = "#reference-first-message" style = "display:none"></a>
+    <div class = "subscribe-me">
+        <div style = "display: none">
+            <div id="reference-first-message" class="popup-main">
+                <div class = "nh-wrapper">
+                    <?php if ($Enablenewsletterimage && $Newsletterimageposition == 'left') {
+                        ?>
+                        <div class="nh-img-left">
+                            <img src="<?php echo $upload_newsletter_image; ?>" alt="Newsletter Image"/>
+                        </div>
+                    <?php } ?>
+                    <div <?php if ($Enablenewsletterimage) { ?> style="width:50%;" <?php } else { ?> style="width:100%;" <?php } ?> class="nh-content">
+                        <?php if ($showmaintitle) { ?>
+                            <h2 style="font-size: <?php echo $var_Maintitlefontsize; ?>;color: <?php echo $var_Maintitletextcolor; ?>;"><?php echo $maintitle; ?></h2>
+                        <?php } ?>
+                        <?php if ($Enablecustommessage) { ?>
+                            <p style="font-size: <?php echo $var_Messagefontsize; ?>;color:<?php echo $var_Messagetextcolor; ?>;"><?php echo $custommessage; ?></p>
+                        <?php } ?>
+                        <div class="nh-field">
+                            <form class="form subscribe"
+                                  novalidate
+                                  action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
+                                  method="post"
+                                  data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                                  id="newsletter-validate-detail">
+                                <div class="input-group">
+                                    <div class="control">
+                                        <input style="height: 36px;" class="newspopupinput" type="email" name="email" placeholder="Email Address" data-validate="{required:true, 'validate-email':true}" />
+                                    </div>
+                                    <div style="display: none;position: absolute;" id="newsletter_error2" class="mage-error" for="newsletter" generated="true">This is a required field.</div>
+                                    <span class="input-group-btn">
+                                        <input type="submit" title="<?php echo $buttontext; ?>" value="<?php echo $buttontext; ?>" class="action primary cus-sub-btn" id="newspopupsubmit" />
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <?php if ($Enablecheckbox) { ?>
+                            <div class="nh-show">
+                                <input style="float: left;" type="checkbox" id="checkbox_show" name="checkbox_show" onclick="calc();" />
+                                <label><?php echo $Checkboxtext; ?></label>
+                            </div>
+                        <?php } ?>
+                        <?php if ($Enablesocial) { ?>
+                            <h3 style="font-size: <?php echo $var_Socialtitlefontsize; ?>;color: <?php echo $var_Socialtitletextcolor; ?>;"><?php echo $Socialtitle; ?></h3>
+                            <div class="nh-social">
+                                <?php if ($Enablefacebook) { ?>
+                                    <a class="s-link fb_link" href="<?php echo $Facebooklink; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <?php } ?>
+                                <?php if ($Enablegplus) { ?>
+                                    <a class="s-link gplus_link" href="<?php echo $Gpluslink; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                <?php } ?>
+                                <?php if ($Enabletwitter) { ?>
+                                    <a class="s-link twitter_link" href="<?php echo $Twitterlink; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <?php } ?>
+                                <?php if ($Enableyoutube) { ?>
+                                    <a class="s-link youtube_link" href="<?php echo $Youtubelink; ?>" target="_blank"><i class="fa fa-youtube"></i></a>
+                                <?php } ?>
+                                <?php if ($Enableflickr) { ?>
+                                    <a class="s-link flickr_link" href="<?php echo $Flickrlink; ?>" target="_blank"><i class="fa fa-flickr"></i></a>
+                                <?php } ?>
+                                <?php if ($Enablevimeo) { ?>
+                                    <a class="s-link vimeo_link" href="<?php echo $Vimeolink; ?>" target="_blank"><i class="fa fa-vimeo"></i></a>
+                                <?php } ?>
+                                <?php if ($Enablepinterest) { ?>
+                                    <a class="s-link pinterest_link" href="<?php echo $Pinterestlink; ?>" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                                <?php } ?>
+                                <?php if ($Enableinstagram) { ?>
+                                    <a class="s-link instagram_link" href="<?php echo $Instagramlink; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <?php } ?>
+                                <?php if ($Enablefoursquare) { ?>
+                                    <a class="s-link foursquare_link" href="<?php echo $Foursquarelink; ?>" target="_blank"><i class="fa fa-foursquare"></i></a>
+                                <?php } ?>
+                                <?php if ($Enabletumblr) { ?>
+                                    <a class="s-link tumblr_link" href="<?php echo $Tumblrlink; ?>" target="_blank"><i class="fa fa-tumblr"></i></a>
+                                <?php } ?>
+                                <?php if ($Enablerss) { ?>
+                                    <a class="s-link rss_link" href="<?php echo $Rsslink; ?>" target="_blank"><i class="fa fa-rss"></i></a>
+                                <?php } ?>
+                                <?php if ($Enableemail) { ?>
+                                    <a class="s-link mail_link" href="mailto:<?php echo $Emaillink; ?>"><i class="fa fa-envelope"></i></a>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <?php if ($Enablenewsletterimage && $Newsletterimageposition == 'right') { ?>
+                        <div class="nh-img-right">
+                            <img src="<?php echo $upload_newsletter_image; ?>" alt="Newsletter Image"/>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ')
+                    c = c.substring(1);
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function calc() {
+            var cookieexptime1 = <?php echo $Cookieexptime; ?>;
+            setCookie("nchecked", "ncheck", cookieexptime1);
+        }
+
+        require(['jquery', 'cpfancybox'], function () {
+            jQuery(document).ready(function () {
+                var cookieexptime2 = <?php echo $Cookieexptime; ?>;
+                var ncookie = getCookie("nchecked");
+                var tempcookie = getCookie("homenewsletter");
+                var showonce = <?php echo $Popupshowonce; ?>;
+                if (showonce == false && ncookie == '') {
+                    setTimeout(function () {
+                        jQuery("#reference-first").fancybox({
+                            openEffect: '<?php echo $Openeffect; ?>',
+                            openMethod: '<?php echo $Openmethod; ?>',
+                            openSpeed: <?php echo $Openspeed; ?>,
+                            closeEffect: '<?php echo $Closeeffect; ?>',
+                            closeMethod: '<?php echo $Closemethod; ?>',
+                            closeSpeed: <?php echo $Closespeed; ?>,
+                            padding: <?php echo $Popuppadding; ?>,
+                        }).trigger("click");
+                    }, <?php echo $Popupdelay; ?>);
+                }
+                else if (showonce == false && ncookie != '') {
+                    jQuery('.subscribe-me').attr('style', 'display:none');
+                    return false;
+                }
+                else if (showonce == true && ncookie == '') {
+                    var tempcookie = getCookie("homenewsletter");
+                    if (tempcookie != "") {
+                        jQuery('.subscribe-me').attr('style', 'display:none');
+                        return false;
+                    } else {
+                        tempcookie = 'news';
+                        if (tempcookie != "" && tempcookie != null) {
+                            setTimeout(function () {
+                                jQuery("#reference-first").fancybox({
+                                    openEffect: '<?php echo $Openeffect; ?>',
+                                    openMethod: '<?php echo $Openmethod; ?>',
+                                    openSpeed: <?php echo $Openspeed; ?>,
+                                    closeEffect: '<?php echo $Closeeffect; ?>',
+                                    closeMethod: '<?php echo $Closemethod; ?>',
+                                    closeSpeed: <?php echo $Closespeed; ?>,
+                                    padding: <?php echo $Popuppadding; ?>,
+                                }).trigger("click");
+                            }, <?php echo $Popupdelay; ?>);
+                            setCookie("homenewsletter", tempcookie, cookieexptime2);
+                        }
+                    }
+                } else if (showonce == true && ncookie != '') {
+                    var tempcookie = getCookie("homenewsletter");
+                    if (tempcookie != "" || ncookie != '') {
+                        jQuery('.subscribe-me').attr('style', 'display:none');
+                        return false;
+                    } else {
+                        tempcookie = 'news';
+                        if (tempcookie != "" && tempcookie != null) {
+                            setTimeout(function () {
+                                jQuery("#reference-first").fancybox({
+                                    openEffect: '<?php echo $Openeffect; ?>',
+                                    openMethod: '<?php echo $Openmethod; ?>',
+                                    openSpeed: <?php echo $Openspeed; ?>,
+                                    closeEffect: '<?php echo $Closeeffect; ?>',
+                                    closeMethod: '<?php echo $Closemethod; ?>',
+                                    closeSpeed: <?php echo $Closespeed; ?>,
+                                    padding: <?php echo $Popuppadding; ?>,
+                                }).trigger("click");
+                            }, <?php echo $Popupdelay; ?>);
+                            setCookie("homenewsletter", tempcookie, cookieexptime2);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        #newsletter-validate-detail #email-error {
+            position:absolute;
+        }
+    </style>
+<?php } ?>

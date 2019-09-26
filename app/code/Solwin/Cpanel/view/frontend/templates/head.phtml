@@ -1,0 +1,41 @@
+<?php
+$_helper = $this->helper('Solwin\Cpanel\Helper\CssSetting');
+$theme_max_width = $_helper->getCpanelDesignConfig('cpanelsection/themegeneral/max_width');
+$header_type = $_helper->getCpanelDesignConfig('cpanelsection/headergroup/headertype');
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$enableloader = $helper->getCpanelConfigValue('cpanelsection/loadergroup/enable_loader');
+?>
+
+<?php
+$designFile = $_helper->getDesignFile();
+if ($designFile) {
+    ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $designFile; ?>">
+<?php }
+?>
+<?php
+$settingsFile = $_helper->getSettingsFile();
+if ($settingsFile) {
+    ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $settingsFile; ?>">
+<?php }
+?>
+<?php if ($header_type != '') { ?>
+    <script type="text/javascript">
+        require([
+            'jquery'
+        ], function () {
+            jQuery("body").addClass("bh-type-" +<?php echo $header_type; ?>);
+        });
+    </script>
+<?php } ?>
+<?php if ($enableloader) { ?>
+    <script type="text/javascript">
+    require([
+    'jquery',
+    'domReady!'
+    ], function ($) {
+        $('.cus-ajax-loader').fadeOut("slow");     
+    });
+    </script>
+<?php } ?>

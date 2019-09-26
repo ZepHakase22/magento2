@@ -1,0 +1,7 @@
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\CssSetting');
+$isHome = $helper->getIsHomePage();
+if ($isHome) {
+    $homeContent = $helper->getCpanelDesignConfig('cpanelsection/homemaincontent/home_content');
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($homeContent)->toHtml();
+}

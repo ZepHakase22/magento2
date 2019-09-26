@@ -1,0 +1,525 @@
+/*media width*/
+@width-1199: 1199px;
+@width-991: 991px;
+@width-767: 767px;
+@width-639: 639px;
+
+/* override font-family variables */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(../fonts/xgzbb53t8j-Mo-vYa23n5j0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(../fonts/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+@font-family-name__base: 'Josefin Sans', 'Arial';
+@font-family-name__base_sec: 'Open Sans';
+
+/*===============================
+Theme Main color variables
+============================*/
+@cpanel-theme-color: #23BC9D;
+@cpanel-theme-color-light: #93ebda;
+@cpanel-base-color: #373737;
+@cpanel-base-color-dark: #272727;
+@cpanel-base-color-extra-dark: #181818;
+@cpanel-base-color-light: #575757;
+@cpanel-base-color-extra-light: #979797;
+@cpanel-base-color-white: #ffffff;
+@cpanel-base-color-gray: #c2c2c2;
+@cpanel-base-color-semidark-gray: #eeeeee;
+@cpanel-base-color-dark-gray: #bbbbbb;
+@cpanel-base-color-light-gray: #f6f6f6;
+
+@cpanel-base-border-color: #dddddd;
+
+/*===================
+text color variables
+====================*/
+@cpanel-txt-color-base-dark: @cpanel-base-color-dark;
+@cpanel-txt-color-base: @cpanel-base-color;
+@cpanel-txt-color-base-light: @cpanel-base-color-light;
+@cpanel-txt-color-base-extra-light: @cpanel-base-color-extra-light;
+@cpanel-txt-color-theme: @cpanel-theme-color;
+@cpanel-txt-color-theme-light: @cpanel-theme-color-light;
+@cpanel-txt-color-white: @cpanel-base-color-white;
+@cpanel-txt-color-grey: @cpanel-base-color-gray;
+
+/*text align*/
+@cpanel-test-align-center: center;
+@cpanel-test-align-right: right;
+@cpanel-test-align-left: left;
+@cpanel-test-align-justify: justify;
+
+/*text transform*/
+@cpanel-text-transform-uppercase: uppercase;
+@cpanel-text-transform-capitalize: capitalize;
+@cpanel-text-transform-lowercase: lowercase;
+@cpanel-text-transform-none: none;
+@cpanel-text-transform-full-width: full-width;
+@cpanel-text-transform-unset: unset;
+@cpanel-text-transform-initial: initial;
+@cpanel-text-transform-inherit: inherit;
+
+/*text decoration*/
+@cpanel-text-decoration-none: none;
+@cpanel-text-decoration-underline: underline;
+@cpanel-text-decoration-overline: overline;
+@cpanel-text-decoration-unset: unset;
+@cpanel-text-decoration-initial: initial;
+@cpanel-text-decoration-inherit: inherit;
+@cpanel-text-decoration-line-through: line-through;
+
+/*background color*/
+@cpanel-background-color-theme: @cpanel-theme-color;
+@cpanel-background-color-theme-light: @cpanel-theme-color-light;
+@cpanel-background-color-black: @cpanel-base-color-dark;
+@cpanel-background-color-black-light: @cpanel-base-color-light;
+@cpanel-background-color-semiblack: @cpanel-base-color;
+@cpanel-background-color-extra-black: @cpanel-base-color-extra-dark;
+@cpanel-background-color-light-gray: @cpanel-base-color-light-gray;
+@cpanel-background-color-semidark-gray: @cpanel-base-color-semidark-gray;
+@cpanel-background-color-white: @cpanel-base-color-white;
+
+/*header background colors*/
+@header__background-color: @cpanel-base-color-semidark-gray;
+@header__background-color-type-3: @cpanel-background-color-white;
+@header__background-color-type-6: @cpanel-background-color-black;
+
+/*border color*/
+@cpanel-border-color-base: @cpanel-base-border-color;
+@cpanel-border-color-black: @cpanel-base-color;
+@cpanel-border-color-theme: @cpanel-theme-color;
+@cpanel-border-color-theme-light: @cpanel-theme-color-light;
+@cpanel-border-color-gray: @cpanel-base-color-gray;
+@cpanel-border-color-white: #ffffff;
+@cpanel-border-color-black-light: @cpanel-base-color-light;
+@cpanel-border-color-black-extra-light: @cpanel-base-color-extra-light;
+
+/*border style*/
+@cpanel-border-style-solid: solid;
+@cpanel-border-style-dotted: dotted;
+@cpanel-border-style-double: double;
+@cpanel-border-style-dashed: dashed;
+@cpanel-border-style-initial: initial;
+@cpanel-border-style-inherit: inherit;
+@cpanel-border-style-unset: unset;
+@cpanel-border-style-ridge: ridge;
+@cpanel-border-style-outset: outset;
+@cpanel-border-style-inset: inset;
+@cpanel-border-style-none: none;
+@cpanel-border-style-groove: groove;
+@cpanel-border-style-hidden: hidden;
+
+/*border width*/
+@cpanel-border-width-1: 1px;
+@cpanel-border-width-2: 2px;
+@cpanel-border-width-3: 3px;
+@cpanel-border-width-4: 4px;
+
+/*border radius*/
+@cpanel-border-radius-round: 50%;
+
+/*font-size*/
+@cpanel-font-size-base: 16px;
+
+
+/*font weight*/
+@cpanel-font-weight-thin: 300;
+@cpanel-font-weight-normal: 400;
+@cpanel-font-weight-semibold: 500;
+@cpanel-font-weight-bold: 600;
+@cpanel-font-weight-extrabold: 700;
+
+/*=======================
+Theme less variables
+=======================*/
+/*general*/
+@color-gray20: @cpanel-txt-color-base;
+@font-size__base: @cpanel-font-size-base;
+@color-gray80: @cpanel-border-color-base;
+@color-gray90: @cpanel-border-color-base;
+@color-gray82: @cpanel-border-color-base;
+@border-color__base: @cpanel-border-color-base;
+@layout-column__sidebar-width: 3;
+@breadcrumbs__container-margin: 20px 0 0;
+@breadcrumbs__font-size: @cpanel-font-size-base - 1;
+@cpanel-main-block-padding: 30px;
+@cpanel-main-block-padding-mobile: 15px;
+@cpanel-all-block-transition: all 0.2s ease-in-out 0s;
+@cpanel-search-block-transition: all 0.3s ease-in-out 0s;
+@addto-color: @cpanel-txt-color-base-dark;
+@addto-hover-color: @cpanel-txt-color-theme;
+@color-orange-red1: @cpanel-txt-color-theme;
+@form-field-label__font-weight: @cpanel-font-weight-bold;
+/*@color-gray76: @cpanel-border-color-base;*/
+
+/*==============================
+Theme hyperlink override
+================================*/
+@link__color: @cpanel-base-color-light;
+@link__text-decoration: @cpanel-text-decoration-none;
+@link__hover__color: @cpanel-txt-color-theme;
+@link__hover__text-decoration: @cpanel-text-decoration-none;
+@link__active__color: @cpanel-txt-color-theme;
+@link__active__text-decoration: @cpanel-text-decoration-none;
+@link__visited__color:  @cpanel-base-color-light;
+@link__visited__text-decoration: @cpanel-text-decoration-none;
+@cpanel-link-outline-none: none;
+
+
+/*============================
+Home page Main Block title
+============================*/
+@cpanel-main-block-title-color: @cpanel-txt-color-base-dark;
+@cpanel-main-block-title-span-color: @cpanel-txt-color-theme;
+@cpanel-main-block-title-font-size: @cpanel-font-size-base + 20;
+@cpanel-main-block-title-font-size-mobile: @cpanel-main-block-title-font-size - 10;
+@cpanel-main-block-title-line-height: @cpanel-main-block-title-font-size + 16;
+@cpanel-main-block-title-line-height-mobile: @cpanel-main-block-title-font-size-mobile + 10;
+@cpanel-main-block-title-margin: 0 0 8px;
+@cpanel-main-block-title-margin-mobile: 0 0 5px;
+@cpanel-main-block-title-text-transform: @cpanel-text-transform-capitalize;
+@cpanel-main-block-title-font-weight: @cpanel-font-weight-bold;
+
+/*==============================
+Theme primary button override
+================================*/
+@button-primary__background: @cpanel-background-color-white;
+@button-primary__border: @cpanel-border-width-2 @cpanel-border-style-solid @cpanel-border-color-black;
+@button-primary__hover__background: @cpanel-background-color-white;
+@button-primary__hover__border: @cpanel-border-width-2 @cpanel-border-style-solid @cpanel-border-color-black;
+@button-primary__active__background: @cpanel-background-color-white;
+@button__border-radius: 0;
+@button-primary__hover__color: @cpanel-txt-color-white;
+@button-primary__color: @cpanel-txt-color-base;
+/*@button__padding: 0;*/
+@button__font-weight: @cpanel-font-weight-bold;
+@button__padding__l: 14px 17px 10px;
+@button__padding: 8px 15px 5px;
+@button__background: @cpanel-background-color-white;
+@button__border: 1px solid @cpanel-border-color-black;
+@button__hover__background: @cpanel-background-color-white;
+
+/*=========================================
+product detail page add to links variables
+========================================*/
+@cpanel-product-detail-add-to-btn-border: @cpanel-border-width-2 @cpanel-border-style-solid @cpanel-border-color-black;
+@cpanel-product-detail-add-to-btn-background: @cpanel-background-color-white;
+@cpanel-product-detail-add-to-btn-hover-background: @cpanel-background-color-white;
+@cpanel-product-detail-add-to-btn-height: 38px;
+@cpanel-product-detail-add-to-btn-width: @cpanel-product-detail-add-to-btn-height;
+@cpanel-product-detail-add-to-btn-line-height: @cpanel-product-detail-add-to-btn-height - 3;
+
+//  Tabs
+/*product detail page tabs override less variables*/
+@tab-control__font-size: @cpanel-font-size-base;
+@text__color__muted: @cpanel-txt-color-base;
+@tab-control__background-color: @cpanel-background-color-light-gray;
+
+@tab-control__font-weight: 600;
+@tab-control__height: @indent__base*2;
+@tab-control__margin-right: -1px;
+@tab-control__padding-top: 1px;
+@tab-control__padding-right: 25px;
+
+//  Tabs content
+@tab-content__padding-top: 25px;
+@tab-content__padding-right: @tab-control__padding-right;
+
+/*new and sale labels*/
+@cpanel-new-sale-lbl-background: @cpanel-background-color-theme;
+@cpanel-new-sale-lbl-color: @cpanel-txt-color-white;
+@cpanel-new-sale-lbl-border-radius: 0;
+@cpanel-new-sale-lbl-font-size: @cpanel-font-size-base;
+@cpanel-new-sale-lbl-font-weight: @cpanel-font-weight-bold;
+@cpanel-new-sale-lbl-height: 25px;
+@cpanel-new-sale-lbl-width: 60px;
+@cpanel-new-sale-lbl-line-height: @cpanel-new-sale-lbl-height;
+@cpanel-new-sale-lbl-text-align: @cpanel-test-align-center;
+@cpanel-new-sale-lbl-text-transform: @cpanel-text-transform-capitalize;
+@cpanel-new-sale-lbl-top-value: 15px;
+@cpanel-new-lbl-left-value: 15px;
+@cpanel-sale-lbl-right-value: 15px;
+
+/*===========================
+form variables override
+=============================*/
+@form-element-input__height: 36px;
+@form-element-input-placeholder__color: @cpanel-txt-color-base-light;
+
+/*=========================================================================
+navigation override variables and variables used in theme for navigation
+===========================================================================*/
+@navigation-desktop-level0-item__margin: 0;
+@navigation-desktop-level0-item__padding: 22px 20px;
+@navigation-desktop-level0-item__padding-type-2: 9px 18px;
+@navigation-desktop-level0-item__padding-type-3: 16px 20px;
+@navigation-desktop-level0-item__line-height: 24px;
+@cpanel-top-navigation-block-height: auto;
+@cpanel-top-navigation-block-height-type-2: 43px;
+@cpanel-top-navigation-block-height-type-3: 55px;
+@cpanel-top-navigation-block-width: 66px;
+@cpanel-top-navigation-level0-font-weight: @cpanel-font-weight-bold;
+@cpanel-top-navigation-level0-font-weight-type-2: @cpanel-font-weight-bold;
+@cpanel-top-navigation-level0-font-weight-type-3: @cpanel-font-weight-bold;
+@cpanel-top-navigation-level0-font-weight-mobile: @cpanel-font-weight-bold;
+@cpanel-top-navigation-level0-font-size: @cpanel-font-size-base;
+@cpanel-top-navigation-level0-font-size-type-2: @cpanel-font-size-base;
+@cpanel-top-navigation-level0-font-size-type-3: @cpanel-font-size-base;
+@cpanel-top-navigation-level0-font-size-mobile: @cpanel-font-size-base;
+@navigation-desktop__background: @cpanel-background-color-black;
+@navigation-desktop__background-type-3: @cpanel-background-color-semiblack;
+@navigation-desktop__background-mobile: @cpanel-background-color-light-gray;
+@navigation-desktop-level0-item__hover__background: @cpanel-background-color-semiblack;
+@navigation-desktop-level0-item__active__background: @cpanel-background-color-semiblack;
+@navigation-desktop-level0-item__active__color: @cpanel-txt-color-white;
+@navigation-desktop-level0-item__active__color-type-2: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__active__color-type-6: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__active__color-type-3: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__active__color-type-7: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__color: @cpanel-txt-color-white;
+@navigation-desktop-level0-item__color-mobile: @cpanel-txt-color-base;
+@navigation-desktop-level0-item__color-type-2: @cpanel-txt-color-base;
+@navigation-desktop-level0-item__color-type-3: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__color-type-6: @cpanel-txt-color-white;
+@navigation-desktop-level0-item__hover__color: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__hover__color-type-6: @cpanel-txt-color-white;
+@navigation-desktop-level0-item__hover__color-type-2: @cpanel-txt-color-white;
+@navigation-desktop-level0-item__hover__color-type-3: @cpanel-txt-color-theme;
+@navigation-desktop-level0-item__active__border-color: false;
+@navigation-desktop-level0-item__active__border-style: false;
+@navigation-desktop-level0-item__active__border-width: false;
+@submenu-desktop__box-shadow: none;
+@submenu-desktop__background: @cpanel-background-color-semiblack;
+@submenu-desktop__background-htype-2: @cpanel-background-color-black;
+@submenu-desktop__background-htype-6: @cpanel-background-color-black;
+@submenu-desktop-item__color: @cpanel-txt-color-white;
+@submenu-desktop__border-width: @cpanel-border-width-2 @cpanel-border-width-1 @cpanel-border-width-1;
+@submenu-desktop__border-style: @cpanel-border-style-solid;
+@submenu-desktop__border-color: @cpanel-border-color-theme @cpanel-border-color-black @cpanel-border-color-black;
+@submenu-desktop-item__background: transparent;
+@submenu-desktop-item__hover__background: transparent;
+@submenu-desktop-item__hover__color: @cpanel-txt-color-theme;
+@submenu-desktop-item__active__border-width: 0;
+@submenu-desktop-item__active__color: @cpanel-txt-color-theme;
+@cpanel-submenu-item-fontsize: @cpanel-font-size-base - 1;
+@cpanel-submenu-item-fontweight: @cpanel-font-weight-bold;
+@cpanel-submenu-item-color: @cpanel-txt-color-base;
+@navigation-level0-item__padding: 10px 40px 10px 15px;
+@cpanel-navigation-border-type-2: @cpanel-border-width-3 @cpanel-border-style-double @cpanel-border-color-base;
+
+/*=====================================================================
+minicart overirde variables and variables used in theme for minicart
+======================================================================*/
+@minicart-icons-color: @cpanel-txt-color-base;
+@minicart-icons-color-type-2: @cpanel-txt-color-white;
+@minicart-icons-color-type-3: @cpanel-txt-color-white;
+@minicart-icons-color-mobile: @cpanel-txt-color-base;
+@minicart-icons-color-hover: @cpanel-txt-color-base;
+@cpanel-minicart-block-height: 68px;
+@cpanel-minicart-block-height-type-2: 40px;
+@cpanel-minicart-block-text-align: @cpanel-test-align-center;
+@cpanel-minicart-block-width: @cpanel-top-navigation-block-width;
+@cpanel-minicart-block-width-type-2: @cpanel-minicart-block-height-type-2;
+@cpanel-minicart-block-padding: 16px 0;
+@cpanel-minicart-block-padding-type-2: 0;
+@cpanel-minicart-block-qty-background: @cpanel-background-color-black;
+@cpanel-minicart-block-qty-background-type-2: @cpanel-background-color-black-light;
+@cpanel-minicart-block-qty-color-type-2: @cpanel-txt-color-white;
+
+/*======================================
+variables used in theme for top search
+========================================*/
+@cpanel-search-input-background-color: @cpanel-background-color-light-gray;
+@cpanel-search-input-border: @cpanel-border-width-1 @cpanel-border-style-solid @cpanel-border-color-base;
+@cpanel-search-input-border-type-3: @cpanel-border-width-1 @cpanel-border-style-solid @cpanel-border-color-black-extra-light;
+@cpanel-block-search-btn-background: @cpanel-background-color-black;
+@cpanel-block-search-btn-background-type-2: @cpanel-background-color-theme;
+@cpanel-block-search-btn-icon-color: @cpanel-txt-color-white;
+@cpanel-block-search-btn-icon-color-type-2: @cpanel-txt-color-white;
+@cpanel-block-search-btn-icon-color-type-2-second: @cpanel-txt-color-white;
+@cpanel-block-search-btn-icon-color-type-3: @cpanel-txt-color-base-light;
+@cpanel-block-search-input-height: 40px;
+@cpanel-block-search-btn-width: @cpanel-block-search-input-height;
+@cpanel-block-search-btn-height: @cpanel-block-search-input-height;
+
+/*==============================
+top header block less variables
+===============================*/
+@cpanel-header-links-border-left: @cpanel-border-width-1 @cpanel-border-style-solid @cpanel-border-color-base;
+@cpanel-header-links-font-size: @cpanel-font-size-base - 1;
+@cpanel-header-links-font-size-mobile: @cpanel-font-size-base;
+@cpanel-header-links-font-weight-mobile: @cpanel-font-weight-bold;
+@cpanel-header-links-color-mobile: @cpanel-txt-color-base;
+@cpanel-header-links-margin: 0 0 0 10px;
+@cpanel-header-links-padding: 0 0 0 10px;
+@cpanel-top-block-background: @cpanel-background-color-white;
+@cpanel-top-block-background-type-1: @cpanel-background-color-black;
+@cpanel-top-block-background-type-2: @cpanel-background-color-black;
+@cpanel-top-block-background-type-7: @cpanel-background-color-black;
+@cpanel-top-block-background-type-3: @cpanel-background-color-white;
+@cpanel-header-notification-color: @cpanel-txt-color-base;
+
+@cpanel-header-switcher-color-htype-1: @cpanel-txt-color-white;
+@cpanel-header-switcher-color-hover-htype-1: @cpanel-txt-color-theme;
+@cpanel-header-switcher-color-htype-2: @cpanel-txt-color-white;
+@cpanel-header-switcher-color-hover-htype-2: @cpanel-txt-color-theme;
+@cpanel-header-switcher-color-htype-3: @cpanel-txt-color-base;
+@cpanel-header-switcher-color-hover-htype-3: @cpanel-txt-color-theme;
+@cpanel-header-switcher-color-htype-6: @cpanel-txt-color-white;
+@cpanel-header-switcher-color-hover-htype-6: @cpanel-txt-color-theme;
+@cpanel-header-switcher-color-htype-7: @cpanel-txt-color-white;
+@cpanel-header-switcher-color-hover-htype-7: @cpanel-txt-color-theme;
+/*main title*/
+@cpanel-main-title-font-size: @cpanel-font-size-base + 10;
+@cpanel-main-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-main-title-color: @cpanel-txt-color-base-dark;
+@cpanel-main-title-text-transform: @cpanel-text-transform-capitalize;
+@cpanel-main-title-margin: 0 0 30px;
+
+/*======================
+footer less variables
+=======================*/
+@cpanel-cp-footer-container-padding: 50px 0 30px;
+/*footer main */
+@cpanel-cp-footer-main-width: 25%;
+@cpanel-cp-footer-main-width-tablet: 50%;
+@cpanel-cp-footer-main-width-mobile: 100%;
+@cpanel-cp-footer-main-padding: 0 15px;
+
+
+
+/*newsletter block*/
+@cpanel-footer-newsletter-left-block-width: 60%;
+@cpanel-footer-newsletter-right-block-width: 40%;
+
+
+/*=============================================
+sidebar and sidebar additional less variables
+===============================================*/
+/*sidebar and sidebar additional block*/
+@cpanel-sidebar-block-background: @cpanel-background-color-light-gray;
+@cpanel-sidebar-block-padding: 15px;
+/*sidebar title*/
+@cpanel-sidebar-block-title-padding: 0 0 10px;
+@cpanel-sidebar-block-title-border: @cpanel-border-width-1 @cpanel-border-style-solid @cpanel-border-color-base;
+@cpanel-sidebar-block-title-color: @cpanel-txt-color-base-dark;
+@cpanel-sidebar-block-title-font-size: @cpanel-font-size-base;
+@cpanel-sidebar-block-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-sidebar-block-title-text-transform: @cpanel-text-transform-capitalize;
+/*sidebar sub title*/
+@cpanel-sidebar-block-sub-title-padding: 5px 0 15px;
+@cpanel-sidebar-block-sub-title-border: none;
+@cpanel-sidebar-block-sub-title-color: @cpanel-txt-color-base;
+@cpanel-sidebar-block-sub-title-font-size: @cpanel-font-size-base + 2;
+@cpanel-sidebar-block-sub-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-sidebar-block-sub-title-text-transform: @cpanel-text-transform-capitalize;
+/*sidebar block filter and its options*/
+@cpanel-sidebar-filter-options-background: @cpanel-background-color-light-gray;
+@cpanel-sidebar-filter-options-margin: 0 0 12px;
+@cpanel-sidebar-filter-options-padding: 6px 5px 12px;
+@cpanel-sidebar-filter-options-border: none;
+/*sidebar block filter and its options title*/
+@cpanel-sidebar-filter-options-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-sidebar-filter-options-title-font-color: @cpanel-txt-color-base;
+
+/*===========================
+Contact Us Page less Variables
+=============================*/
+/*contact us page less varibales*/
+/*store title*/
+@cpanel-contact-store-name-color: @cpanel-txt-color-theme;
+@cpanel-contact-store-name-font-size: @cpanel-font-size-base + 11;
+@cpanel-contact-store-name-font-weight: @cpanel-font-weight-bold;
+@cpanel-contact-store-name-line-height: 30px;
+@cpanel-contact-store-name-margin: 0 0 20px;
+@cpanel-contact-store-name-text-transform: @cpanel-text-transform-capitalize;
+/*store address title*/
+@cpanel-contact-store-add-title-font-size: @cpanel-font-size-base + 3;
+@cpanel-contact-store-add-title-text-align: @cpanel-test-align-center;
+@cpanel-contact-store-add-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-contact-store-add-title-margin: 0 0 5px;
+/*store address text*/
+@cpanel-contact-store-add-txt-font-size: @cpanel-font-size-base + 1;
+@cpanel-contact-store-add-txt-line-height: @cpanel-contact-store-add-txt-font-size + 1;
+@cpanel-contact-store-add-txt-margin: 0 0 10px;
+
+
+
+/*===========================
+Blog All Pages less Variables
+=============================*/
+
+/*blog sidebar*/
+@cpanel-blog-sidebar-title-font-size: @cpanel-font-size-base;
+@cpanel-blog-sidebar-title-line-height: @cpanel-blog-sidebar-title-font-size + 10;
+@cpanel-blog-sidebar-title-font-weight: @cpanel-font-weight-bold;
+@cpanel-blog-sidebar-title-color: @cpanel-txt-color-base;
+@cpanel-blog-sidebar-info-color: @cpanel-txt-color-base;
+@cpanel-blog-sidebar-title-color-hover: @cpanel-txt-color-theme;
+
+
+/*===========================
+category page pagination less Variables
+=============================*/
+/*pagination less variales*/
+/*override toolbar variables*/
+@toolbar-element-background: @cpanel-txt-color-white;
+@button__shadow:none;
+@_pager-current-background: @cpanel-background-color-light-gray;
+@cpanel-pager-current-background: @cpanel-background-color-light-gray;
+@cpanel-pager-current-color: @cpanel-txt-color-theme;
+@cpanel-pager-current-font-weight: @cpanel-font-weight-bold;
+@cpanel-pager-min-width: 15px;
+@cpanel-pager-color: @cpanel-txt-color-base;
+@cpanel-pager-padding: 5px 9px;
+@cpanel-pager-border: @cpanel-border-width-1 @cpanel-border-style-solid @cpanel-border-color-base;
+@cpanel-pager-prev-next-color: @cpanel-txt-color-base;
+@cpanel-pager-prev-next-font-size: @cpanel-font-size-base - 1;
+
+//  Form fieldset
+@form-fieldset-legend__font-size: 18px;
+@form-fieldset-legend__font-weight: 600;
+@form-fieldset-legend__margin: 0 0 @indent__base;
+@form-fieldset-legend__padding: 0 0 @indent__s;
+@form-fieldset-legend__width: 100%;
+
+//  Form field
+@form-field-type-revert: false;
+@form-field__additional-vertical-indent: @indent__s;
+
+//  Form field label
+@form-field-type-label-block__margin: 0 0 8px;
+
+//  Form field note icon
+@form-field-note-icon-font__content: false;
+
+@account-nav-background: @sidebar__background-color;
+@account-nav-color: false;
+
+@account-nav-current-border: 3px solid transparent;
+@account-nav-current-border-color: @color-orange-red1;
+@account-nav-current-color: false;
+@account-nav-current-font-weight: 600;
+
+@account-nav-item-hover: @color-gray91;
+
+@_password-default: @color-gray-light01;
+@_password-weak: #ffafae;
+@_password-medium: #ffd6b3;
+@_password-strong: #c5eeac;
+@_password-very-strong: #81b562;

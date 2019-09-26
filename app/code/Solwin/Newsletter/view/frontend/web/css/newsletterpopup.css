@@ -1,0 +1,135 @@
+.nh-content #newsletter-validate-detail .control .newspopupinput::-moz-placeholder {
+    color: #ffffff;
+}
+.nh-content .nh-field {
+    margin: 0 auto 15px;
+    max-width: 500px;
+}
+.nh-content #newsletter-validate-detail .control .newspopupinput {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: #ffffff;
+    color: #ffffff;
+    height: 45px !important;
+}
+.nh-wrapper {
+    color: #ffffff;
+}
+.nh-content #newsletter-validate-detail .input-group-btn #newspopupsubmit {
+    background: #b9cb44 none repeat scroll 0 0;
+    border-color: #b9cb44;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 45px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: -1px;
+}
+.nh-wrapper .nh-img-left {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 20px 0 0;
+    width: 50%;
+}
+.nh-wrapper .nh-img-right {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 0 0 20px;
+    width: 50%;
+}
+.nh-wrapper .nh-content {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+}
+.nh-img  img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.nh-wrapper .nh-content > h2 {
+    color: #0088cd;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 30px 0 20px;
+    text-align: center;
+}
+.nh-wrapper .nh-content > p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 25px;
+    text-align: center;
+}
+.input-group {
+    border-collapse: separate;
+    display: table;
+    position: relative;
+}
+.input-group-btn {
+    font-size: 0;
+    position: relative;
+    white-space: nowrap;
+}
+.input-group-addon, .input-group-btn {
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+.input-group-btn > .btn {
+    position: relative;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left: -1px;
+}
+.nh-wrapper .nh-content .nh-show {
+    display: block;
+    margin: 0 auto 10px;
+    width: 235px;
+}
+.nh-wrapper .nh-content .nh-social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.nh-wrapper .nh-content .nh-social > a.s-link {
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 1px 4px;
+    width: 40px;
+}
+.nh-wrapper .nh-content > h3 {
+    font-weight: 400;
+    margin: 20px 0 15px;
+    text-align: center;
+    font-weight: 600;
+}
+.popup-main {
+    background: #111111;
+}
+@media only screen and (max-width: 767px) {
+    #reference-first-message {
+        max-width: 600px !important;
+    }
+}
+@media only screen and (max-width: 639px) {
+    #reference-first-message {
+        max-width: 300px !important;
+    }
+    .nh-img-right {
+        width: 100% !important;
+        display: none;
+    }
+    .nh-img-left {
+        width: 100% !important;
+        display: none;
+    }
+    .nh-wrapper .nh-content {
+        width: 100% !important;
+    }
+}

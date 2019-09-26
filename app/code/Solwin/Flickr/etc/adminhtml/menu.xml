@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Solwin Infotech
+ * Solwin Flickr Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_Flickr
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+<!--        <add id="Solwin_Flickr::flickr" title="Flickr" module="Solwin_Flickr" sortOrder="56" resource="Solwin_Flickr::flickr"/>
+        <add id="Solwin_Flickr::flickr_config" title="Configuration" module="Solwin_Flickr" sortOrder="20" parent="Solwin_Flickr::flickr" action="adminhtml/system_config/edit/section/flickrsection" resource="Solwin_Flickr::flickr_config"/>-->
+    </menu>
+</config>

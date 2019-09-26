@@ -1,0 +1,25 @@
+<?php
+/**
+ * Solwin Infotech
+ * Solwin Flickr Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_Flickr
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+namespace Solwin\Flickr\Controller\Index;
+
+
+use Magento\Framework\App\RequestInterface;
+
+class Index extends \Magento\Framework\App\Action\Action
+{
+
+    public function execute() {
+        $this->_view->loadLayout();
+        $this->_view->getLayout()->initMessages();
+        $this->_view->renderLayout();  
+    }
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Solwin Infotech. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="page.top">
+            <block class="Solwin\Megamenu\Block\Topmenu" name="sol.topnav" template="Solwin_Megamenu::topmenu.phtml" ttl="3600" before="-"/>
+        </referenceContainer>
+        <move element="sol.topnav" destination="store.menu" before="-"/>        
+        <!--add css on head block-->
+        <referenceContainer name="after.body.start">
+            <block class="Solwin\Megamenu\Block\Template" name="megamenu_custom_head" template="Solwin_Megamenu::head.phtml" after="cpanel_custom_head"/>
+        </referenceContainer>
+    </body>
+</page>

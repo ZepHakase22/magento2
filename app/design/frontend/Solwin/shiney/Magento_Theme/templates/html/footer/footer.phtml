@@ -1,0 +1,179 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$Enable_footer_middle1 = $helper->getCpanelConfigValue('cpanelsection/footergroup/show_footer_middle_1');
+$Enable_footer_middle2 = $helper->getCpanelConfigValue('cpanelsection/footergroup/show_footer_middle');
+$Footer_middle1_static_block = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_1_static');
+
+$footer_column1 = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_1');
+$footer_column1_static_block = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_1_static');
+$footer_column_1_width = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_column_1_width');
+
+$footer_column2 = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_2');
+$footer_column2_static_block = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_2_static');
+$footer_column_2_width = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_column_2_width');
+
+$footer_column3 = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_3');
+$footer_column3_static_block = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_3_static');
+$footer_column_3_width = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_column_3_width');
+
+$footer_column4 = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_4');
+$footer_column4_static_block = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_middle_col_4_static');
+$footer_column_4_width = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_column_4_width');
+
+$enable_addthis = $helper->getCpanelConfigValue('cpanelsection/headergroup/sharingaddon');
+$enableloader = $helper->getCpanelConfigValue('cpanelsection/loadergroup/enable_loader');
+$pubid = $helper->getCpanelConfigValue('cpanelsection/headergroup/pubid');
+$baseUrl = $helper->getBaseUrl();
+$mediaurl = $helper->getMediaUrl() . 'social/';
+$ishome = $helper->getIsHomePage();
+?>
+<div class="page-footer">
+    <div class="page-main" style="padding: 0 5px;">
+        <div class="cus-container" style="padding: 0 5px;">
+            <?php if ($Enable_footer_middle2) { ?>
+                <div class="cp-footer-container">
+                    <?php if ($footer_column1 != '') { ?>
+                        <div class="col-lg-<?php echo $footer_column_1_width; ?> col-md-<?php echo $footer_column_1_width; ?> col-sm-<?php echo $footer_column_1_width; ?> col-xs-12 cp-footer-main">
+                            <div class="cp-fblock">
+                                <?php if ($footer_column1 == 'info') { ?>
+                                    <div class="cp-ftitle">
+                                        <h3>
+                                            <?php echo __('Information') ?>
+                                        </h3>
+                                    </div>
+                                    <div class="cp-fcontent">
+                                        <?php echo $this->getChildHtml('footer_links'); ?>
+                                    </div>
+                                <?php } else if ($footer_column1 == 'flickr') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_flickr')->toHtml(); ?>
+                                <?php } else if ($footer_column1 == 'instagram') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_instagram')->toHtml(); ?>
+                                <?php } else if ($footer_column1 == 'static') { ?>
+                                    <?php if ($footer_column1 != '') { ?>
+                                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footer_column1_static_block)->toHtml(); ?>
+                                    <?php } ?>
+                                <?php } else if ($footer_column1 == 'newsltter_socials') { ?>
+                                    <?php echo $this->getChildHtml('form.subscribe.block'); ?>
+                                <?php } ?>
+                            </div>
+                        </div>    
+                    <?php } ?>
+                    <?php if ($footer_column2 != '') { ?>
+                        <div class="col-lg-<?php echo $footer_column_2_width; ?> col-md-<?php echo $footer_column_2_width; ?> col-sm-<?php echo $footer_column_2_width; ?> col-xs-12 cp-footer-main">
+                            <div class="cp-fblock">
+                                <?php if ($footer_column2 == 'info') { ?>
+                                    <div class="cp-ftitle">
+                                        <h3>
+                                            <?php echo __('Information') ?>
+                                        </h3>
+                                    </div>
+                                    <div class="cp-fcontent">
+                                        <?php echo $this->getChildHtml('footer_links'); ?>
+                                    </div>
+                                <?php } else if ($footer_column2 == 'flickr') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_flickr')->toHtml(); ?>
+                                <?php } else if ($footer_column2 == 'instagram') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_instagram')->toHtml(); ?>
+                                <?php } else if ($footer_column2 == 'static') { ?>
+                                    <?php if ($footer_column2 != '') { ?>
+                                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footer_column2_static_block)->toHtml(); ?>
+                                    <?php } ?>
+                                <?php } else if ($footer_column2 == 'newsltter_socials') { ?>
+                                    <?php echo $this->getChildHtml('form.subscribe.block'); ?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <?php if ($footer_column3 != '') { ?>
+                        <div class="col-lg-<?php echo $footer_column_3_width; ?> col-md-<?php echo $footer_column_3_width; ?> col-sm-<?php echo $footer_column_3_width; ?> cp-footer-main">
+                            <div class="cp-fblock">
+                                <?php if ($footer_column3 == 'info') { ?>
+                                    <div class="cp-ftitle">
+                                        <h3>
+                                            <?php echo __('Information') ?>
+                                        </h3>
+                                    </div>
+                                    <div class="cp-fcontent">
+                                        <?php echo $this->getChildHtml('footer_links'); ?>
+                                    </div>
+                                <?php } else if ($footer_column3 == 'flickr') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_flickr')->toHtml(); ?>
+                                <?php } else if ($footer_column3 == 'instagram') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_instagram')->toHtml(); ?>
+                                <?php } else if ($footer_column3 == 'static') { ?>
+                                    <?php if ($footer_column3 != '') { ?>
+                                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footer_column3_static_block)->toHtml(); ?>
+                                    <?php } ?>
+                                <?php } else if ($footer_column3 == 'newsltter_socials') { ?>
+                                    <?php echo $this->getChildHtml('form.subscribe.block'); ?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <?php if ($footer_column4 != '') { ?>
+                        <div class="col-lg-<?php echo $footer_column_4_width; ?> col-md-<?php echo $footer_column_4_width; ?> col-sm-<?php echo $footer_column_4_width; ?> cp-footer-main">
+                            <div class="cp-fblock">
+                                <?php if ($footer_column4 == 'info') { ?>
+                                    <div class="cp-ftitle">
+                                        <h3>
+                                            <?php echo __('Information') ?>
+                                        </h3>
+                                    </div>
+                                    <div class="cp-fcontent">
+                                        <?php echo $this->getChildHtml('footer_links'); ?>
+                                    </div>
+                                <?php } else if ($footer_column4 == 'flickr') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_flickr')->toHtml(); ?>
+                                <?php } else if ($footer_column4 == 'instagram') { ?>
+                                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('shiney_instagram')->toHtml(); ?>
+                                <?php } else if ($footer_column4 == 'static') { ?>
+                                    <?php if ($footer_column4 != '') { ?>
+                                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footer_column4_static_block)->toHtml(); ?>
+                                    <?php } ?>
+                                <?php } else if ($footer_column4 == 'newsltter_socials') { ?>
+                                    <?php echo $this->getChildHtml('form.subscribe.block'); ?>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+            <?php if ($Enable_footer_middle1) { ?>
+                <div class="cp-footer-container cp-service">
+                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($Footer_middle1_static_block)->toHtml(); ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<?php if ($ishome) { ?>
+    <style>
+        #maincontent {
+            margin-top: 0;
+            float: left;
+            width:100%;
+            box-sizing: border-box;
+            clear: both;
+        }
+    </style>
+<?php } else { ?>
+    <style>
+        #maincontent {
+            margin-top: 30px;
+        }
+    </style>
+<?php } ?>
+
+<?php if ($enable_addthis) { ?>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $pubid; ?>" async="async"></script>
+<?php } ?>

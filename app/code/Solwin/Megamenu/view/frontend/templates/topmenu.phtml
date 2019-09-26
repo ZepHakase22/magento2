@@ -1,0 +1,99 @@
+<?php
+/**
+ * Copyright © 2015 Solwin Infotech. All rights reserved.
+ */
+?>
+<?php
+/**
+ * Top Navigation menu for website
+ *
+ * \Solwin\Megamenu\Block\Topmenu
+ */
+?>
+<?php
+$_helper = $this->helper('Solwin\Megamenu\Helper\Data');
+$_config = $_helper->getConfig('megamenu');
+
+$columnsLimit = 0;
+if ($_config['general']['enable']) {
+    ?>
+    <?php $_menu = $block->getMegamenuHtml(); ?>
+
+    <nav class="navigation sol-megamenu" role="navigation">
+        <ul>
+            <?php echo $_menu; ?>
+        </ul>
+    </nav>
+    <script type="text/javascript">
+        require([
+            'jquery',
+            'Solwin_Megamenu/js/megamenu'
+        ], function ($) {
+            $(".sol-megamenu").solMegamenu({
+            });
+        });
+    </script>
+
+    <?php
+} else {
+    ?>
+    <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit); ?>
+    <?php
+    $cHelper = $this->helper('Solwin\Cpanel\Helper\Data');
+    $showhomelink = $cHelper->getCpanelConfigValue('cpanelsection/headergroup/addhomelink');
+    $hometext = $cHelper->getCpanelConfigValue('cpanelsection/headergroup/menuhomelink');
+    $baseUrl = $cHelper->getBaseUrl();
+    $curr_Url = $cHelper->getCurrentUrl();
+    $ishome = $cHelper->getIsHomePage();
+    ?>
+    <nav class="navigation" role="navigation">
+        <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"right top","at":"right bottom"}}}'>
+            <?php if ($showhomelink) { ?>
+                <li class="level0 level-top <?php if ($ishome) { ?> active <?php } ?>">
+                    <a class="level-top" href="<?php echo $baseUrl; ?>">
+                        <?php echo $hometext; ?>
+                    </a>
+                </li>
+            <?php } ?>
+            <?php /* @escapeNotVerified */ echo $_menu; ?>
+        </ul>
+    </nav>
+    <style>
+        .navigation .level0.parent:hover > .submenu {
+            left: 0 !important;
+            top: 100% !important;
+        }
+        .navigation .level1.parent:hover .submenu {
+            left: 100% !important;
+            top: 0 !important;
+        }
+        .navigation .level0.parent:hover > .submenu,
+        .navigation .level1.parent:hover .submenu {
+            overflow: visible !important;
+            visibility: visible;
+            opacity: 1;
+            display: block !important;
+            right: auto !important;
+        }
+        .level0.parent > .level-top > .ui-menu-icon::after {
+            display: none !important;
+        }
+        .navigation ul li.level0.parent > a::after {
+            content: "\e622";
+            font-family: "icons-blank-theme";
+            font-size: 22px;
+            position: absolute;
+            right: 8px;
+        }
+        .navigation .level0 .submenu li.parent > a > .ui-menu-icon::after {
+            content: "\e622";
+            font-family: "icons-blank-theme";
+            font-size: 22px;
+            position: absolute;
+            right: 10px;
+            font-weight: 600;
+        }
+    </style>
+    <?php
+}
+?>

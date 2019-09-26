@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$Enable_footer_bottom = $helper->getCpanelConfigValue('cpanelsection/footergroup/show_footer_bottom');
+$Copyright_text = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_bottom_copyright');
+$Copyright_before_static = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_bottom_static_1');
+$Copyright_after_static = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_bottom_static_2');
+?>
+<?php if ($Enable_footer_bottom) { ?>
+    <div class="footer-copyright">
+        <div class="page-main">
+            <div class="cus-container">
+                <div class="copyright-block">
+                    <small class="copyright">
+                        <?php if ($Copyright_before_static != '') { ?>
+                            <span>
+                                <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($Copyright_before_static)->toHtml(); ?>
+                            </span>
+                        <?php } ?>
+                        <span><?php /* @escapeNotVerified */ echo $Copyright_text; ?></span>
+                        <?php if ($Copyright_after_static != '') { ?>
+                            <span>
+                                <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($Copyright_after_static)->toHtml(); ?>
+                            </span>
+                        <?php } ?>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>

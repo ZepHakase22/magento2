@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <newsletter_settings>
+            <general>
+                <active>0</active>
+            </general>
+            <displayoptions>
+                <showmaintitle>1</showmaintitle>
+                <maintitle>Subscribe our Newsletter</maintitle>
+                <use_default_maintitle_settings>1</use_default_maintitle_settings>
+                <maintitle_fontsize>24px</maintitle_fontsize>
+                <maintitle_textcolor>#1979c3</maintitle_textcolor>
+                <enable_custommessage>1</enable_custommessage>
+                <custommessage>Subscribe to our mailing list to get updates to your email inbox</custommessage>
+                <use_default_custommessage_settings>1</use_default_custommessage_settings>
+                <custommessage_fontsize>13px</custommessage_fontsize>
+                <custommessage_textcolor>#444444</custommessage_textcolor>
+                <buttontext>Sign up</buttontext>
+                <use_default_button_settings>1</use_default_button_settings>
+                <button_background>#1979c3</button_background>
+                <button_background_hover>#006BB4</button_background_hover>
+                <button_text_color>#ffffff</button_text_color>
+                <button_text_color_hover>#ffffff</button_text_color_hover>
+                <enable_checkbox>1</enable_checkbox>
+                <checkbox_text>Don't Show this popup again</checkbox_text>
+		<enable_newsletter_image>0</enable_newsletter_image>
+		<upload_newsletter_image></upload_newsletter_image>
+		<imageposition>left</imageposition>
+		<enable_background_image>0</enable_background_image>
+		<upload_newsletter_background_image></upload_newsletter_background_image>
+            </displayoptions>
+            <moreoptions>                 
+                <popupwidth>700px</popupwidth>                    
+                <popupheight>auto</popupheight>                    
+                <poppadding>0</poppadding>      
+                <popup_box_border>0</popup_box_border>                    
+                <boxbordercolor>transparent</boxbordercolor>             
+                <boxopeneffect>elastic</boxopeneffect>
+                <boxopenspeed>500</boxopenspeed>
+                <boxopenmethod>zoomIn</boxopenmethod>
+                <boxcloseeffect>fade</boxcloseeffect>
+                <boxclosespeed>500</boxclosespeed>
+                <boxclosemethod>zoomOut</boxclosemethod>
+                <delay>0</delay>
+                <showOnce>false</showOnce>                    
+                <cookieexptime>1</cookieexptime>                 
+            </moreoptions>
+            <socialoptions>
+                <enablesocial>1</enablesocial>
+                <social_title>Follow Us</social_title>
+                <use_default_socialtitle_settings>1</use_default_socialtitle_settings>
+                <socialtitle_fontsize>14px</socialtitle_fontsize>
+                <maintitle_textcolor>#444444</maintitle_textcolor>
+                
+                <enablefacebook>1</enablefacebook>
+                <fb_link>http://www.facebook.com</fb_link>
+                <use_default_fb_icon_settings>1</use_default_fb_icon_settings>
+                <fb_background>#45619D</fb_background>
+                <fb_background_hover>#31446F</fb_background_hover>
+                <fb_iconcolor>#ffffff</fb_iconcolor>
+                <fb_iconcolor_hover>#ffffff</fb_iconcolor_hover>
+                
+                <enablegoogle>1</enablegoogle>
+                <google_link>http://www.googleplus.com</google_link>
+                <use_default_gplus_icon_settings>1</use_default_gplus_icon_settings>
+                <google_background>#DE4B39</google_background>
+                <google_background_hover>#C94434</google_background_hover>
+                <google_iconcolor>#ffffff</google_iconcolor>
+                <google_iconcolor_hover>#ffffff</google_iconcolor_hover>
+                
+                <enabletwitter>1</enabletwitter>
+                <twitter_link>http://www.twitter.com</twitter_link>
+                <use_default_twitter_icon_settings>1</use_default_twitter_icon_settings>
+                <twitter_background>#55ACEE</twitter_background>
+                <twitter_background_hover>#3C79A8</twitter_background_hover>
+                <twitter_iconcolor>#ffffff</twitter_iconcolor>
+                <twitter_iconcolor_hover>#ffffff</twitter_iconcolor_hover>
+                
+                <enableyoutube>1</enableyoutube>
+                <youtube_link>http://www.youtube.com.com</youtube_link>
+                <use_default_youtube_icon_settings>1</use_default_youtube_icon_settings>
+                <youtube_background>#E52D27</youtube_background>
+                <youtube_background_hover>#BC1515</youtube_background_hover>
+                <youtube_iconcolor>#ffffff</youtube_iconcolor>
+                <youtube_iconcolor_hover>#ffffff</youtube_iconcolor_hover>
+                
+                <enableflickr>1</enableflickr>
+                <flickr_link>http://flickr.com</flickr_link>
+                <use_default_flickr_icon_settings>1</use_default_flickr_icon_settings>
+                <flickr_background>#ED1983</flickr_background>
+                <flickr_background_hover>#BA1570</flickr_background_hover>
+                <flickr_iconcolor>#ffffff</flickr_iconcolor>
+                <flickr_iconcolor_hover>#ffffff</flickr_iconcolor_hover>
+                
+                <enablevimeo>1</enablevimeo>
+                <vimeo_link>http://vimeo.com</vimeo_link>
+                <use_default_vimeo_icon_settings>1</use_default_vimeo_icon_settings>
+                <vimeo_background>#1AB7EA</vimeo_background>
+                <vimeo_background_hover>#139FBF</vimeo_background_hover>
+                <vimeo_iconcolor>#ffffff</vimeo_iconcolor>
+                <vimeo_iconcolor_hover>#ffffff</vimeo_iconcolor_hover>
+                
+                <enablepinterest>1</enablepinterest>
+                <pinterest_link>http://pinterest.com</pinterest_link>
+                <use_default_pinterest_icon_settings>1</use_default_pinterest_icon_settings>
+                <pinterest_background>#CB1F26</pinterest_background>
+                <pinterest_background_hover>#8F161B</pinterest_background_hover>
+                <pinterest_iconcolor>#ffffff</pinterest_iconcolor>
+                <pinterest_iconcolor_hover>#ffffff</pinterest_iconcolor_hover>
+                
+                <enableinstagram>1</enableinstagram>
+                <instagram_link>http://instagram.com</instagram_link>
+                <instagram_background>#527FA3</instagram_background>
+                <use_default_instagram_icon_settings>1</use_default_instagram_icon_settings>
+                <instagram_background_hover>#255270</instagram_background_hover>
+                <instagram_iconcolor>#ffffff</instagram_iconcolor>
+                <instagram_iconcolor_hover>#ffffff</instagram_iconcolor_hover>
+                
+                <enablefoursquare>1</enablefoursquare>
+                <foursquare_link>http://foursquare.com</foursquare_link>
+                <use_default_foursquare_icon_settings>1</use_default_foursquare_icon_settings>
+                <foursquare_background>#F94877</foursquare_background>
+                <foursquare_background_hover>#AF3354</foursquare_background_hover>
+                <foursquare_iconcolor>#ffffff</foursquare_iconcolor>
+                <foursquare_iconcolor_hover>#ffffff</foursquare_iconcolor_hover>
+                
+                <enabletumblr>1</enabletumblr>
+                <tumblr_link>http://tumblr.com</tumblr_link>
+                <use_default_tumblr_icon_settings>1</use_default_tumblr_icon_settings>
+                <tumblr_background>#325E8B</tumblr_background>
+                <tumblr_background_hover>#1B436C</tumblr_background_hover>
+                <tumblr_iconcolor>#ffffff</tumblr_iconcolor>
+                <tumblr_iconcolor_hover>#ffffff</tumblr_iconcolor_hover>
+                
+                <enablerss>1</enablerss>
+                <rss_link>http://rss.com</rss_link>
+                <use_default_rss_icon_settings>1</use_default_rss_icon_settings>
+                <rss_background>#FF9900</rss_background>
+                <rss_background_hover>#B75B0F</rss_background_hover>
+                <rss_iconcolor>#ffffff</rss_iconcolor>
+                <rss_iconcolor_hover>#ffffff</rss_iconcolor_hover>
+                
+                <enablemail>1</enablemail>
+                <mail_link>info@yourdomain.com</mail_link>
+                <use_default_mail_icon_settings>1</use_default_mail_icon_settings>
+                <mail_background>#0072C6</mail_background>
+                <mail_background_hover>#00508C</mail_background_hover>
+                <mail_iconcolor>#ffffff</mail_iconcolor>
+                <mail_iconcolor_hover>#ffffff</mail_iconcolor_hover>
+            </socialoptions>
+        </newsletter_settings>
+    </default>
+</config>

@@ -1,0 +1,449 @@
+/**
+* WARNING: Do not change this file. Your changes will be lost.
+* <?php echo date("Y-m-d H:i:s"); ?>
+*/
+<?php
+$menu_helper = $this->helper('Solwin\Megamenu\Helper\Css');
+$menu_use_custom = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/use_custom');
+$top_backcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_backcolor');
+$top_textcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_textcolor');
+$top_hovercolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_hovercolor');
+$top_activecolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_activecolor');
+$top_hoverbackcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_hoverbackcolor');
+$top_activebackcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/top_activebackcolor');
+$sub_backcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/sub_backcolor');
+$sub_textcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/sub_textcolor');
+$sub_hovercolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/sub_hovercolor');
+$sub_activecolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/sub_activecolor');
+/* lebels */
+$label1_color = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label1_color');
+$label1_backcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label1_backcolor');
+$label2_color = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label2_color');
+$label2_backcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label2_backcolor');
+$label3_color = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label3_color');
+$label3_backcolor = $menu_helper->getMegamenuStoreConfig('megamenudesign/design/label3_backcolor');
+?>
+<?php if ($menu_use_custom) { ?>
+    <?php if ($top_backcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation {
+        background: #<?php echo $top_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections {
+        background: #<?php echo $top_backcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($top_textcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $top_textcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $top_textcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $top_textcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $top_textcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top {
+        color: #<?php echo $top_textcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($top_hovercolor != '' || $top_hoverbackcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus {
+        <?php if ($top_hovercolor != '') { ?>
+            color: #<?php echo $top_hovercolor; ?>;
+        <?php } ?>
+        <?php if ($top_hoverbackcolor != '') { ?>
+            background: #<?php echo $top_hoverbackcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($top_hovercolor != '') { ?>
+            color: #<?php echo $top_hovercolor; ?>;
+        <?php } ?>
+        <?php if ($top_hoverbackcolor != '') { ?>
+            background: #<?php echo $top_hoverbackcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top:hover,
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top.ui-state-focus,
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($top_hovercolor != '') { ?>
+            color: #<?php echo $top_hovercolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($top_hovercolor != '') { ?>
+            color: #<?php echo $top_hovercolor; ?>;
+        <?php } ?>
+        <?php if ($top_hoverbackcolor != '') { ?>
+            background: #<?php echo $top_hoverbackcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top:hover, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-focus, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 > a.level-top.ui-state-active {
+        <?php if ($top_hovercolor != '') { ?>
+            color: #<?php echo $top_hovercolor; ?>;
+        <?php } ?>
+        <?php if ($top_hoverbackcolor != '') { ?>
+            background: #<?php echo $top_hoverbackcolor; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+        <?php if ($top_activecolor != '' || $top_activebackcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($top_activecolor != '') { ?>
+            color: #<?php echo $top_activecolor; ?>;
+        <?php } ?>
+        <?php if ($top_activebackcolor != '') { ?>
+            background: #<?php echo $top_activebackcolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($top_activecolor != '') { ?>
+            color: #<?php echo $top_activecolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-3 .nav-sections .navigation ul li.level0.active > a.level-top {
+        <?php if ($top_activecolor != '') { ?>
+            color: #<?php echo $top_activecolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($top_activecolor != '') { ?>
+            color: #<?php echo $top_activecolor; ?>;
+        <?php } ?>
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.active > a.level-top {
+        <?php if ($top_activecolor != '') { ?>
+            color: #<?php echo $top_activecolor; ?>;
+        <?php } ?>
+        }
+    <?php } ?>
+    <?php if ($sub_backcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.fullwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth ul.submenu .subchildmenu .subchildmenu .subchildmenu, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0.staticwidth div.submenu .subchildmenu .subchildmenu .subchildmenu {
+        background: #<?php echo $sub_backcolor; ?>;
+        }
+    <?php } ?>
+
+    <?php if ($sub_textcolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($sub_hovercolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $sub_hovercolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $sub_hovercolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $sub_hovercolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus,
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active {
+        color: #<?php echo $sub_hovercolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a:hover,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-active,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li > a.ui-state-focus,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a:hover,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-active,
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li > a.ui-state-focus {
+        color: #<?php echo $sub_hovercolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($sub_activecolor != '') { ?>
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-1 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $sub_activecolor; ?>;
+        }
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-2 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $sub_activecolor; ?>;
+        }
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-3 .nav-sections .navigation > ul li.level0.fullwidth div.submenu li.active > a {
+        color: #<?php echo $sub_activecolor; ?>;
+        }
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-6 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 ul.submenu li.active > a, 
+        header.page-header.htype-7 .nav-sections .navigation > ul li.level0 div.submenu li.active > a {
+        color: #<?php echo $sub_textcolor; ?>;
+        }
+    <?php } ?>
+
+    <?php if ($label1_backcolor != '') { ?>
+        .sol-megamenu.navigation li.level0 > a > span.cat-label.cat-label-label1:before {
+        border-top-color: #<?php echo $label1_backcolor; ?>;
+        }
+        .sol-megamenu.navigation span.cat-label.cat-label-label1 {
+        background: #<?php echo $label1_backcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($label1_color != '') { ?>
+        .sol-megamenu.navigation span.cat-label-label1 {
+        color: #<?php echo $label1_color; ?>;
+        }
+    <?php } ?>
+        
+    <?php if ($label2_backcolor != '') { ?>
+        .sol-megamenu.navigation li.level0 > a > span.cat-label.cat-label-label2:before {
+        border-top-color: #<?php echo $label2_backcolor; ?>;
+        }
+        .sol-megamenu.navigation span.cat-label.cat-label-label2 {
+        background: #<?php echo $label2_backcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($label2_color != '') { ?>
+        .sol-megamenu.navigation span.cat-label-label2 {
+        color: #<?php echo $label2_color; ?>;
+        }
+    <?php } ?>
+        
+    <?php if ($label3_backcolor != '') { ?>
+        .sol-megamenu.navigation li.level0 > a > span.cat-label.cat-label-label3:before {
+        border-top-color: #<?php echo $label3_backcolor; ?>;
+        }
+        .sol-megamenu.navigation span.cat-label.cat-label-label3 {
+        background: #<?php echo $label3_backcolor; ?>;
+        }
+    <?php } ?>
+    <?php if ($label3_color != '') { ?>
+        .sol-megamenu.navigation span.cat-label-label3 {
+        color: #<?php echo $label3_color; ?>;
+        }
+    <?php } ?>
+
+
+
+<?php } ?>

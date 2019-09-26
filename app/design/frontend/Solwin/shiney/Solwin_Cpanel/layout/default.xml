@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Solwin_Cpanel::css/bootstrap.css"/>
+        <css src="Solwin_Cpanel::css/bootstrap.css"/>
+        <css src="Solwin_Cpanel::css/owl.carousel.css"/>
+        <css src="Solwin_Cpanel::css/owl.theme.css"/>
+        <css src="Solwin_Cpanel::css/owl.transitions.css"/>
+        <css src="Solwin_Cpanel::css/fancybox/jquery.fancybox.css"/>
+        <css src="Solwin_Cpanel::css/font-awesome.min.css"/>
+        <script src="Solwin_Cpanel::js/shiney-customjs.js"/>
+    </head>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="cpanel_header" template="Solwin_Cpanel::headertype/headertype.phtml" before="main.content">
+                <block class="Magento\Framework\View\Element\Html\Links" name="top.links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
+            </block>
+        </referenceContainer>
+        <move element="navigation.sections" destination="cpanel_header"/>
+        <move element="top.search" destination="cpanel_header"/>
+        <move element="minicart" destination="cpanel_header"/>
+        <move element="store_language" destination="cpanel_header"/>
+        <move element="currency" destination="cpanel_header"/>
+        <move element="logo" destination="cpanel_header"/>
+        <move element="skip_to_content" destination="cpanel_header"/>
+
+        <move element="page.top" destination="page.wrapper" after="cpanel_header"/>
+        <move element="product.info.overview" destination="product.info.main" before="product.info"/>
+
+        <referenceContainer name="header.container" remove="1"/>
+        <referenceContainer name="header.panel" remove="1"/>
+        <referenceContainer name="header-wrapper" remove="1"/>
+
+
+        <referenceContainer name="sidebar.additional">
+            <block class="Magento\Framework\View\Element\Template" name="sidebar.content" as="sidebar_content" template="Solwin_Cpanel::sidebarcontent/sidebarcontent.phtml"></block>
+        </referenceContainer>
+
+        <!--add about us link in footer-->
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Template" name="about.us" as="cpanel_aboutus" template="Solwin_Cpanel::aboutlink.phtml" ifconfig="cpanelsection/footergroup/show_aboutus_link"></block>
+        </referenceBlock>
+
+        <!--add header call now static block-->
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="call.now" as="header_call_now" template="Solwin_Cpanel::callnow.phtml" ></block>
+        </referenceContainer>
+
+        <!--add css on head block-->
+        <referenceContainer name="after.body.start">
+            <block class="Solwin\Cpanel\Block\Template" name="cpanel_custom_head" template="Solwin_Cpanel::head.phtml" before="-"/>
+        </referenceContainer>
+
+        <!--add blocks above home main content block-->
+        <referenceContainer name="home.content">
+            <block class="Magento\Framework\View\Element\Template" name="home.content.block" as="home_content_block" template="Solwin_Cpanel::homecontent/homecontent.phtml" ></block>
+        </referenceContainer>
+        <!--add blocks above home main content block-->
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Framework\View\Element\Template" name="cpanel.ajax.loader" as="cpanel_ajax_loader" template="Solwin_Cpanel::ajaxloader.phtml" ifconfig="cpanelsection/loadergroup/enable_loader" ></block>
+        </referenceContainer>
+    </body>
+</page>

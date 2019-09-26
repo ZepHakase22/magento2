@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Solwin_Cpanel::view" title="Theme Cpanel" module="Solwin_Cpanel" sortOrder="60" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Cpanel::cpanelsetting" title="Theme Settings" module="Solwin_Cpanel" sortOrder="20" parent="Solwin_Cpanel::extension" action="adminhtml/system_config/edit/section/cpanelsection" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Cpanel::cpaneldesignsection" title="Design Settings" module="Solwin_Cpanel" sortOrder="30" parent="Solwin_Cpanel::extension" action="adminhtml/system_config/edit/section/cpaneldesignsection" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Cpanel::extension" title="Theme Cpanel" module="Solwin_Cpanel" sortOrder="5" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view" />
+        
+        <add id="Solwin_Bannerslider::bannerimage" title="Manage Bannerslider" module="Solwin_Bannerslider" sortOrder="10" parent="Solwin_Cpanel::extension_banner" action="bannerslider/banner" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Bannerslider::bannerimagesetting" title="Configuration" module="Solwin_Bannerslider" sortOrder="20" parent="Solwin_Cpanel::extension_banner" action="adminhtml/system_config/edit/section/bannersection" resource="Solwin_Cpanel::cpanel"/>
+        <add id="Solwin_Cpanel::extension_banner" title="Banner Slider" module="Solwin_Cpanel" sortOrder="10" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view" />
+        
+        <add id="Solwin_Newsletter::settings" title="Configuration" module="Solwin_Newsletter" sortOrder="10" parent="Solwin_Newsletter::extension" action="adminhtml/system_config/edit/section/newsletter_settings" resource="Solwin_Newsletter::settings"/>
+        <add id="Solwin_Newsletter::extension" title="Newsletter" module="Solwin_Newsletter" sortOrder="20" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view"/>
+        
+        <add id="Solwin_Advertising::advertisingimage" title="Manage Advertising Blocks" module="Solwin_Advertising" sortOrder="10" parent="Solwin_Advertising::extension" action="advertising/adver" resource="Solwin_Advertising::advertisingimage"/>
+        <add id="Solwin_Advertising::extension" title="Advertising" module="Solwin_Advertising" sortOrder="30" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view" />        
+        
+        <add id="Solwin_ScrolltoTop::scrollsection" title="Configuration" module="Solwin_ScrolltoTop" sortOrder="20" parent="Solwin_ScrolltoTop::extension" action="adminhtml/system_config/edit/section/scrollsection" resource="Solwin_ScrolltoTop::scrolltotop"/>
+        <add id="Solwin_ScrolltoTop::extension" title="Scroll to Top" module="Solwin_ScrolltoTop" sortOrder="40" parent="Solwin_Cpanel::view" resource="Solwin_Cpanel::view" />
+        
+        <add id="Solwin_Megamenu::megamenu" title="Configuration" module="Solwin_Megamenu" sortOrder="10" parent="Solwin_Megamenu::extension" action="adminhtml/system_config/edit/section/megamenu" resource="Solwin_Megamenu::megamenu"/>
+        <add id="Solwin_Megamenu::designmegamenu" title="Design Configuration" module="Solwin_Megamenu" sortOrder="11" parent="Solwin_Megamenu::extension" action="adminhtml/system_config/edit/section/megamenudesign" resource="Solwin_Megamenu::megamenu"/>
+        <add id="Solwin_Megamenu::extension" title="Mega Menu" module="Solwin_Megamenu" sortOrder="50" parent="Solwin_Cpanel::view" resource="Solwin_Megamenu::extension" />
+        
+        <add id="Solwin_Flickr::flickr" title="Flickr" module="Solwin_Flickr" sortOrder="55" parent="Solwin_Cpanel::view" resource="Solwin_Flickr::flickr"/>
+        <add id="Solwin_Flickr::flickr_config" title="Configuration" module="Solwin_Flickr" sortOrder="20" parent="Solwin_Flickr::flickr" action="adminhtml/system_config/edit/section/flickrsection" resource="Solwin_Flickr::flickr_config"/>
+        
+        <add id="Solwin_Instagram::instagram" title="Instagram" module="Solwin_Instagram" sortOrder="60" parent="Solwin_Cpanel::view" resource="Solwin_Instagram::instagram"/>
+        <add id="Solwin_Instagram::instagram_config" title="Configuration" module="Solwin_Instagram" sortOrder="20" parent="Solwin_Instagram::instagram" action="adminhtml/system_config/edit/section/instagramsection" resource="Solwin_Instagram::instagram_config"/>
+    </menu>
+</config>

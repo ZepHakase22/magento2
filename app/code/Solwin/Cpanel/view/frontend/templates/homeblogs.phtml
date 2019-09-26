@@ -1,0 +1,109 @@
+<?php
+$cpanel_helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$titlemediaurl = $cpanel_helper->getMediaUrl() . 'themecss/box/';
+$blogmediaurl = $cpanel_helper->getMediaUrl() . 'blogs/';
+$title_bottom_image = $cpanel_helper->getCpanelConfigValue('cpanelsection/homemaincontent/title_bottom_image');
+?>
+<div class="bh-back-wrapper">
+    <div class="page-main">
+        <div class="bh-wrapper pad-main">
+            <div class="block-title-main">
+                <h2>Latest Posts</h2>
+                <div class="title-img">
+                    <img class="center-b img-resp" src="" alt="img"/>
+                </div>
+            </div>
+            <div class="bh-row">
+                <ul class="bh-main blog-home-slider owl-top-btn">
+                    <li>
+                        <div class="bh-main-inner">
+                            <div class="bh-img"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#"> <img class="img-resp center-b" title="ad-beaut-welcome" src="<?php echo $blogmediaurl.'ad-beaut-welcome.jpg'; ?>" alt="ad-beaut-welcome" /> </a>
+                                <div class="bh-info" style="margin-bottom: 0;">
+                                    <div class="bh-other-info">
+                                        <h3 class="bh-title"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#">Kosmic Responsive Magento 2 Theme</a></h3>
+                                        <div class="bh-date">
+                                            <div class="bh-monyr">08 Mar 2016</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bh-main-inner">
+                            <div class="bh-img"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#"> <img class="img-resp center-b" title="google-custom-search-integration--magento-2" src="<?php echo $blogmediaurl.'google-custom-search-integration--magento-2.jpg'; ?>" alt="google-custom-search-integration--magento-2" /> </a>
+                                <div class="bh-info" style="margin-bottom: 0;">
+                                    <div class="bh-other-info">
+                                        <h3 class="bh-title"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#">Kosmic Responsive Magento 2 Theme</a></h3>
+                                        <div class="bh-date">
+                                            <div class="bh-monyr">08 Mar 2016</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bh-main-inner">
+                            <div class="bh-img"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#"> <img class="img-resp center-b" title="kosmic-welcome" src="<?php echo $blogmediaurl.'kosmic-welcome.jpg'; ?>" alt="kosmic-welcome" /> </a>
+                                <div class="bh-info" style="margin-bottom: 0;">
+                                    <div class="bh-other-info">
+                                        <h3 class="bh-title"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#">Kosmic Responsive Magento 2 Theme</a></h3>
+                                        <div class="bh-date">
+                                            <div class="bh-monyr">08 Mar 2016</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bh-main-inner">
+                            <div class="bh-img"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#"> <img class="img-resp center-b" title="ad-beaut-welcome" src="<?php echo $blogmediaurl.'ad-beaut-welcome.jpg'; ?>" alt="ad-beaut-welcome" /> </a>
+                                <div class="bh-info" style="margin-bottom: 0;">
+                                    <div class="bh-other-info">
+                                        <h3 class="bh-title"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#">Kosmic Responsive Magento 2 Theme</a></h3>
+                                        <div class="bh-date">
+                                            <div class="bh-monyr">08 Mar 2016</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bh-main-inner">
+                            <div class="bh-img"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#"> <img class="img-resp center-b" title="google-custom-search-integration--magento-2" src="<?php echo $blogmediaurl.'google-custom-search-integration--magento-2.jpg'; ?>" alt="google-custom-search-integration--magento-2" /> </a>
+                                <div class="bh-info" style="margin-bottom: 0;">
+                                    <div class="bh-other-info">
+                                        <h3 class="bh-title"><a title="Kosmic &ndash; Upcoming Responsive Magento 2 Theme" href="#">Kosmic Responsive Magento 2 Theme</a></h3>
+                                        <div class="bh-date">
+                                            <div class="bh-monyr">08 Mar 2016</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            require(['jquery', 'cpowlcarousel'], function ($) {
+                $(document).ready(function () {
+                    $(".blog-home-slider").owlCarousel({
+                        items: 3,
+                        itemsDesktop: [1080, 3],
+                        itemsDesktopSmall: [860, 2],
+                        itemsTablet: [768, 2],
+                        itemsTabletSmall: [639, 1],
+                        itemsMobile: [360, 1],
+                        pagination: false,
+                        navigationText: ["<div class='lft-btn'><i class='fa fa-angle-left'></i></div>", "<div class='rgt-btn'><i class='fa fa-angle-right'></div>"],
+                        navigation: true,
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>

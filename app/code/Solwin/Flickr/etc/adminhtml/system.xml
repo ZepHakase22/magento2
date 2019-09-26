@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Solwin Infotech
+ * Solwin Flickr Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_Flickr
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+<!--        <tab id="flickr" translate="label" sortOrder="10">
+            <label>Flickr</label>
+        </tab>-->
+        <section id="flickrsection" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Flickr</label>
+            <tab>cpanel</tab>
+            <resource>Solwin_Flickr::flickr_config</resource>
+            <group id="flickrgroup" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select Yes to enable module on frontend.</comment>
+                </field>
+                <field id="flickerid" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flicker Id</label>
+                    <comment><![CDATA[get Your Flickr Id <a href="http://idgettr.com/">Click Here</a>]]></comment>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends> 
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

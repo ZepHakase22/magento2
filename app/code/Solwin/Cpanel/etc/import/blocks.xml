@@ -1,0 +1,480 @@
+<root>
+    <blocks>
+        <cms_block>
+            <title>Shiney Default Home Page Content</title>
+            <identifier>shiney_homepage_content</identifier>
+            <content><![CDATA[{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_advertisement1"}}
+        <div class="page-main">
+            {{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" products_count="8" template="product/widget/new/content/new_grid.phtml"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_advertisement2"}}
+        <div class="page-main">
+            {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="<span>Featured</span> Products" products_count="8" template="product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]" page_var_name="petfif"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_blogs"}}
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_brands"}}]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Furniture Demo Home Page Content</title>
+            <identifier>shiney_furniture_demo_homepage_content</identifier>
+            <content><![CDATA[{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_advertisement3"}}
+        <div class="page-main">
+            {{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" products_count="8" template="product/widget/new/content/new_grid.phtml"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_advertisement4"}}
+        <div class="page-main">
+            {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="<span>Featured</span> Products" products_count="8" template="product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]" page_var_name="petfif"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_blogs"}}
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_brands"}}]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Electronics Demo Home Page Content</title>
+            <identifier>shiney_electronics_demo_homepage_content</identifier>
+            <content><![CDATA[<div class="page-main">
+            {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="<span>Featured</span> Products" products_count="8" template="product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]" page_var_name="petfif"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_advertisement5"}}
+        <div class="page-main">
+            {{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" products_count="8" template="product/widget/new/content/new_grid.phtml"}}
+        </div>
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_blogs"}}
+        {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="shiney_home_brands"}}]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Advertisement Block 1</title>
+            <identifier>shiney_home_advertisement1</identifier>
+            <content><![CDATA[<div class="had-wrapper pad-main">
+<div class="page-main">
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Men Collection" src="{{media url="wysiwyg/home/advertise/men.jpg"}}" alt="men collection" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Offers" src="{{media url="wysiwyg/home/advertise/sale.jpg"}}" alt="Offers" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Women Collection" src="{{media url="wysiwyg/home/advertise/women.jpg"}}" alt="women collection" /> </a></div>
+</div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Advertisement Block 2</title>
+            <identifier>shiney_home_advertisement2</identifier>
+            <content><![CDATA[<div class="had-wrapper pad-main">
+<div class="had-inner f-wid"><a href="#"> <img class="img-resp center-b" title="New Arrival" src="{{media url="wysiwyg/home/advertise/new-arrival.jpg"}}" alt="new arrival" /> </a></div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Advertisement Block 3</title>
+            <identifier>shiney_home_advertisement3</identifier>
+            <content><![CDATA[<div class="had-wrapper pad-main">
+<div class="page-main">
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="classic desk" src="{{media url="wysiwyg/home/advertise/furniture-adv-1.jpg"}}" alt="classic desk" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="unique chair" src="{{media url="wysiwyg/home/advertise/furniture-adv-2.jpg"}}" alt="unique chair" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="reading chair" src="{{media url="wysiwyg/home/advertise/furniture-adv-3.jpg"}}" alt="reading chair" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="classic desk" src="{{media url="wysiwyg/home/advertise/furniture-adv-4.jpg"}}" alt="classic desk" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="unique chair" src="{{media url="wysiwyg/home/advertise/furniture-adv-5.jpg"}}" alt="unique chair" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="reading chair" src="{{media url="wysiwyg/home/advertise/furniture-adv-6.jpg"}}" alt="reading chair" /> </a></div>
+</div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Advertisement Block 4</title>
+            <identifier>shiney_home_advertisement4</identifier>
+            <content><![CDATA[<div class="had-wrapper pad-main">
+<div class="had-inner f-wid"><a href="#"> <img class="img-resp center-b" title="New Arrival" src="{{media url="wysiwyg/home/advertise/furniture-new-arrival.jpg"}}" alt="new arrival" /> </a></div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Advertisement Block 5</title>
+            <identifier>shiney_home_advertisement5</identifier>
+            <content><![CDATA[<div class="had-wrapper pad-main">
+<div class="page-main">
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Ear Phone" src="{{media url="wysiwyg/home/advertise/electronics-adv-1.jpg"}}" alt="Ear Phone" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Head Phone" src="{{media url="wysiwyg/home/advertise/electronics-adv-2.jpg"}}" alt="Head Phone" /> </a></div>
+<div class="had-inner"><a href="#"> <img class="img-resp center-b" title="Mobiles" src="{{media url="wysiwyg/home/advertise/electronics-adv-3.jpg"}}" alt="Mobiles" /> </a></div>
+</div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Blogs</title>
+            <identifier>shiney_home_blogs</identifier>
+            <content><![CDATA[<div class="bh-back-wrapper">
+<div class="page-main">
+<div class="bh-wrapper pad-main">
+<div class="block-title-main">
+<h2><span>Latest</span> Posts</h2>
+<div class="title-img">
+<div class="title-img"></div>
+</div>
+</div>
+<div class="bh-row">
+<ul class="bh-main blog-home-slider owl-top-btn">
+<li>
+<div class="bh-main-inner">
+<div class="bh-img"><a title="Lorem ipsum dolor sit amet consectetur" href="#"> <img class="img-resp center-b" title="Lorem ipsum dolor sit amet consectetur" src="{{media url="wysiwyg/home/blogs/blog-image-1.jpg"}}" alt="Lorem ipsum dolor sit amet consectetur" /> </a>
+<div class="bh-info" style="margin-bottom: 0;">
+<div class="bh-other-info">
+<h3 class="bh-title"><a title="Lorem ipsum dolor sit amet consectetur" href="#"> Lorem ipsum dolor sit amet consectetur </a></h3>
+<div class="bh-date">
+<div class="bh-monyr">09 Mar 2016</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="bh-main-inner">
+<div class="bh-img"><a title="Sed ut perspiciatis unde omnis iste" href="#"> <img class="img-resp center-b" title="Sed ut perspiciatis unde omnis iste" src="{{media url="wysiwyg/home/blogs/blog-image-2.jpg"}}" alt="Sed ut perspiciatis unde omnis iste" /> </a>
+<div class="bh-info" style="margin-bottom: 0;">
+<div class="bh-other-info">
+<h3 class="bh-title"><a title="Sed ut perspiciatis unde omnis iste" href="#"> Sed ut perspiciatis unde omnis iste </a></h3>
+<div class="bh-date">
+<div class="bh-monyr">29 Mar 2016</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="bh-main-inner">
+<div class="bh-img"><a title="At vero eos et accusamus et iusto odio" href="#"> <img class="img-resp center-b" title="At vero eos et accusamus et iusto odio" src="{{media url="wysiwyg/home/blogs/blog-image-3.jpg"}}" alt="At vero eos et accusamus et iusto odio" /> </a>
+<div class="bh-info" style="margin-bottom: 0;">
+<div class="bh-other-info">
+<h3 class="bh-title"><a title="At vero eos et accusamus et iusto odio" href="#">At vero eos et accusamus et iusto odio</a></h3>
+<div class="bh-date">
+<div class="bh-monyr">12 Apr 2016</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="bh-main-inner">
+<div class="bh-img"><a title="Nemo enim ipsam voluptatem voluptas" href="#"> <img class="img-resp center-b" title="Nemo enim ipsam voluptatem voluptas" src="{{media url="wysiwyg/home/blogs/blog-image-4.jpg"}}" alt="Nemo enim ipsam voluptatem voluptas" /> </a>
+<div class="bh-info" style="margin-bottom: 0;">
+<div class="bh-other-info">
+<h3 class="bh-title"><a title="Nemo enim ipsam voluptatem voluptas" href="#">Nemo enim ipsam voluptatem voluptas</a></h3>
+<div class="bh-date">
+<div class="bh-monyr">09 Mar 2016</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Home Brands</title>
+            <identifier>shiney_home_brands</identifier>
+            <content><![CDATA[<div class="page-main">
+            <div class="brh-wrapper pad-main">
+                <div>
+                    <div class="brh-main">
+                        <div style="margin: 0 -15px;">
+                            <ul class="brh-inner-main owl-top-btn">
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                                <li class="brh-item">
+                                    <div class="brh-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/home/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Sidebar Blogs</title>
+            <identifier>shiney_sidebar_blogs</identifier>
+            <content><![CDATA[<div class="block block-brand">
+<div class="block-title"><strong>Blogs</strong></div>
+<div class="bg-side-main">
+<ul class="bg-side-inner-main">
+<li class="bh-main-inner">
+<div class="bg-img"><a title="Lorem ipsum dolor sit amet consectetur" href="#"> <img class="center-b img-resp" title="Lorem ipsum dolor sit amet consectetur" src="{{media url="wysiwyg/sidebar/blogs/blog-image-1.jpg"}}" alt="Lorem ipsum dolor sit amet consectetur" /> </a></div>
+<div class="bg-info">
+<h3 class="bg-title"><a title="Lorem ipsum dolor sit amet consectetur" href="#">Lorem ipsum dolor sit amet consectetur</a></h3>
+<div class="bg-date">08-Mar-2016</div>
+<div class="bg-cmt-count"><em class="fa fa-comment"></em> 0</div>
+</div>
+</li>
+<li class="bh-main-inner">
+<div class="bg-img"><a title="Sed ut perspiciatis unde omnis iste" href="#"> <img class="center-b img-resp" title="Sed ut perspiciatis unde omnis iste" src="{{media url="wysiwyg/sidebar/blogs/blog-image-2.jpg"}}" alt="Sed ut perspiciatis unde omnis iste" /> </a></div>
+<div class="bg-info">
+<h3 class="bg-title"><a title="Sed ut perspiciatis unde omnis iste" href="#">Sed ut perspiciatis unde omnis iste</a></h3>
+<div class="bg-date">08-Mar-2016</div>
+<div class="bg-cmt-count"><em class="fa fa-comment"></em> 0</div>
+</div>
+</li>
+<li class="bh-main-inner">
+<div class="bg-img"><a title="At vero eos et accusamus et iusto odio" href="#"> <img class="center-b img-resp" title="At vero eos et accusamus et iusto odio" src="{{media url="wysiwyg/sidebar/blogs/blog-image-3.jpg"}}" alt="At vero eos et accusamus et iusto odio" /> </a></div>
+<div class="bg-info">
+<h3 class="bg-title"><a title="At vero eos et accusamus et iusto odio" href="#">At vero eos et accusamus et iusto odio</a></h3>
+<div class="bg-date">08-Mar-2016</div>
+<div class="bg-cmt-count"><em class="fa fa-comment"></em> 0</div>
+</div>
+</li>
+</ul>
+</div>
+</div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Sidebar Brands</title>
+            <identifier>shiney_sidebar_brands</identifier>
+            <content><![CDATA[<div class="block block-brand">
+            <div class="block-title"><strong>Brands</strong></div>
+            <div class="br-side-main">
+                <ul class="br-side-inner-main">
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                    <li class="br-side-item">
+                        <div class="br-side-img"><a title="brand-logo" href="#"> <img class="img-resp center-b" title="brand-logo" src="{{media url="wysiwyg/sidebar/brands/brand-logo.png"}}" alt="brand-logo" /> </a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Footer Theme Features</title>
+            <identifier>shiney_footer_theme_features</identifier>
+            <content><![CDATA[<div class="cp-ftitle">
+            <h3>Theme Features</h3>
+        </div>
+        <div class="cp-fcontent">
+            <ul>
+                <li><a href="#">Magento 2.0 Ready! </a></li>
+                <li><a href="#">Fully responsive </a></li>
+                <li><a href="#">Unlimited Color Options</a></li>
+                <li><a href="#">5+ Unique Header Styles</a></li>
+                <li><a href="#">Premium Features </a></li>
+            </ul>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Footer Contact Block</title>
+            <identifier>shiney_footer_contact</identifier>
+            <content><![CDATA[<div class="cp-fcontent">
+            <div class="f-logo">
+                <p></p>
+                <img class="img-resp" src="{{media url="wysiwyg/footer/footer-logo.png"}}" alt="Shiney" />
+                <p></p>
+            </div>
+            <ul>
+                <li>
+                    Shiney is a premium Magento 2.0 theme with advanced features.
+                </li>
+                <li>
+                    <div class="cp-fcontact">
+                        <span>
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <div>+91-261-4000515</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="cp-fcontact">
+                        <span>
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <div><a href="mailto:info@solwinintotech.com ">info@solwinintotech.com </a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Footer Services</title>
+            <identifier>shiney_footer_services</identifier>
+            <content><![CDATA[<div class="cp-footer-main">
+            <div class="cp-fblock">
+                <div class="cp-fcontent cp-service-main"><em class="fa fa-thumbs-up s-icon"></em>
+                    <p class="s-content">100% Satisfaction</p>
+                </div>
+            </div>
+        </div>
+        <div class="cp-footer-main">
+            <div class="cp-fblock">
+                <div class="cp-fcontent cp-service-main"><em class="fa fa-truck s-icon"></em>
+                    <p class="s-content">Free Shipping</p>
+                </div>
+            </div>
+        </div>
+        <div class="cp-footer-main">
+            <div class="cp-fblock">
+                <div class="cp-fcontent cp-service-main"><em class="fa fa-clock-o s-icon"></em>
+                    <p class="s-content">24 X 7 Helpline</p>
+                </div>
+            </div>
+        </div>
+        <div class="cp-footer-main">
+            <div class="cp-fblock">
+                <div class="cp-fcontent cp-service-main"><em class="fa fa-money s-icon"></em>
+                    <p class="s-content">Money Back Guarantee</p>
+                </div>
+            </div>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Footer My Account</title>
+            <identifier>shiney_footer_myaccount</identifier>
+            <content><![CDATA[<div class="cp-ftitle">
+            <h3>
+                My Account
+            </h3>
+        </div>
+        <div class="cp-fcontent">
+            <ul>
+                <li>
+                    <a href="{{store url='customer/account'}}">
+                        My Account
+                    </a>
+                </li>
+                <li>
+                    <a href="{{store url='checkout/cart'}}">
+                        View Cart
+                    </a>
+                </li>
+                <li>
+                    <a href="{{store url='checkout'}}">
+                        Checkout
+                    </a>
+                </li>
+                <li>
+                    <a href="{{store url='wishlist'}}">
+                        My Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Track My Order
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Help
+                    </a>
+                </li>
+            </ul>
+        </div>]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Instagram Block</title>
+            <identifier>shiney_instagram</identifier>
+            <content><![CDATA[{{widget type="Solwin\Instagram\Block\Widget\Instagram" title="Instagram Feeds" numberimage="6"}}]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+        <cms_block>
+            <title>Shiney Flickr Block</title>
+            <identifier>shiney_flickr</identifier>
+            <content><![CDATA[{{widget type="Solwin\Flickr\Block\Widget\Flickr" title="Flickr Feeds" numberimage="9" display="latest"}}]]></content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+        </cms_block>
+    </blocks>
+</root>

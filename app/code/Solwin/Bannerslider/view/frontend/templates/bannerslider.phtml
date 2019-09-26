@@ -1,0 +1,97 @@
+<?php
+$cpanelHelper = $this->helper('Solwin\Cpanel\Helper\Data');
+$header_type = $cpanelHelper->getCpanelConfigValue('cpanelsection/headergroup/headertype');
+$home_slider_width = $cpanelHelper->getCpanelConfigValue('cpanelsection/homemaincontent/home_slider_width');
+$ishome = $cpanelHelper->getIsHomePage();
+if ($ishome) {
+    $enable = $this->getEnableModule();
+    if ($enable) {
+        $animationType = $this->getAnimationType();
+        $controlNav = $this->getControlNav();
+        $slideshowSpeed = $this->getSlideshowSpeed();
+        $direction = $this->getDirection();
+        $animationLoop = $this->getAnimationLoop();
+        $smoothHeight = $this->getSmoothHeight();
+        $startAt = $this->getStartAt();
+        $slideshow = $this->getSlideshow();
+        $animationSpeed = $this->getAnimationSpeed();
+        $initDelay = $this->getInitDelay();
+        $pauseOnHover = $this->getPauseOnHover();
+        $touch = $this->getTouch();
+        $directionNav = $this->getDirectionNav();
+        $keyboard = $this->getKeyboard();
+        $mousewheel = $this->getMousewheel();
+        $prevText = $this->getPrevText();
+        $nextText = $this->getNextText();
+
+        $mediaUrl = $this->getBaseUrl() . 'pub/media/';
+        $bannerData = $this->getBannerData();
+        $size = $bannerData->getSize();
+
+        if ($size > 0) {
+            ?>
+            <?php if ($home_slider_width == 'box') { ?>
+                <div class="page-main s-div">
+                <?php } ?>
+                <div class="flexslider flexslider-8">
+                    <ul class="slides"> 
+                        <?php foreach ($bannerData as $banner): ?>
+                            <?php if ($header_type == 6) { ?>
+                                <li style="background-image: url('<?php echo $mediaUrl . $banner->getImage(); ?>');background-position: center center;background-repeat: no-repeat;background-size: cover;" data-thumb="<?php echo $mediaUrl . $banner->getImage(); ?>">
+                                    <img style="opacity: 0;visibility: hidden;" alt="<?php echo $banner->getTitle(); ?>" title="<?php echo $banner->getTitle(); ?>" src="<?php echo $mediaUrl . $banner->getImage(); ?>"/>
+                                </li>
+                            <?php } else { ?>
+                                <li data-thumb="<?php echo $mediaUrl . $banner->getImage(); ?>">
+                                    <?php if ($header_type == 1 || $header_type == 3 || $header_type == 2) { ?>
+                                        <a href="<?php echo $banner->getUrl(); ?>" target="<?php echo $banner->getTarget(); ?>">
+                                        <?php } ?>
+                                        <img alt="<?php echo $banner->getTitle(); ?>" title="<?php echo $banner->getTitle(); ?>" src="<?php echo $mediaUrl . $banner->getImage(); ?>"/>
+                                        <?php if ($header_type == 1 || $header_type == 3 || $header_type == 2) { ?>
+                                        </a>
+                                    <?php } ?>
+                                </li>
+                            <?php } ?>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <?php if ($home_slider_width == 'box') { ?>
+                </div>
+            <?php } ?>
+            <script type="text/javascript">
+                require(['jquery', 'cpflexslider', 'cpmousewheel'], function () {
+                    jQuery(document).ready(function () {
+                        jQuery('.flexslider-8').flexslider({
+                            animation: "<?php echo $animationType; ?>",
+                            controlNav: "<?php echo $controlNav; ?>",
+                            slideshowSpeed: <?php echo $slideshowSpeed; ?>,
+                            direction: "<?php echo $direction; ?>",
+                            animationLoop: <?php echo ($animationLoop == 1) ? "true" : "false"; ?>,
+                            smoothHeight: <?php echo ($smoothHeight == 1) ? "true" : "false"; ?>,
+                            startAt: <?php echo $startAt; ?>,
+                            slideshow: <?php echo ($slideshow == 1) ? "true" : "false"; ?>,
+                            animationSpeed: <?php echo $animationSpeed; ?>,
+                            initDelay: <?php echo $initDelay; ?>,
+                            pauseOnHover: <?php echo ($pauseOnHover == 1) ? "true" : "false"; ?>,
+                            touch: <?php echo ($touch == 1) ? "true" : "false"; ?>,
+                            directionNav: <?php echo ($directionNav == 1) ? "true" : "false"; ?>,
+                            keyboard: <?php echo ($keyboard == 1) ? "true" : "false"; ?>,
+                            mousewheel: <?php echo ($mousewheel == 1) ? "true" : "false"; ?>,
+                            prevText: '<?php echo $prevText; ?>',
+                            nextText: '<?php echo $nextText; ?>'
+                        });
+                    });
+                });
+            </script>
+        <?php }
+        ?>
+        <?php if ($controlNav == "false") { ?>
+            <style>
+                .flex-control-paging {
+                    display:none;
+                }
+            </style>
+            <?php
+        }
+    }
+}
+?>

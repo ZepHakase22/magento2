@@ -1,0 +1,11 @@
+<?php
+$_helper = $this->helper('Solwin\Megamenu\Helper\Css');
+?>
+<?php
+$megamenuFile = $_helper->getMegamenuFile();
+if ($megamenuFile) {
+    ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $megamenuFile; ?>">
+<?php }
+?>
+

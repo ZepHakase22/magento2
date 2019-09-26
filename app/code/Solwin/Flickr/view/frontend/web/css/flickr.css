@@ -1,0 +1,7 @@
+.flickr_photos_wrap a {
+    display: inline-block;
+    margin-right: 3px;
+}
+.flickr_photos_wrap a img {
+    width: 90px;
+}

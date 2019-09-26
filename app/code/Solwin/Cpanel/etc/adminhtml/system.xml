@@ -1,0 +1,1251 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="cpanel" translate="label" sortOrder="10">
+            <label>Shiney</label>
+        </tab>
+        <section id="cpaneldesignsection" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Theme Design</label>
+            <tab>cpanel</tab>
+            <resource>Solwin_Cpanel::configuration</resource>
+            <group id="themedesigngeneral" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Setting</label>
+                <field id="themecolor" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                </field>
+            </group>
+            <group id="colorsettings" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Body Font Color</label>
+                <field id="use_custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use custom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bodycolor" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Body Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="fontsettings" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Body Font Size</label>
+                <field id="use_custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use custom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bodyfontsize" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Body Font Size</label>
+                    <comment><![CDATA[Give value in pixels. i.e 14px.]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="wrapper_content_settings" translate="label" type="select" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Page Wrapper and Main Content Settings</label>
+                <field id="use_custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use custom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="mainwrapper_background" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Main Wrapper Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="maincontent_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Main Content Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="blog_background_image" translate="label" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Blog Section Background Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                </field>
+                <field id="custom_blog_style" translate="label comment" type="textarea" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Blog background Image Style</label>
+                    <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;</em>
+                            ]]>
+                    </comment>
+                </field>
+            </group>
+            <group id="headerdesign" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header Design Settings</label>
+                <field id="use_custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use custom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="header_background_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_background_image" translate="label" type="image" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Background Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="custom_header_style" translate="label comment" type="textarea" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Header Style</label>
+                    <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;</em>
+                            ]]>
+                    </comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top" translate="label comment" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_background" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_bottom_border_color" translate="label" type="text" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Border Bottom Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 3]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_link_color" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Links Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_link_color_hover" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Links Hover Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_links_sprt_border" translate="label" type="text" sortOrder="71" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Link's Separator Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_block" translate="label comment" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Search Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_background" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Searchbox Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_border_color" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Searchbox Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_txtcolor" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Searchbox Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_btn_background" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Searchbox Button Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_btn_iconcolor" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Searchbox Button Icon Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_toggle_iconcolor" translate="label" type="text" sortOrder="141" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Search Toggle Button Icon Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 2, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_search_toggle_icon_background" translate="label" type="text" sortOrder="142" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Search Toggle Button Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 2, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_top_menu" translate="label comment" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Navigation Menu</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_background" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 3]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_border_top_color" translate="label" type="text" sortOrder="161" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 2]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_link_color" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Links Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_link_color_hover" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Links Hover Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_link_color_active" translate="label" type="text" sortOrder="181" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Links Active Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_link_background_hover" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Links Hover Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_menu_link_background_active" translate="label" type="text" sortOrder="191" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Menu Links Active Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_submenu_background" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Sub-Menu Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_submenu_link_color" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Sub-Menu Links Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_submenu_link_color_hover" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Sub-Menu Links Hover Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_submenu_link_color_active" translate="label" type="text" sortOrder="221" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Sub-Menu Links Active Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_minikart" translate="label comment" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Minicart Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_minicart_background" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Minicart Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="header_minicart_iconcolor" translate="label" type="text" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Minicart Icon Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <comment><![CDATA[For header type 1, header type 2, header type 3, header type 4, header type 5]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="footerdesign" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer Design Settings</label>
+                <field id="use_custom" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use custom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_top" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_top_background" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_top_background_image" translate="label" type="image" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top Background Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="custom_footer_style" translate="label comment" type="textarea" sortOrder="41" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Footer Top Style</label>
+                   <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;</em>
+                            ]]>
+                    </comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_top_txtcolor" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Newsletter Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter_border_color" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter_txtcolor" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter_btn_iconcolor" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscribe Button Icon Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_newsletter_btn_iconcolor_hover" translate="label" type="text" sortOrder="111" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscribe Button Icon Color Hover</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_socials" translate="label comment" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Socials Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_socials_icon_border_color" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Socials Icon Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_socials_icon_border_color_hover" translate="label" type="text" sortOrder="151" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Socials Icon Border Color On Hover</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_socials_icon_color" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Socials Icon Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_socials_icon_color_hover" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Socials Icon Color On Hover</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle" translate="label comment" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Block</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_background" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_background_image" translate="label" type="image" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Background Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="custom_footer_middle_style" translate="label comment" type="textarea" sortOrder="201" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Footer Middle Style</label>
+                   <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;</em>
+                            ]]>
+                    </comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_title_color" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Title Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_txtcolor" translate="label" type="text" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_txtcolor_hover" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Middle Text Color Hover</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom" translate="label comment" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Bottom Block (Copyright)</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_background" translate="label" type="text" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Bottom Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_border_color" translate="label" type="text" sortOrder="261" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Top Border Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_txtcolor" translate="label" type="text" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Bottom Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="custom_css_block" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Add Custom Css</label>
+                <field id="custom_theme_style" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Footer Style</label>
+                    <comment><![CDATA[Type in your custom styles , e.g.:<br/>.classname {<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;<br/>}</em>
+                            ]]></comment>
+                    <depends>
+                        <field id="use_custom">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+        <section id="cpanelsection" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Theme Settings</label>
+            <tab>cpanel</tab>
+            <resource>Solwin_Cpanel::configuration</resource>
+            <group id="themegeneral" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Layout Setting</label>
+                <field id="themelayout" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Layout</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Themelayout</source_model>
+                </field>
+                <field id="box_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Out Of Box Background Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="themelayout">box</field>
+                    </depends>
+                </field>
+                <field id="box_imgage" translate="label" type="image" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Out of Box Background Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <depends>
+                        <field id="themelayout">box</field>
+                    </depends>
+                </field>
+                <field id="box_style" translate="label comment" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Box Style</label>
+                    <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>&nbsp;&nbsp;&nbsp;&nbsp;background-repeat: no-repeat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size: cover;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-attachment: fixed;</em>
+                            ]]>
+                    </comment>
+                    <depends>
+                        <field id="themelayout">box</field>
+                    </depends>
+                </field>
+                <field id="max_width" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maximum Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Maxwidth</source_model>
+                </field>
+            </group>
+            <group id="headergroup" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header</label>
+                <field id="headertype" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Type</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Headertype</source_model>
+                </field>
+                <field id="sharingaddon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sharing addon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pubid" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addthis Pub ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[You can get pub id from http://www.addthis.com ]]></comment>
+                    <depends>
+                        <field id="sharingaddon">1</field>
+                    </depends>
+                </field>
+                <field id="addhomelink" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Home Link In Navigation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[ For Magento Default Menu Only ]]></comment>
+                </field>
+                <field id="menuhomelink" translate="label" type="text" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link Text </label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[ For Magento Default Menu Only ]]></comment>
+                    <depends>
+                        <field id="addhomelink">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="homemaincontent" translate="label" type="select" sortOrder="29" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Home Page And Sidebar Content Settings</label>
+                <field id="home_content" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block For Home Page Content</label>
+                    <comment><![CDATA[ Add static block identifier to display content on home page.]]></comment>
+                </field>
+                <field id="home_slider_width" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Home Slider Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Sliderwidth</source_model>
+                    <comment><![CDATA[ Dislay Slider in full and boxed width. ]]></comment>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="title_bottom_image" translate="label" type="image" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Upload Main Title Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <depends>
+                        <field id="themelayout">box</field>
+                    </depends>
+                </field>
+                <field id="sidebar_content_1" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block For Sidebar Content 1</label>
+                    <comment><![CDATA[ Add static block identifier to display content on sidebar.]]></comment>
+                </field>
+                <field id="sidebar_content_2" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block For Sidebar Content 2</label>
+                    <comment><![CDATA[ Add static block identifier to display content on sidebar.]]></comment>
+                </field>
+            </group>
+            <group id="footergroup" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer</label>
+                <field id="footer_top_heading" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer - Top</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="show_footer_top" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Footer Top</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="shownewsletter" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Newsletter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_newsletter_title" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Block Title</label>
+                    <depends>
+                        <field id="shownewsletter">1</field>
+                    </depends>
+                </field>
+                <field id="showsocial" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Social Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="showfacebook" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Facebook</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="facebook_link" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your facebook url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showfacebook">1</field>
+                    </depends>
+                </field>
+                <field id="showtwitter" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Twitter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="twitter_link" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your twitter url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showtwitter">1</field>
+                    </depends>
+                </field>
+                <field id="showlinkedin" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Linkedin</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="linkedin_link" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linkedin Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your linkedin url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showlinkedin">1</field>
+                    </depends>
+                </field>
+                <field id="showgoogle" translate="label" type="select" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Google+</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="google_link" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google+ Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your google+ url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showgoogle">1</field>
+                    </depends>
+                </field>
+                <field id="showpinterest" translate="label" type="select" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Pinterest</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="pinterest_link" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your pinterest url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showpinterest">1</field>
+                    </depends>
+                </field>
+                <field id="showyoutube" translate="label" type="select" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Youtube</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="youtube_link" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Youtube Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your youtube video url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showyoutube">1</field>
+                    </depends>
+                </field>
+                <field id="showflickr" translate="label" type="select" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Flickr</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>                        
+                    </depends>
+                </field>
+                <field id="flickr_link" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flickr Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your flickr url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showflickr">1</field>
+                    </depends>
+                </field>
+                <field id="showvimeo" translate="label" type="select" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Vimeo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="vimeo_link" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Vimeo Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your vimeo url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showvimeo">1</field>
+                    </depends>
+                </field>
+                <field id="showinstagram" translate="label" type="select" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Instagram</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="showsocial">1</field>
+                    </depends>
+                </field>
+                <field id="instagram_link" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instagram Url</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Enter your instagram url.]]></comment>
+                    <depends>
+                        <field id="showsocial">1</field>
+                        <field id="showinstagram">1</field>
+                    </depends>
+                </field>
+                <field id="footer_links_block" translate="label comment" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Links</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="show_aboutus_link" translate="label comment" type="select" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show About Us Link in Footer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_middle_heading_2" translate="label comment" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer - Middle 1</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="show_footer_middle" translate="label comment" type="select" sortOrder="280" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Footer Middle 1</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_middle_col_1" translate="label comment" type="select" sortOrder="290" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 1</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Footermiddle</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_1_static" translate="label comment" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id</label>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                        <field id="footer_middle_col_1">static</field>
+                    </depends>
+                </field>
+                <field id="footer_column_1_width" translate="label comment" type="select" sortOrder="301" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 1 Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Columnwidth</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_2" translate="label comment" type="select" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 2</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Footermiddle</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_2_static" translate="label comment" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id</label>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                        <field id="footer_middle_col_2">static</field>
+                    </depends>
+                </field>
+                <field id="footer_column_2_width" translate="label comment" type="select" sortOrder="321" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 2 Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Columnwidth</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_3" translate="label comment" type="select" sortOrder="330" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 3</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Footermiddle</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_3_static" translate="label comment" type="text" sortOrder="340" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id</label>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                        <field id="footer_middle_col_3">static</field>
+                    </depends>
+                </field>
+                <field id="footer_column_3_width" translate="label comment" type="select" sortOrder="341" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 3 Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Columnwidth</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_4" translate="label comment" type="select" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 4</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Footermiddle</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_col_4_static" translate="label comment" type="text" sortOrder="360" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id</label>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                        <field id="footer_middle_col_4">static</field>
+                    </depends>
+                </field>
+                <field id="footer_column_4_width" translate="label comment" type="select" sortOrder="361" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Column 4 Width</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Columnwidth</source_model>
+                    <depends>
+                        <field id="show_footer_middle">1</field>
+                    </depends>
+                </field>
+                <field id="footer_middle_heading_1" translate="label comment" sortOrder="370" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer - Middle 2</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="show_footer_middle_1" translate="label comment" type="select" sortOrder="380" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Footer Middle 2</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_middle_1_static" translate="label comment" type="text" sortOrder="390" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id</label>
+                    <depends>
+                        <field id="show_footer_middle_1">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_heading" translate="label comment" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer - Bottom</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="show_footer_bottom" translate="label comment" type="select" sortOrder="410" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Footer Bottom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="stick_footer_bottom" translate="label comment" type="select" sortOrder="420" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Stick Copyright Block To Bottom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="footer_bottom_copyright" translate="label comment" type="text" sortOrder="430" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Copyright Text</label>
+                    <depends>
+                        <field id="show_footer_bottom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_static_1" translate="label comment" type="text" sortOrder="440" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id(before copyright block)</label>
+                    <depends>
+                        <field id="show_footer_bottom">1</field>
+                    </depends>
+                </field>
+                <field id="footer_bottom_static_2" translate="label comment" type="text" sortOrder="450" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Block Id(after copyright block)</label>
+                    <depends>
+                        <field id="show_footer_bottom">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="listpagegroup" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product List Page</label>
+                <field id="newlabel" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show New Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="new_label_background" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="newlabel">1</field>
+                    </depends>
+                </field>
+                <field id="new_label_txtcolor" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="newlabel">1</field>
+                    </depends>
+                </field>
+                <field id="salelabel" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sale Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sale_label_background" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sale Label Background</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="salelabel">1</field>
+                    </depends>
+                </field>
+                <field id="sale_label_txtcolor" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sale Label Text Color</label>
+                    <backend_model>Solwin\Cpanel\Model\Config\Validatecolor</backend_model>
+                    <frontend_model>Solwin\Cpanel\Block\Color</frontend_model>
+                    <depends>
+                        <field id="salelabel">1</field>
+                    </depends>
+                </field>
+                <field id="list_product_blocks" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>List page product blocks</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Listblocks</source_model>
+                </field>
+                <field id="image_aspect_ratio" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Keep Image Aspect Ratio</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="image_ratio_width" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Width</label>
+                </field>
+                <field id="image_ratio_height" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Height</label>
+                    <depends>
+                        <field id="image_aspect_ratio">0</field>
+                    </depends>
+                </field>
+                <field id="show_alternative_image" translate="label comment" type="select" sortOrder="61" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Alternative Image On Hover</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_rating_star" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Rating Stars</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_product_price" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Product Price</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_actions" translate="label comment" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Action Links</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_addtocompare" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Add to Compare Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="show_actions">1</field>
+                    </depends>
+                </field>
+                <field id="show_addtowishlist" translate="label comment" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Add to Wishlist Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="show_actions">1</field>
+                    </depends>
+                </field>
+                <field id="show_productview" translate="label comment" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Product-view Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="show_actions">1</field>
+                    </depends>
+                </field>
+            </group>
+            
+            <group id="viewpagegroup" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product View Page</label>
+                <field id="sharingaddon" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Sharing addon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pubid" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addthis Pub ID</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[You can get pub id from http://www.addthis.com ]]></comment>
+                    <depends>
+                        <field id="sharingaddon">1</field>
+                    </depends>
+                </field>
+                <field id="showproducts" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Related, Upsell and Crosssell Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="contactpagegroup" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact Page</label>
+                <field id="showgooglemap" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Google Map</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="embedcode" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Map Embeded Code</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="showgooglemap">1</field>
+                    </depends>
+                </field>
+                <field id="storename" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Name</label>
+                </field>
+                <field id="storeaddress" translate="label" type="textarea" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Address</label>
+                </field>
+                <field id="contactinfo" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact No.</label>
+                </field>
+                <field id="storeemail" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Email</label>
+                </field>
+            </group>
+            <group id="loadergroup" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Loader Settings</label>
+                <field id="enable_loader" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Loader</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="loader_image" translate="label" type="image" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Upload Loader Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">themecss/box</upload_dir>
+                    <base_url type="media" scope_info="1">themecss/box</base_url>
+                    <depends>
+                        <field id="enable_loader">1</field>
+                    </depends>
+                </field>
+                <field id="loader_displayon" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Loader Diaply on?</label>
+                    <source_model>Solwin\Cpanel\Model\Source\Loaderdisplay</source_model>
+                    <comment><![CDATA[Only On Home Page: Loader display only on home page.<br/>All Pages: Loader display on all pages.]]></comment>
+                    <depends>
+                        <field id="enable_loader">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="importgroup" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Import static blocks and pages</label>
+                <field id="import_blocks" translate="label" type="button" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Static Blocks</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Cms</frontend_model>
+                    <attribute type="process">blocks</attribute>
+                    <comment><![CDATA[Click this button to create all static blocks provided with Shiney theme.]]></comment>
+                </field>
+                <field id="overwrite_block" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Overwrite Existing Blocks</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If the identifiers of the static blocks are already exist, you can set to "Yes" then save the configuration, then click the "Import Static Blocks" button.]]></comment>
+                </field>
+                <field id="import_pages" translate="label" type="button" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CMS Pages</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Pages</frontend_model>
+                    <attribute type="process">pages</attribute>
+                    <comment><![CDATA[Click this button to create all CMS pages provided with Shiney theme.]]></comment>
+                </field>
+                <field id="overwrite_pages" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Overwrite Existing Pages</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If the identifiers of the cms pages are already exist, you can set to "Yes" then save the configuration, then click the "Import CMS Pages" button.]]></comment>
+                </field>
+                
+                <field id="import_data" translate="label" type="button" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo Data</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Data</frontend_model>
+                    <attribute type="process">data</attribute>
+                    <comment><![CDATA[Click to import all extension data provided with Shiney theme.]]></comment>
+                </field>
+			
+		<field id="import_demo_heading" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Import Demo Settings</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="import_demo1" translate="button_label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo 1</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Demo</frontend_model>
+                    <attribute type="process">import</attribute>
+                    <attribute type="demo">demo01</attribute>
+                </field>
+                <field id="import_demo2" translate="button_label" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo 2</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Demo</frontend_model>
+                    <attribute type="process">import</attribute>
+                    <attribute type="demo">demo02</attribute>
+                </field>	
+                <field id="import_demo3" translate="button_label" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo 3</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Demo</frontend_model>
+                    <attribute type="process">import</attribute>
+                    <attribute type="demo">demo03</attribute>
+                </field>	
+                <field id="import_demo4" translate="button_label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo 4</label>
+                    <frontend_model>Solwin\Cpanel\Block\Adminhtml\Button\Import\Demo</frontend_model>
+                    <attribute type="process">import</attribute>
+                    <attribute type="demo">demo04</attribute>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

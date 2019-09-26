@@ -1,0 +1,74 @@
+._lib-dropdown-styles(
+    @_options-selector,
+    @_dropdown-list-min-width,
+    @_dropdown-list-width,
+    @_dropdown-list-height,
+    @_dropdown-list-margin-top,
+    @_dropdown-list-background,
+    @_dropdown-list-border,
+    @_dropdown-list-z-index,
+    @_dropdown-list-shadow,
+    @_dropdown-list-background,
+    @_dropdown-list-item-padding,
+    @_dropdown-list-item-margin,
+    @_dropdown-list-item-border,
+    @_dropdown-list-item-hover,
+    @_dropdown-list-position-top,
+    @_dropdown-list-position-bottom,
+    @_dropdown-list-position-left,
+    @_dropdown-list-position-right,
+    @_dropdown-list-pointer,
+    @_dropdown-list-pointer-border,
+    @_dropdown-list-pointer-position,
+    @_dropdown-list-pointer-position-top,
+    @_dropdown-list-pointer-position-left-right
+) {
+    @{_options-selector} {
+        .lib-css(background, @_dropdown-list-background);
+        .lib-css(border, @_dropdown-list-border);
+        .lib-css(z-index, @_dropdown-list-z-index);
+        .lib-list-reset-styles();
+        box-sizing: border-box;
+        position: absolute;
+
+        ._lib-dropdown-list-position(
+            @_dropdown-list-position-top,
+            @_dropdown-list-position-bottom,
+            @_dropdown-list-position-left,
+            @_dropdown-list-position-right
+        );
+
+        ._lib-dropdown-list-shadow(none);
+        .lib-css(height, @_dropdown-list-height);
+        .lib-css(margin-top, 0);
+        .lib-css(min-width, @_dropdown-list-min-width);
+        .lib-css(width, @_dropdown-list-width);
+        border-top: 3px solid @cpanel-border-color-theme;
+        display: none;
+    }
+}
+
+._lib-dropdown-pointer-default(
+    @_dropdown-list-background,
+    @_dropdown-list-pointer-border
+) {
+    &:before,
+    &:after {
+        border-bottom-style: none;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+    &:before {
+        border: none;
+        border-color: none;
+        z-index: 99;
+    }
+    &:after {
+        border: none;
+        border-color: none;
+        z-index: 98;
+    }
+}

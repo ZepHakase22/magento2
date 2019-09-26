@@ -1,0 +1,94 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+$helper = $this->helper('Solwin\Cpanel\Helper\Data');
+$newsletter_show = $helper->getCpanelConfigValue('cpanelsection/footergroup/shownewsletter');
+$newsletter_title = $helper->getCpanelConfigValue('cpanelsection/footergroup/footer_newsletter_title');
+
+$showsocial = $helper->getCpanelConfigValue('cpanelsection/footergroup/showsocial');
+
+$showfacebook = $helper->getCpanelConfigValue('cpanelsection/footergroup/showfacebook');
+$showtwitter = $helper->getCpanelConfigValue('cpanelsection/footergroup/showtwitter');
+$showlinkedin = $helper->getCpanelConfigValue('cpanelsection/footergroup/showlinkedin');
+$showgoogle = $helper->getCpanelConfigValue('cpanelsection/footergroup/showgoogle');
+$showpinterest = $helper->getCpanelConfigValue('cpanelsection/footergroup/showpinterest');
+$showyoutube = $helper->getCpanelConfigValue('cpanelsection/footergroup/showyoutube');
+$showflickr = $helper->getCpanelConfigValue('cpanelsection/footergroup/showflickr');
+$showvimeo = $helper->getCpanelConfigValue('cpanelsection/footergroup/showvimeo');
+$showinstagram = $helper->getCpanelConfigValue('cpanelsection/footergroup/showinstagram');
+
+$facebook_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/facebook_link');
+$twitter_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/twitter_link');
+$linkdn_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/linkedin_link');
+$gplus_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/google_link');
+$pint_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/pinterest_link');
+$youtube_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/youtube_link');
+$flickr_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/flickr_link');
+$vimeo_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/vimeo_link');
+$instagram_url = $helper->getCpanelConfigValue('cpanelsection/footergroup/instagram_link');
+
+if ($newsletter_show) {
+    ?>
+
+    <div class="cp-fblock">
+        <div class="cp-ftitle">
+            <h3><?php echo $newsletter_title; ?></h3>
+        </div>
+        <div class="cp-fcontent">
+            <form class="form subscribe" novalidate action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
+                <div class="block-content">
+                    <div class="newsletter-input">
+                        <div class="control">
+                            <input name="email" type="email" id="newsletter"
+                                   placeholder="<?php /* @escapeNotVerified */ echo __('Enter your email address') ?>"
+                                   data-validate="{required:true, 'validate-email':true}"/>
+                            <button class="subscribe btn action primary" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>" type="submit">
+                                <span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="social-block">
+                <?php
+                if ($showsocial) {
+                    ?>
+                    <ul class="cp-social">
+                        <?php if ($showfacebook) { ?>
+                            <li><a href="<?php echo $facebook_url; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showtwitter) { ?>
+                            <li><a href="<?php echo $twitter_url; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showlinkedin) { ?>
+                            <li><a href="<?php echo $linkdn_url; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showgoogle) { ?>
+                            <li><a href="<?php echo $gplus_url; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showpinterest) { ?>
+                            <li><a href="<?php echo $pint_url; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showyoutube) { ?>
+                            <li><a href="<?php echo $youtube_url; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showflickr) { ?>
+                            <li><a href="<?php echo $flickr_url; ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showvimeo) { ?>
+                            <li><a href="<?php echo $vimeo_url; ?>" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                        <?php } ?>
+                        <?php if ($showinstagram) { ?>
+                            <li><a href="<?php echo $instagram_url; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <?php } ?>
+                    </ul>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+<?php } ?>

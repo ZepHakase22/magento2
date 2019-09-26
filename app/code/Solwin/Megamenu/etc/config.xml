@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <megamenu>
+            <general>
+                <enable>1</enable>
+                <menu_type>classic</menu_type>
+                <static_width>600px</static_width>
+                <max_level></max_level>
+                <show_home_link>1</show_home_link>
+                <show_home_icon>0</show_home_icon>
+                <home_icon></home_icon>
+            </general>
+            <custom_links>
+                <custommenu></custommenu>
+            </custom_links>
+            <cat_labels>
+                <label1>New</label1>
+                <label2>Hot!</label2>
+                <label3>Sale</label3>
+            </cat_labels>
+        </megamenu>
+        <megamenudesign>
+            <design>
+                <use_custom>0</use_custom>
+                <top_heading></top_heading>
+                <top_backcolor></top_backcolor>
+                <top_textcolor></top_textcolor>
+                <top_hovercolor></top_hovercolor>
+                <top_activecolor></top_activecolor>
+                <top_hoverbackcolor></top_hoverbackcolor>
+                <top_activebackcolor></top_activebackcolor>
+                
+                <sub_heading></sub_heading>
+                <sub_backcolor></sub_backcolor>
+                <sub_textcolor></sub_textcolor>
+                <sub_hovercolor></sub_hovercolor>
+                <sub_activecolor></sub_activecolor>
+                
+                <label_heading></label_heading>
+                <label1_color></label1_color>
+                <label1_backcolor></label1_backcolor>
+                <label2_color></label2_color>
+                <label2_backcolor></label2_backcolor>
+                <label3_color></label3_color>
+                <label3_backcolor></label3_backcolor>
+            </design>
+        </megamenudesign>
+    </default>
+</config>

@@ -1,0 +1,34 @@
+#!/usr/bin/env php
+<?php
+
+//$instruction = "container";
+//$instruction = "referenceContainer";
+$instruction = "block";
+//$instruction = "referenceBlock";
+
+$path = '/var/www/html/magento2/vendor/magento';
+$command = 'cd '.$path.' && egrep -r -i --include \*.xml "<'.$instruction.'".*?"name=" *';
+exec($command, $output);
+
+$container_max_length = 1;
+$pattern = '/(.*?):.*<'.$instruction.'.*name="(.*?)".*/';
+foreach ($output as $subject) {
+  preg_match($pattern, $subject, $matches);
+  $containers[$matches[2]][] = $matches[1];
+  if (strlen($matches[2]) > $container_max_length) $container_max_length = strlen($matches[2]);
+}
+
+$n=1;
+ksort($containers);
+foreach ($containers as $k => $v) {
+  printf("%6s", "$n. ");
+  printf("%-".$container_max_length."s".$v[0]."\n", $k);
+  $i=1;
+  while (isset($v[$i])) {
+    printf("      %-".$container_max_length."s".$v[$i]."\n", "");
+    $i++;
+  }
+  $n++;
+}
+
+?>

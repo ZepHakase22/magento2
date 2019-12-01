@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Solwin/Bannerslider/view/frontend/web/js/jquery.mousewheel.js

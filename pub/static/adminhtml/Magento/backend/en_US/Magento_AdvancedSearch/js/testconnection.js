@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Magento/AdvancedSearch/view/adminhtml/web/js/testconnection.js

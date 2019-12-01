@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Solwin/Megamenu/view/frontend/web/js/megamenu.js

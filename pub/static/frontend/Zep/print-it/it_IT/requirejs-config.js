@@ -180,11 +180,6 @@ var config = {
             upsellProducts:         'Magento_Catalog/js/upsell-products',
             productListToolbarForm: 'Magento_Catalog/js/product/list/toolbar',
             catalogGallery:         'Magento_Catalog/js/gallery',
-            priceBox:               'Magento_Catalog/js/price-box',
-            priceOptionDate:        'Magento_Catalog/js/price-option-date',
-            priceOptionFile:        'Magento_Catalog/js/price-option-file',
-            priceOptions:           'Magento_Catalog/js/price-options',
-            priceUtils:             'Magento_Catalog/js/price-utils',
             catalogAddToCart:       'Magento_Catalog/js/catalog-add-to-cart'
         }
     },
@@ -193,6 +188,26 @@ var config = {
             'Magento_Theme/js/view/breadcrumbs': {
                 'Magento_Catalog/js/product/breadcrumbs': true
             }
+        }
+    }
+};
+
+require.config(config);
+})();
+(function() {
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+var config = {
+    map: {
+        '*': {
+            priceBox:             'Magento_Catalog/js/price-box',
+            priceOptionDate:      'Magento_Catalog/js/price-option-date',
+            priceOptionFile:      'Magento_Catalog/js/price-option-file',
+            priceOptions:         'Magento_Catalog/js/price-options',
+            priceUtils:           'Magento_Catalog/js/price-utils'
         }
     }
 };
@@ -300,6 +315,20 @@ var config = {
         '*': {
             configurable: 'Magento_ConfigurableProduct/js/configurable'
         }
+    }
+};
+
+require.config(config);
+})();
+(function() {
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+var config = {
+    paths: {
+        'jquery/jquery-storageapi': 'Magento_Cookie/js/jquery.storageapi.extended'
     }
 };
 
@@ -725,11 +754,13 @@ var config = {
         '*': {
             editTrigger: 'mage/edit-trigger',
             addClass: 'Magento_Translation/js/add-class',
-            'Magento_Translation/add-class': 'Magento_Translation/js/add-class'
+            'Magento_Translation/add-class': 'Magento_Translation/js/add-class',
+            mageTranslationDictionary: 'Magento_Translation/js/mage-translation-dictionary'
         }
     },
     deps: [
-        'mage/translate-inline'
+        'mage/translate-inline',
+        'mageTranslationDictionary'
     ]
 };
 

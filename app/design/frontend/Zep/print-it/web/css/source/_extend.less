@@ -1,0 +1,91 @@
+/*===========================
+Blog All Pages less Variables
+=============================*/
+.bh-back-wrapper {
+    background: url(../images/printit-background-image.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 60px 0;
+    margin: 25px 0 0;
+    .bh-row {
+        margin: 0 -10px;
+    }
+    .bh-wrapper {
+        box-sizing: border-box;
+        float: left;
+        position: relative;
+        width: 100%;
+        .bh-main {
+            box-sizing: border-box;
+            display: block;
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            .bh-main-inner {
+                box-sizing: border-box;
+                margin: 0 10px;
+                position: relative;
+                .bh-img {
+                    box-sizing: border-box;
+                    display: block;
+                    float: left;
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    .bh-info {
+                        background: rgba(0, 0, 0, 0.5);
+                        bottom: -35px;
+                        box-sizing: border-box;
+                        float: left;
+                        margin-bottom: 30px;
+                        padding: 12px 15px;
+                        position: absolute;
+                        transition: all 0.3s ease-in 0s;
+                        -moz-transition: all 0.3s ease-in 0s;
+                        -webkit-transition: all 0.3s ease-in 0s;
+                        width: 100%;
+                        .bh-other-info {
+                            box-sizing: border-box;
+                            float: left;
+                            width: 100%;
+                            .bh-title {
+                                font-size: @cpanel-font-size-base;
+                                color: @cpanel-txt-color-white;
+                                line-height: 20px;
+                                margin: 0 0 8px;
+                                text-transform: capitalize;
+                                font-weight: 600;
+                                a {
+                                    color: @cpanel-txt-color-white;
+                                    &:hover {
+                                        color: @cpanel-txt-color-theme;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bh-sub-info {
+                        margin-top: 3px;
+                        .bh-sub-info-value {
+                            color: @cpanel-txt-color-theme;
+                            font-size: @cpanel-font-size-base;
+                        }
+                    }
+                    &:hover {
+                        .bh-info[target=3] {
+                            bottom: 30px;
+                        }
+                        .bh-info {
+                            bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

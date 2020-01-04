@@ -1,0 +1,1 @@
+/var/www/html/magento2/app/code/Magento/SalesRule/view/frontend/web/js/view/cart/totals/discount.js

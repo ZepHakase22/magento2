@@ -1,0 +1,1 @@
+/var/www/html/magento2/app/code/Magento/GiftMessage/view/frontend/web/js/view/gift-message.js

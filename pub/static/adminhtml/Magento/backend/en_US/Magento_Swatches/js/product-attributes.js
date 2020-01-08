@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Magento/Swatches/view/adminhtml/web/js/product-attributes.js

@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Magento/ConfigurableProduct/view/adminhtml/web/js/components/price-configurable.js

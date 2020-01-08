@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Magento/SalesRule/view/frontend/web/js/view/summary/discount.js

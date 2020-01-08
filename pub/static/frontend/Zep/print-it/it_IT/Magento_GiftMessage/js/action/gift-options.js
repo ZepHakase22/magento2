@@ -1,1 +1,0 @@
-/var/www/html/magento2/app/code/Magento/GiftMessage/view/frontend/web/js/action/gift-options.js
